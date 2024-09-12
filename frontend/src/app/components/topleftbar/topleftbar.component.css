@@ -1,0 +1,54 @@
+/*.divTopLeft{
+  margin: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: gainsboro;
+  border-radius: 30px;
+  min-height: 50px;
+  vertical-align: middle;
+}
+
+.divTopLeft button{
+  margin: 1px;
+  width: 33%;
+  height: 50px;
+  border: none;
+  vertical-align: middle;
+  background-color: gainsboro;
+  cursor: pointer;
+}
+
+#fontStyle {
+  margin-left: 12px;
+  width: 99%;
+}
+
+*/
+
+mat-button-toggle-group {
+  margin: 15px;
+  margin-right: 10px;
+  padding-right: 10px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 30px;
+  width: 99%;
+  background-color: var(--centerColor);
+  /* align-items: center; */
+  /* vertical-align: middle; */
+  /* text-align: center; */
+}
+
+mat-button-toggle {
+  margin: 0;
+  height: auto;
+  padding-top: 12px;
+  /* border: 1px solid black; */
+  width: 33%;
+  vertical-align: middle;
+}
+
+/* mat-button-toggle-group :nth-child(1) { */
+.selectedButton {
+  background-color: var(--topLeftBarSelectedButton);
+}

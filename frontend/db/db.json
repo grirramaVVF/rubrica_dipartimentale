@@ -1,0 +1,93 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "createtoken": {
+    "success": true,
+    "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3MjEyOTE3NDYsImlhdCI6MTcyMTI5MTc0NiwianRpIjoiaWQxMjM0NTYiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0IiwibmFtZSI6IiIsInN1YiI6IkFBQUJCQjAwRjEwQjEyM0siLCJpc3MiOiJBcHBSdWJEaXAiLCJ0aXBvIjoiVlZGIiwic2VkaSI6W3siY29kU2VkZSI6MSwiaXNTdXBlclVzZXIiOnRydWUsInVmZmljaSI6W3siaWRVZmYiOjEsImlkUHJvZmlsbyI6MX0seyJpZFVmZiI6MiwiaWRQcm9maWxvIjoxfV19XX0.htBoH9V6PzbnEXGZ7W3AyYCrMDHt7QsRn8hYe_EYBj-j4m6bpGL9dZUFwl8-m5GlFlatREFFDosoLkFnsV1qiQ"
+  },
+  "ufficiRubrica": [
+    {
+      "codiceUfficio": "00.0",
+      "nomeTitolare": "Prefetto Franceschelli",
+      "descrizioneUfficio": "Capo Dipartimento",
+      "coloreSfondoBase": "#495380",
+      "children": [
+        {
+          "codiceUfficio": "00.1000",
+          "descrizioneUfficio": "figlio1",
+          "nomeTitolare": "figlio1",
+          "coloreSfondoBase": "#495380",
+          "children": []
+        },
+        {
+          "codiceUfficio": "00.1001",
+          "coloreSfondoBase": "#495380",
+          "descrizioneUfficio": "figlio2",
+          "nomeTitolare": "",
+          "children": [
+            {
+              "codiceUfficio": "00.1002",
+              "coloreSfondoBase": "#495380",
+              "descrizioneUfficio": "figlio2.1",
+              "nomeTitolare": "",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "codiceUfficio": "01.0",
+      "descrizioneUfficio": "Vice Capo Dipartimento Vicario",
+      "nomeTitolare": "Capo del Corpo Nazionale dei Vigili del Fuoco",
+      "coloreSfondoBase": "#840101",
+      "children": []
+    },
+    {
+      "codiceUfficio": "02.0",
+      "descrizioneUfficio": "Ufficio di collegamento",
+      "nomeTitolare": "del Capo Dipartimento e del Capo del CNVVF",
+      "coloreSfondoBase": "#ff7c7c",
+      "children": []
+    },
+    {
+      "codiceUfficio": "03.0",
+      "descrizioneUfficio": "",
+      "nomeTitolare": "",
+      "coloreSfondoBase": "#ffdcdc",
+      "children": []
+    },
+    {
+      "codiceUfficio": "04.0",
+      "descrizioneUfficio": "Opera Nazionale Assistenza",
+      "nomeTitolare": "",
+      "coloreSfondoBase": "#e1e1e1",
+      "children": []
+    }
+  ]
+}

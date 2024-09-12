@@ -1,0 +1,25 @@
+{
+  "sub": "AAABBB00F10B123K",
+  "iss": "AppRubDip",
+  "tipo": "VVF",
+  "sedi": [
+    {
+      "codSede": 1,
+      "isSuperUser": true,
+      "uffici": [
+        {
+          "idUff": 1,
+          "idProfilo": 1
+        },
+        {
+          "idUff": 2,
+          "idProfilo": 1
+        }
+      ]
+    }
+  ],
+  "aud": "localhost",
+  "name": "",
+  "iat": 1516239022,
+  "exp": ""
+}

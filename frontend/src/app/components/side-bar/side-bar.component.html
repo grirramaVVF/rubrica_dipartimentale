@@ -1,0 +1,39 @@
+<mat-toolbar color="primary" class="full-height-toolbar">
+  <div fxLayout="column" fxLayoutAlign="space-between stretch" style="height: 100vh;">
+    <!-- Prima riga: allineata in alto -->
+    <div fxFlex="10" fxLayoutAlign="start center">
+      <img src="Img/logoVVF.png">
+    </div>
+
+    <div fxFlex="auto"></div>
+    <div fxFlex="50" fxLayout="column" class="toolbar-content">
+      <mat-toolbar color="primary">
+        <mat-toolbar-row class="custom-toolbar spacer-button">
+          <a mat-button>
+            <fa-icon [icon]="faLandmark" size="2x" title="Uffici Centrali"></fa-icon>
+            <!-- Uff. Centrali -->
+          </a>
+        </mat-toolbar-row>
+        <mat-toolbar-row class="custom-toolbar spacer-button">
+          <a mat-button>
+            <fa-icon [icon]="faBuilding" size="2x" title="Sedi VVF"></fa-icon>
+            <!-- Sedi VVF -->
+          </a>
+        </mat-toolbar-row>
+        <mat-toolbar-row class="custom-toolbar spacer-button" title="Login">
+          <a mat-button>
+            <fa-icon [icon]="faUserRegular" size="2x"></fa-icon>
+            <!-- Login -->
+          </a>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </div>
+
+    <div fxFlex="auto"></div>
+    <div fxFlex="10" fxLayoutAlign="end center">
+      <span style="display: flex; justify-content: center; width: 100%;">
+        Terza riga (in basso)
+      </span>
+    </div>
+  </div>
+</mat-toolbar>

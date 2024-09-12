@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+:root {
+  --centerColor: #f4f4ed;
+  --sideBarColor: #ac1a17;
+  --topLeftBarSelectedButton: #ab201d;
+
+  font-family: Titillium-Web, sans-serif;
+  /* font-family: "Noto Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol"; */
+  /* -webkit-font-smoothing: antialiased; */
+  /* -moz-osx-font-smoothing: grayscale; */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 99.9%;
+  ;
+  /* background-color: var(--sideBarColor); */
+}
+
+.divCenter {
+  background-color: var(--centerColor);
+}
+
+.divGlobal {
+  background-color: var(--sideBarColor);
+}

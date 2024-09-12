@@ -1,0 +1,23 @@
+.boxCerca {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 30px;
+  background-color: gainsboro;
+}
+
+.boxCerca input[type="text"] {
+  width: 99%;
+  border: none;
+  outline: none;
+  height: 1, 5rem;
+  background-color: gainsboro;
+  border-bottom: 1px solid #ccc;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.boxCerca button{
+  border: none;
+  background-color: gainsboro;
+  cursor: pointer;
+}

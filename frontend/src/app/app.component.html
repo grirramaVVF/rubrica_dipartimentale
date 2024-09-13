@@ -13,8 +13,8 @@
 
       <div fxLayout="row" fxLayoutWrap class="divCenter">
         <div fxFlex="100" fxLayout="column" class="divCenter">
-          <app-item-aoo [itemDst]="itemSrcCC"></app-item-aoo>
-          <app-item-aoo [itemDst]="itemSrcVCDV"></app-item-aoo>
+          <a routerLink="/sottouffici/{{itemSrcCC.children}}" routerLinkActive="active" ariaCurrentWhenActive="page"><app-item-aoo [itemDst]="itemSrcCC"></app-item-aoo></a>
+          <a routerLink="/sottouffici/{{itemSrcVCDV.children}}" routerLinkActive="active" ariaCurrentWhenActive="page"><app-item-aoo [itemDst]="itemSrcVCDV"></app-item-aoo></a>
           <app-item-aoo [itemDst]="itemSrcUC"></app-item-aoo>
           <app-item-aoo [itemDst]="itemSrcUCE"></app-item-aoo>
           <app-item-aoo [itemDst]="itemSrcONA"></app-item-aoo>
@@ -32,10 +32,10 @@
     <div fxLayout="row" fxLayoutWrap>
       <div fxFlex="100" fxLayout="column" fxLayoutAlign="center center">
         <fa-icon [icon]="faAddressBook" size="10x" [style.fill-opacity]=".2"></fa-icon>
-        <app-sottouffici></app-sottouffici>
+        <router-outlet></router-outlet>
       </div>
     </div>
   </div>
 </div>
 
-<router-outlet />
+

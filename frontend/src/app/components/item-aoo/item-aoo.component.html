@@ -34,30 +34,29 @@
 
 <div class="custom-card-container">
   <!-- Parte sinistra colorata (simula la sovrapposizione) -->
-  <div class="left-decoration"></div>
+  <div class="left-decoration" [ngStyle]="{ 'background-color': itemDst.coloreSfondoBase }"
+  ></div>
 
   <!-- Card principale -->
-  <mat-card class="custom-card">
+  <mat-card class="custom-card" [ngStyle]="{'fill-opacity': itemDst.opacita}">
     <mat-card-content (click)="leggiSottoAlbero(itemDst.codiceUO)" style="cursor: pointer;">
       <h3 [ngClass]="classeBig">{{itemDst.riga1}} ({{itemDst.codiceUO}})</h3>
       <p [ngClass]="classeRedux">{{itemDst.riga2}}</p>
       <p [ngClass]="classeRedux">{{itemDst.riga3}}</p>
-
     </mat-card-content>
   </mat-card>
 
-  <div fxLayout="row" fxLayoutAlign="start center">
+<!--   <div fxLayout="row" fxLayoutAlign="start center">
     <div *ngIf="!itemDst.isChild">
-<!--       
-           [style.fill]="itemDst.coloreSfondoBase"
-           [style.fill-opacity]="itemDst.opacita">
-    -->
+          <div *ngFor="let child of itemDst.children">
+          <app-item-aoo [itemDst]="child" style="margin: 10px"></app-item-aoo>
+          </div>
+    </div>
+  </div> -->
 
-  </div>
-  <div *ngFor="let child of itemDst.children">
-    <app-item-aoo [itemDst]="child"></app-item-aoo>
-  </div>
-   </div></div>
+</div>
+  
+  
 
 <!-- <section class="accordion">
     <input type="checkbox" name="collapse2" id="handle2">

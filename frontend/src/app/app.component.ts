@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { ItemAOOComponent } from './components/item-aoo/item-aoo.component';
 import { IVMAOOItemobj } from './interfaces/IVMAOOItemobj';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
@@ -23,7 +23,7 @@ import { jwtDecode } from "jwt-decode";
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [RouterOutlet, ItemAOOComponent, SideBarComponent, FontAwesomeModule, FlexLayoutModule, SottoufficiComponent, CercaComponent, ToplrftbarComponent]
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, ItemAOOComponent, SideBarComponent, FontAwesomeModule, FlexLayoutModule, SottoufficiComponent, CercaComponent, ToplrftbarComponent]
 })
 export class AppComponent {
   title = 'rubricadip';

@@ -1,3 +1,7 @@
-<p>sottouffici works!</p>
-<app-item-aoo [itemDst]="itemSrcCC"></app-item-aoo>
-<app-item-aoo [itemDst]="itemSrcCC"></app-item-aoo>
+<div fxLayout="row" fxLayoutAlign="start center">
+    <div *ngIf="!itemSrcCC.isChild">
+          <div *ngFor="let child of itemSrcCC.children">
+          <app-item-aoo [itemDst]="child" style="margin: 10px"></app-item-aoo>
+          </div>
+    </div>
+</div>

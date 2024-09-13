@@ -22,7 +22,7 @@
 
 .testoAOOBigFiglio {
   font-family: 'Noto Sans';
-  font-size: x-small;
+  font-size: small;
   line-height: 1;
   /* Minimize space between lines */
   margin: 0;
@@ -100,8 +100,8 @@
 
 .left-decoration {
   background-color: #3a407d; /* Colore simile a quello della parte sinistra */
-  width: 40px;
-  height: 80px;
+  width: 39px; /* Larghezza fissa */
+  height: 105px; /* Altezza fissa */
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   position: absolute;
@@ -111,11 +111,13 @@
 
 .custom-card {
   position: relative;
-  margin-left: 20px; /* Spazio per creare l'effetto sovrapposizione */
+  margin-left: 36px; /* Spazio per creare l'effetto sovrapposizione */
   padding-left: 30px; /* Spostare il testo verso destra */
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 2;
+  width: 450px; /* Larghezza fissa */
+  height: 100px; /* Altezza fissa */
 }
 
 .card-title {

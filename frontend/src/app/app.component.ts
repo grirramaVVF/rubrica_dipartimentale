@@ -51,22 +51,17 @@ export class AppComponent {
     this._storeApp$.dispatch({ type: AuthUserActionType.GetAuthToken });
     this._storeApp$.dispatch({ type: RubricaActionType.GetHomeRubrica });
 
-    // this._storeApp$.select(selectAuthUser).subscribe(
-    //   s => {console.log('authUser',s);}
-    // );
-
     this.homeItems$.subscribe(
       items => {
         // console.log('homeItems', items);
         this.homeItems = [...items?.rubrica];
+        this.childrenSelected=this.homeItems[0].children;
       }
     );
-
-    //console.log(environment.apiCreateTocken);
   }
 
   receiveChildren(children: Array<IOffice>) {
-    console.log("app: ", children);
+    // console.log("app: ", children);
     this.childrenSelected = []
     this.childrenSelected = children;
   }

@@ -12,22 +12,14 @@ import { IOffice } from '../../models/IOffice';
 })
 export class ItemAOOComponent {
 
-  @Input() itemDst: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", descrizioneUfficio: "", nomeTitolare: "", children: [] };
+  @Input() itemDst: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
   @Output() childSelected = new EventEmitter<[]>();
 
   constructor() { }
 
-  ngOnInit(): void {
-    // Inizializzazione delle proprietà nel metodo ngOnInit
-    //this.classeBig = !this.itemDst.isChild ? "testoAOOBig" : "testoAOOBigFiglio";
-    //this.classeRedux = !this.itemDst.isChild ? "testoAOORedux" : "testoAOOReduxFiglio";
-  }
+  ngOnInit(): void { }
 
   leggiSottoAlbero(codiceUO: string) {
-    console.log('Div cliccato!', codiceUO);
-
-    //if (this.itemDst.children?.length > 0) {
-      this.childSelected.emit(this.itemDst.children);
-    //}
+    this.childSelected.emit(this.itemDst.children);
   }
 }

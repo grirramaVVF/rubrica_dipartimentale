@@ -1,20 +1,15 @@
 <div class="accordion_container" style="background-color: {{itemDst.coloreSfondo}};">
   <section class="accordion">
-    <input type="checkbox" name="collapse" id="{{itemDst.codiceUfficio}}" (click)="leggiSottoAlbero(itemDst.codiceUfficio)">
+    <input type="checkbox" name="collapse" id="{{itemDst.codiceUfficio}}"
+      (click)="leggiSottoAlbero(itemDst.codiceUfficio)">
     <h2 class="handle">
-      <label for="{{itemDst.codiceUfficio}}">{{itemDst.nomeTitolare}}<br>
-        <span class="smallLabelFont">{{itemDst.descrizioneUfficio}}</span>
+      <label for="{{itemDst.codiceUfficio}}">{{itemDst.nomeUfficio}}<br>
+        <span class="smallLabelFont">{{itemDst.nomeTitolare}}</span>
       </label>
     </h2>
     <div class="content">
-      <p><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well carbonated Trappist ale,
-        showing
-        a fruity-spicy Trappist yeast character, a spicy-floral hop profile, and a soft, supportive grainy-sweet malt
-        palate.</p>
-      <p><strong>History:</strong> While Trappist breweries have a tradition of brewing a lower-strength beer as a
-        monk’s
-        daily ration, the bitter, pale beer this style describes is a relatively modern invention reflecting current
-        tastes. Westvleteren first brewed theirs in 1999, but replaced older lower-gravity products.</p>
+      <p><strong>Descrizione:</strong>{{itemDst.descrizioneUfficio}}
+      </p>
     </div>
   </section>
 </div>

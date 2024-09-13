@@ -4,10 +4,11 @@
   background-color: var(--centerColor);
 }
 
-.container {}
-
 .container app-item-aoo {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   /* Opzionale: aggiungi spaziatura tra i componenti */
 }

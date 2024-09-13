@@ -11,7 +11,7 @@
   </div>
 </div> -->
 
-<div class="accordion_container" style="background-color: {{itemDst.coloreSfondoBase}};">
+<!-- <div class="accordion_container" style="background-color: {{itemDst.coloreSfondoBase}}">
   <section class="accordion">
     <input type="checkbox" name="collapse" id="{{itemDst.codiceUO}}">
     <h2 class="handle">
@@ -30,7 +30,34 @@
         tastes. Westvleteren first brewed theirs in 1999, but replaced older lower-gravity products.</p>
     </div>
   </section>
-</div>
+</div> -->
+
+<div class="custom-card-container">
+  <!-- Parte sinistra colorata (simula la sovrapposizione) -->
+  <div class="left-decoration"></div>
+
+  <!-- Card principale -->
+  <mat-card class="custom-card">
+    <mat-card-content (click)="leggiSottoAlbero(itemDst.codiceUO)" style="cursor: pointer;">
+      <h3 [ngClass]="classeBig">{{itemDst.riga1}} ({{itemDst.codiceUO}})</h3>
+      <p [ngClass]="classeRedux">{{itemDst.riga2}}</p>
+      <p [ngClass]="classeRedux">{{itemDst.riga3}}</p>
+
+    </mat-card-content>
+  </mat-card>
+
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div *ngIf="!itemDst.isChild">
+<!--       
+           [style.fill]="itemDst.coloreSfondoBase"
+           [style.fill-opacity]="itemDst.opacita">
+    -->
+
+  </div>
+  <div *ngFor="let child of itemDst.children">
+    <app-item-aoo [itemDst]="child"></app-item-aoo>
+  </div>
+   </div></div>
 
 <!-- <section class="accordion">
     <input type="checkbox" name="collapse2" id="handle2">

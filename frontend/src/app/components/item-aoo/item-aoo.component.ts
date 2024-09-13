@@ -4,11 +4,12 @@ import { IVMAOOItemobj } from '../../interfaces/IVMAOOItemobj';
 // import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common'; // Importa CommonModule
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatCard, MatCardContent} from '@angular/material/card'
 
 @Component({
   selector: 'app-item-aoo',
   standalone: true,
-  imports: [CommonModule, MatExpansionModule],
+  imports: [CommonModule, MatExpansionModule, MatCard, MatCardContent],
   templateUrl: './item-aoo.component.html',
   styleUrl: './item-aoo.component.css'
 })

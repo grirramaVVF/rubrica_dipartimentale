@@ -89,6 +89,40 @@
   /* Traslazione sull'asse x */
 }
 
+/************************************************/
+
+
+.custom-card-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.left-decoration {
+  background-color: #3a407d; /* Colore simile a quello della parte sinistra */
+  width: 40px;
+  height: 80px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.custom-card {
+  position: relative;
+  margin-left: 20px; /* Spazio per creare l'effetto sovrapposizione */
+  padding-left: 30px; /* Spostare il testo verso destra */
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
 
 /************************************************/
 .accordion_container {

@@ -10,12 +10,14 @@ import { appState } from './store/states/app.state';
 import { provideHttpClient } from '@angular/common/http';
 import { provideEffects } from '@ngrx/effects';
 import { AuthUserEffects } from './store/effects/authuser.effects';
+import { RubricaEffects } from './store/effects/rubrica.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideAnimationsAsync(),
     provideStore(appState),
+    provideEffects(RubricaEffects),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }),
     provideRouterStore(),
     provideHttpClient(),

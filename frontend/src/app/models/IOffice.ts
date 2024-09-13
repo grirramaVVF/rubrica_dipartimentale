@@ -1,3 +1,8 @@
 export interface IOffice{
-  nome:string;
+  codiceUfficio:string;
+  codiceUfficioSuperiore?:string;
+  descrizioneUfficio:string;
+  nomeTitolare:string;
+  coloreSfondo?:string;
+  children:[];
 }

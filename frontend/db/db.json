@@ -1,28 +1,4 @@
 {
-  "posts": [
-    {
-      "id": "1",
-      "title": "a title",
-      "views": 100
-    },
-    {
-      "id": "2",
-      "title": "another title",
-      "views": 200
-    }
-  ],
-  "comments": [
-    {
-      "id": "1",
-      "text": "a comment about post 1",
-      "postId": "1"
-    },
-    {
-      "id": "2",
-      "text": "another comment about post 1",
-      "postId": "1"
-    }
-  ],
   "profile": {
     "name": "typicode"
   },
@@ -34,27 +10,31 @@
     {
       "codiceUfficio": "00.0",
       "nomeTitolare": "Prefetto Franceschelli",
-      "descrizioneUfficio": "Capo Dipartimento",
-      "coloreSfondoBase": "#495380",
+      "nomeUfficio": "Capo Dipartimento",
+      "coloreSfondo": "#495380",
+      "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
       "children": [
         {
           "codiceUfficio": "00.1000",
-          "descrizioneUfficio": "figlio1",
+          "nomeUfficio": "figlio1",
           "nomeTitolare": "figlio1",
-          "coloreSfondoBase": "#495380",
+          "coloreSfondo": "#495380",
+          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
           "children": []
         },
         {
           "codiceUfficio": "00.1001",
-          "coloreSfondoBase": "#495380",
-          "descrizioneUfficio": "figlio2",
-          "nomeTitolare": "",
+          "coloreSfondo": "#495380",
+          "nomeUfficio": "figlio2",
+          "nomeTitolare": "nome titolare",
+          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
           "children": [
             {
               "codiceUfficio": "00.1002",
-              "coloreSfondoBase": "#495380",
-              "descrizioneUfficio": "figlio2.1",
-              "nomeTitolare": "",
+              "coloreSfondo": "#495380",
+              "nomeUfficio": "figlio2.1",
+              "nomeTitolare": "nome titolare",
+              "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
               "children": []
             }
           ]
@@ -63,31 +43,165 @@
     },
     {
       "codiceUfficio": "01.0",
-      "descrizioneUfficio": "Vice Capo Dipartimento Vicario",
-      "nomeTitolare": "Capo del Corpo Nazionale dei Vigili del Fuoco",
-      "coloreSfondoBase": "#840101",
-      "children": []
+      "nomeUfficio": "Capo del Corpo Nazionale dei Vigili del Fuoco Vice Capo Dipartimento Vicario",
+      "nomeTitolare": "Ing. Carlo Dall'Oppio",
+      "coloreSfondo": "#840101",
+      "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+      "children": [
+        {
+          "codiceUfficio": "01.1000",
+          "nomeUfficio": "figlio1",
+          "nomeTitolare": "figlio1",
+          "coloreSfondo": "#840101",
+          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+          "children": []
+        },
+        {
+          "codiceUfficio": "01.1001",
+          "coloreSfondo": "#840101",
+          "nomeUfficio": "figlio2",
+          "nomeTitolare": "nome titolare",
+          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+          "children": [
+            {
+              "codiceUfficio": "00.1002",
+              "coloreSfondo": "#840101",
+              "nomeUfficio": "figlio2.1",
+              "nomeTitolare": "nome titolare",
+              "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+              "children": []
+            }
+          ]
+        }
+      ]
     },
     {
       "codiceUfficio": "02.0",
-      "descrizioneUfficio": "Ufficio di collegamento",
-      "nomeTitolare": "del Capo Dipartimento e del Capo del CNVVF",
-      "coloreSfondoBase": "#ff7c7c",
-      "children": []
+      "nomeUfficio": "Ufficio di collegamento del Capo Dipartimento e del Capo del CNVVF",
+      "nomeTitolare": "Ing. Carlo Dall'Oppio",
+      "coloreSfondo": "#ff7c7c",
+      "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+      "children": [
+        {
+          "codiceUfficio": "02.1000",
+          "nomeUfficio": "figlio1",
+          "nomeTitolare": "figlio1",
+          "coloreSfondo": "#ff7c7c",
+          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+          "children": []
+        },
+        {
+          "codiceUfficio": "02.1001",
+          "coloreSfondo": "#ff7c7c",
+          "nomeUfficio": "figlio2",
+          "nomeTitolare": "nome titolare",
+          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+          "children": [
+            {
+              "codiceUfficio": "02.1002",
+              "coloreSfondo": "#ff7c7c",
+              "nomeUfficio": "figlio2.1",
+              "nomeTitolare": "nome titolare",
+              "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+              "children": []
+            }
+          ]
+        }
+      ]
     },
     {
       "codiceUfficio": "03.0",
-      "descrizioneUfficio": "",
-      "nomeTitolare": "",
-      "coloreSfondoBase": "#ffdcdc",
-      "children": []
+      "nomeUfficio": "Ufficio number X",
+      "nomeTitolare": "Nome e Cognome",
+      "coloreSfondo": "#ffdcdc",
+      "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+      "children": [
+        {
+          "codiceUfficio": "03.1000",
+          "nomeUfficio": "figlio1",
+          "nomeTitolare": "figlio1",
+          "coloreSfondo": "#ffdcdc",
+          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+          "children": []
+        },
+        {
+          "codiceUfficio": "03.1001",
+          "coloreSfondo": "#ffdcdc",
+          "nomeUfficio": "figlio2",
+          "nomeTitolare": "nome titolare",
+          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+          "children": [
+            {
+              "codiceUfficio": "03.1002",
+              "coloreSfondo": "#ffdcdc",
+              "nomeUfficio": "figlio2.1",
+              "nomeTitolare": "nome titolare",
+              "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+              "children": []
+            }
+          ]
+        }
+      ]
     },
     {
       "codiceUfficio": "04.0",
-      "descrizioneUfficio": "Opera Nazionale Assistenza",
-      "nomeTitolare": "",
-      "coloreSfondoBase": "#e1e1e1",
-      "children": []
+      "nomeUfficio": "Opera Nazionale Assistenza",
+      "nomeTitolare": "nome titolare",
+      "coloreSfondo": "#e1e1e1",
+      "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+      "children": [
+        {
+          "codiceUfficio": "04.1000",
+          "nomeUfficio": "figlio1",
+          "nomeTitolare": "figlio1",
+          "coloreSfondo": "#e1e1e1",
+          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+          "children": [
+            {
+              "codiceUfficio": "04.1000",
+              "nomeUfficio": "figlio1",
+              "nomeTitolare": "figlio1",
+              "coloreSfondo": "#e1e1e1",
+              "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+              "children": []
+            },
+            {
+              "codiceUfficio": "04.1001",
+              "coloreSfondo": "#e1e1e1",
+              "nomeUfficio": "figlio2",
+              "nomeTitolare": "nome titolare",
+              "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+              "children": [
+                {
+                  "codiceUfficio": "04.1002",
+                  "coloreSfondo": "#e1e1e1",
+                  "nomeUfficio": "figlio2.1",
+                  "nomeTitolare": "nome titolare",
+                  "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "codiceUfficio": "00.1001",
+          "coloreSfondo": "#e1e1e1",
+          "nomeUfficio": "figlio2",
+          "nomeTitolare": "Nome ritolare",
+          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+          "children": [
+            {
+              "codiceUfficio": "00.1002",
+              "coloreSfondo": "#e1e1e1",
+              "nomeUfficio": "figlio2.1",
+              "nomeTitolare": "nome titolare",
+              "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ]
 }

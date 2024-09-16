@@ -11,7 +11,7 @@ export function authUserReducer(
 ) {
   const jwtKey = environment.jwtKey;
 
-  console.log('action type: ', action.type);
+  //console.log('action type: ', action.type);
 
   switch (action.type) {
     case AuthUserActionType.SetAuthToken:
@@ -25,6 +25,4 @@ export function authUserReducer(
     default:
       return authUser
   }
-
-
 }

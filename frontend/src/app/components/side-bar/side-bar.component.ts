@@ -5,11 +5,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faLandmark,faBuilding,faUser as faUserSolid } from '@fortawesome/free-solid-svg-icons';
 import { faUser as faUserRegular} from '@fortawesome/free-regular-svg-icons';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-side-bar',
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule,FontAwesomeModule,FlexLayoutModule],
+  imports: [MatToolbarModule, MatButtonModule,FontAwesomeModule,FlexLayoutModule,RouterLink, RouterLinkActive],
   templateUrl: './side-bar.component.html',
   styleUrl: './side-bar.component.css'
 })

@@ -8,6 +8,7 @@ using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using ApiRubricaDipartimentale.Services;
+using System.Diagnostics;
 
 namespace ApiRubricaDipartimentale;
 
@@ -22,11 +23,17 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-
-        var connectionString = "Server=localhost;Database=app_rub_dip;User=root;Password=;";
-        services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
-
+        if (Debugger.IsAttached)
+        {
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlite("Data Source=app_rub_dip.db"));
+        }
+        else
+        {
+            var connectionString = "Server=localhost;Database=app_rub_dip;User=root;Password=;";
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+        }
 
         // Configura l'autenticazione JWT
         var jwtSettings = Configuration.GetSection("Jwt");

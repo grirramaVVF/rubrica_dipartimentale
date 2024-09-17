@@ -6,7 +6,7 @@ import { selectUfficioSelezionato } from '../../store/selectors/rubrica.selector
 import { NgForOf, NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-personale',
+  selector: 'vvfrubrica-personale',
   standalone: true,
   imports: [NgForOf,NgIf],
   templateUrl: './personale.component.html',

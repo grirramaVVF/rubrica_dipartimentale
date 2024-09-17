@@ -1,7 +1,7 @@
 <router-outlet>
   <div fxLayout="row" fxLayoutWrap class="divGlobal">
     <div fxFlex="5" fxLayout="column">
-      <app-side-bar></app-side-bar>
+      <vvfrubrica-side-bar></vvfrubrica-side-bar>
     </div>
 
     <div fxFlex="40" fxLayout="column" class="topBottomLeftBordefRadius">
@@ -44,14 +44,14 @@
     <div fxFlex="60" fxLayout="column" class="divCenter">
       <div fxLayout="row" fxLayoutWrap>
         <div fxFlex="100" fxLayout="column">
-          <vvfrubrica-topleftbar (frameSelected)="receiveLeftFrameSelected($event)"></vvfrubrica-topleftbar>
+          <vvfrubrica-toprightbar (frameSelected)="receiveLeftFrameSelected($event)"></vvfrubrica-toprightbar>
         </div>
       </div>
       <div fxLayout="row" fxLayoutWrap>
         <div fxFlex="100" fxLayout="column" fxLayoutAlign="center">
           <fa-icon [icon]="faAddressBook" size="10x" [style.fill-opacity]=".2" style="text-align: center;"></fa-icon>
-          <app-sottouffici *ngIf="leftComponentSelected=='ufficiDipendenti'" [childrenItems]="childrenSelected"></app-sottouffici>
-          <app-personale *ngIf="leftComponentSelected=='componenti'"></app-personale>
+          <vvfrubrica-sottouffici *ngIf="leftComponentSelected=='ufficiDipendenti'" [childrenItems]="childrenSelected"></vvfrubrica-sottouffici>
+          <vvfrubrica-personale *ngIf="leftComponentSelected=='componenti'"></vvfrubrica-personale>
         </div>
       </div>
     </div>

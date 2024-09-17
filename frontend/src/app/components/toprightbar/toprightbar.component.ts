@@ -7,14 +7,14 @@ import { selectUfficioSelezionato } from '../../store/selectors/rubrica.selector
 import { IOffice } from '../../models/IOffice';
 
 @Component({
-  selector: 'vvfrubrica-topleftbar',
+  selector: 'vvfrubrica-toprightbar',
   standalone: true,
   imports: [MatButtonToggleModule, FormsModule],
-  templateUrl: './topleftbar.component.html',
-  styleUrl: './topleftbar.component.css',
+  templateUrl: './toprightbar.component.html',
+  styleUrl: './toprightbar.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ToplrftbarComponent {
+export class ToprightbarComponent {
   topLeftBar: string = 'ufficiDipendenti';
 
   ufficioSelezionato$ = this._storeApp$.select(selectUfficioSelezionato);

@@ -7,7 +7,7 @@ import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SottoufficiComponent } from './components/sottouffici/sottouffici.component';
 import { CercaComponent } from "./components/cerca/cerca.component";
-import { ToplrftbarComponent } from "./components/topleftbar/topleftbar.component";
+import { ToprightbarComponent } from "./components/toprightbar/toprightbar.component";
 import { Store } from '@ngrx/store';
 import { AppState } from './store/states/app.state';
 import { IAuthUserState, initialAuthState } from './store/states/authuser.state';
@@ -20,7 +20,7 @@ import { MatButtonModule, MatIconButton } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-root',
+  selector: 'vvfrubrica-root',
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -32,7 +32,7 @@ import { MatIconModule } from '@angular/material/icon';
     FlexLayoutModule,
     SottoufficiComponent,
     CercaComponent,
-    ToplrftbarComponent,
+    ToprightbarComponent,
     AsyncPipe,
     NgForOf,
     PersonaleComponent,
@@ -110,7 +110,6 @@ export class AppComponent {
         }
 
         this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: tempArray[0] }));
-
       }
     }
   }

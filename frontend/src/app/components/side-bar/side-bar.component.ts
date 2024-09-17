@@ -8,7 +8,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'app-side-bar',
+  selector: 'vvfrubrica-side-bar',
   standalone: true,
   imports: [MatToolbarModule, MatButtonModule,FontAwesomeModule,FlexLayoutModule,RouterLink, RouterLinkActive],
   templateUrl: './side-bar.component.html',

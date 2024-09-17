@@ -7,7 +7,7 @@ import { Store } from '@ngrx/store';
 import { selectUfficioSelezionato } from '../../store/selectors/rubrica.selector';
 
 @Component({
-  selector: 'app-sottouffici',
+  selector: 'vvfrubrica-sottouffici',
   standalone: true,
   templateUrl: './sottouffici.component.html',
   styleUrl: './sottouffici.component.css',

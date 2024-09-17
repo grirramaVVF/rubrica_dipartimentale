@@ -4,6 +4,7 @@ import { IVMAOOItemobj } from '../../interfaces/IVMAOOItemobj';
 import { ItemAOOComponent } from "../item-aoo/item-aoo.component";
 import { ActivatedRoute } from '@angular/router';
 import { faQrcode } from '@fortawesome/free-solid-svg-icons';
+import { IOffice } from '../../models/IOffice';
 
 @Component({
     selector: 'app-sottouffici',
@@ -19,7 +20,7 @@ export class SottoufficiComponent {
 ) { }
 
   CapoCorpo: string = "#495380";
-
+  //ufficio?: IOffice;
 
   itemSrcCC: IVMAOOItemobj = {
     codiceUO:"00.0",

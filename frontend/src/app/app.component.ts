@@ -17,6 +17,8 @@ import { AuthService } from './services/auth.service';
 import { IAuthUserState, initialAuthState } from './store/states/authuser.state';
 import { AuthUserActionType } from './store/actions/authuser.action';
 import { jwtDecode } from "jwt-decode";
+import { UfficiService } from './services/uffici.service';
+import { IOffice } from './models/IOffice';
 
 @Component({
   selector: 'app-root',
@@ -25,10 +27,36 @@ import { jwtDecode } from "jwt-decode";
   styleUrl: './app.component.css',
   imports: [RouterOutlet, RouterLink, RouterLinkActive, ItemAOOComponent, SideBarComponent, FontAwesomeModule, FlexLayoutModule, SottoufficiComponent, CercaComponent, ToplrftbarComponent]
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'rubricadip';
   faAddressBook = faAddressBook;
   authUser: IAuthUserState = initialAuthState;
+
+
+  uffici: IOffice[] = [];
+
+    constructor(private _storeApp$: Store<AppState>,
+    private authService: AuthService, private ufficiService: UfficiService
+  ) { }
+
+  ngOnInit() {
+    this._storeApp$.dispatch({ type: AuthUserActionType.GetAuthToken });
+
+    this._storeApp$.select(selectAuthUser).subscribe(
+      s => {
+        console.log('authUser',s);
+      }
+    );
+
+    this.ufficiService.getUffici().subscribe(
+      (datiricevuti) => {
+        this.uffici = datiricevuti;
+        console.log(datiricevuti);
+    });
+
+    //console.log(environment.apiCreateTocken);
+
+  }
 
   /*da gestire altrove */
   CapoCorpo: string = "#495380";
@@ -36,6 +64,8 @@ export class AppComponent {
   UfficioCollegamento: string = "#ff7c7c";
   UfficioComunicazioneEmergenza: string = "#ffdcdc";
   ONA: string = "#e1e1e1";
+
+
 
   itemSrcCC: IVMAOOItemobj = {
     codiceUO: "00.0",
@@ -124,19 +154,5 @@ export class AppComponent {
     ]
   }
 
-  constructor(private _storeApp$: Store<AppState>,
-    private authService: AuthService
-  ) { }
 
-  ngOnInit() {
-    this._storeApp$.dispatch({ type: AuthUserActionType.GetAuthToken });
-
-    this._storeApp$.select(selectAuthUser).subscribe(
-      s => {
-        console.log('authUser',s);
-      }
-    );
-
-    //console.log(environment.apiCreateTocken);
-  }
 }

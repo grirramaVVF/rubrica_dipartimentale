@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ItemAOOComponent } from './components/item-aoo/item-aoo.component';
+import { UfficiComponent } from './components/uffici/uffici.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
@@ -10,52 +10,74 @@ import { CercaComponent } from "./components/cerca/cerca.component";
 import { ToplrftbarComponent } from "./components/topleftbar/topleftbar.component";
 import { Store } from '@ngrx/store';
 import { AppState } from './store/states/app.state';
-import { AuthService } from './services/auth.service';
 import { IAuthUserState, initialAuthState } from './store/states/authuser.state';
-import { AuthUserActionType } from './store/actions/authuser.action';
-import { selectHome } from './store/selectors/rubrica.selector';
-import { RubricaActionType } from './store/actions/rubrica.action';
-import { AsyncPipe, NgForOf } from '@angular/common';
+import { selectHome, selectUfficioSelezionato } from './store/selectors/rubrica.selector';
+import { RubricaActionType, SetUfficioSelezionato } from './store/actions/rubrica.action';
+import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
 import { IOffice } from './models/IOffice';
+import { PersonaleComponent } from './components/personale/personale.component';
+import { MatButtonModule, MatIconButton } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [RouterOutlet, ItemAOOComponent, SideBarComponent, FontAwesomeModule, FlexLayoutModule, SottoufficiComponent, CercaComponent, ToplrftbarComponent,
-    AsyncPipe, NgForOf
+  imports: [
+    RouterOutlet,
+    UfficiComponent,
+    SideBarComponent,
+    FontAwesomeModule,
+    FlexLayoutModule,
+    SottoufficiComponent,
+    CercaComponent,
+    ToplrftbarComponent,
+    AsyncPipe,
+    NgForOf,
+    PersonaleComponent,
+    MatButtonModule,
+    MatIconModule,
+    NgIf,
   ]
 })
 export class AppComponent {
   title = 'rubricadip';
   faAddressBook = faAddressBook;
+
   authUser: IAuthUserState = initialAuthState;
   homeItems$ = this._storeApp$.select(selectHome);
   homeItems: Array<IOffice> = [];
+  currentItems: Array<IOffice> = [];
+
+  ufficioSelezionato$ = this._storeApp$.select(selectUfficioSelezionato);
+  ufficioSelezionato?: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
 
   childrenSelected: Array<IOffice> = [];
 
-  /*da gestire altrove */
-  // CapoCorpo: string = "#495380";
-  // ViceCapoDipartimentoVicario: string = "#840101";
-  // UfficioCollegamento: string = "#ff7c7c";
-  // UfficioComunicazioneEmergenza: string = "#ffdcdc";
-  // ONA: string = "#e1e1e1";
+  leftComponentSelected: string = 'ufficiDipendenti';
 
-  constructor(private _storeApp$: Store<AppState>,
-    private authService: AuthService
-  ) { }
+  constructor(private _storeApp$: Store<AppState>) { }
 
   ngOnInit() {
-    this._storeApp$.dispatch({ type: AuthUserActionType.GetAuthToken });
+    //this._storeApp$.dispatch({ type: AuthUserActionType.GetAuthToken });
     this._storeApp$.dispatch({ type: RubricaActionType.GetHomeRubrica });
 
     this.homeItems$.subscribe(
       items => {
-        // console.log('homeItems', items);
         this.homeItems = [...items?.rubrica];
-        this.childrenSelected=this.homeItems[0].children;
+        this.currentItems = this.homeItems;
+        this.childrenSelected = this.homeItems[0]?.children;
+      }
+    );
+
+    this.ufficioSelezionato$.subscribe(
+      items => {
+        this.ufficioSelezionato = { ...items };
+        if (this.ufficioSelezionato?.codiceUfficioSuperiore) {
+          this.currentItems = [];
+          this.currentItems.push(this.ufficioSelezionato);
+        }
       }
     );
   }
@@ -64,5 +86,46 @@ export class AppComponent {
     // console.log("app: ", children);
     this.childrenSelected = []
     this.childrenSelected = children;
+  }
+
+  onBackClick() {
+    if (this.currentItems.length > 0) {
+      let temp: IOffice = this.currentItems[0];
+
+      let tempArray: Array<IOffice> = this.homeItems.filter(item => {
+        if (item.codiceUfficio == temp.codiceUfficioSuperiore) {
+          return item;
+        }
+        return;
+      });
+
+      if (tempArray.length > 0) {
+        if (tempArray[0].codiceUfficioSuperiore == '') {
+          this.currentItems = this.homeItems;
+          this.childrenSelected = this.homeItems[0]?.children;
+          console.log("wwwwww: ", this.childrenSelected);
+        } else {
+          this.currentItems = tempArray;
+          this.childrenSelected = tempArray[0]?.children;
+        }
+
+        this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: tempArray[0] }));
+
+      }
+    }
+  }
+
+  onAzzeraClick() {
+    this.currentItems = this.homeItems;
+    this.childrenSelected = this.homeItems[0]?.children;
+
+    if (this.currentItems.length > 0) {
+      this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: this.currentItems[0] }));
+    }
+  }
+
+  receiveLeftFrameSelected(frame: string) {
+    console.log("dddd: ", frame);
+    this.leftComponentSelected = frame;
   }
 }

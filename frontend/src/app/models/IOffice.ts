@@ -1,3 +1,5 @@
+import { IPersonale } from "./IPersonale";
+
 export interface IOffice{
   codiceUfficio:string;
   codiceUfficioSuperiore?:string;
@@ -5,5 +7,7 @@ export interface IOffice{
   nomeTitolare:string;
   coloreSfondo?:string;
   descrizioneUfficio?: string;
+  ordineVisualizzazione?: number;
   children:[];
+  personale?: Array<IPersonale>;
 }

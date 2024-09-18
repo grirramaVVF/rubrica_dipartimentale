@@ -21,6 +21,6 @@ export const appConfig: ApplicationConfig = {
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }),
     provideRouterStore(),
     provideHttpClient(),
-    provideEffects(AuthUserEffects),
+    provideEffects(AuthUserEffects), provideAnimationsAsync(),
   ],
 };

@@ -27,6 +27,8 @@
               }
             ],
             "styles": [
+              "src/custom-theme.scss",
+              "bootstrap/dist/css/bootstrap-grid.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -91,6 +93,7 @@
               }
             ],
             "styles": [
+              "bootstrap/dist/css/bootstrap-grid.min.css",
               "src/styles.css"
             ],
             "scripts": []

@@ -1,4 +1,4 @@
-/*.divTopLeft{
+.divTopLeft{
   margin: 10px;
   padding-left: 15px;
   padding-right: 15px;
@@ -8,6 +8,9 @@
   vertical-align: middle;
 }
 
+
+
+/*
 .divTopLeft button{
   margin: 1px;
   width: 33%;

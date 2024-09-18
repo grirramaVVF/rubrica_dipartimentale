@@ -1,0 +1,15 @@
+<h1>Elenco contatti</h1>
+<div class="divPersonale">
+  <div *ngFor="let persona of ufficioSelezionato?.personale" class="divPersonaleChild" style="border-color: {{ufficioSelezionato?.coloreSfondo}};">
+    <div>
+      <span class="circle" style="background-color: {{ufficioSelezionato?.coloreSfondo}}">
+        <span>MG</span>
+      </span>
+    </div>
+    <div>
+      <p>{{persona.qualifica}}</p>
+      <p>{{persona.nominativo}}</p>
+      <p *ngFor="let contatto of persona.contatti"><strong>{{contatto.tipo}}:</strong> {{contatto.contatto}}</p>
+    </div>
+  </div>
+</div>

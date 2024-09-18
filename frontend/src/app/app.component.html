@@ -1,37 +1,60 @@
-<div fxLayout="row" fxLayoutWrap class="divGlobal">
-  <div fxFlex="5" fxLayout="column">
-    <app-side-bar></app-side-bar>
-  </div>
+<router-outlet>
+  <div fxLayout="row" fxLayoutWrap class="divGlobal">
+    <div fxFlex="5" fxLayout="column">
+      <vvfrubrica-side-bar></vvfrubrica-side-bar>
+    </div>
 
-  <div fxFlex="35" fxLayout="column" class="topBottomLeftBordefRadius">
-    <div class="container">
+    <div fxFlex="40" fxLayout="column" class="topBottomLeftBordefRadius">
+      <div class="container">
+        <div fxLayout="row" fxLayoutWrap>
+          <div fxFlex="100" fxLayout="column">
+            <app-cerca></app-cerca>
+          </div>
+        </div>
+
+        <div fxLayout="row" fxLayoutWrap class="divCenter">
+          <div fxFlex="100" fxLayout="column" class="divCenter">
+            <div class="divButtonNav">
+              <button (click)="onBackClick()" class="buttonNav">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5" />
+                </svg>
+                Back
+              </button>
+              <button (click)="onAzzeraClick()" class="buttonNav" style="float: right;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-x-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                  <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                </svg>
+                Azzera
+              </button>
+            </div>
+
+            <vvfrubrica-item-aoo *ngFor="let item of currentItems" [itemDst]="item"
+              (childSelected)="receiveChildren($event)"></vvfrubrica-item-aoo>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div fxFlex="60" fxLayout="column" class="divCenter">
       <div fxLayout="row" fxLayoutWrap>
         <div fxFlex="100" fxLayout="column">
-          <app-cerca></app-cerca>
+          <vvfrubrica-toprightbar (frameSelected)="receiveLeftFrameSelected($event)"></vvfrubrica-toprightbar>
         </div>
       </div>
-
-      <div fxLayout="row" fxLayoutWrap class="divCenter">
-        <div fxFlex="100" fxLayout="column" class="divCenter">
-          <app-item-aoo *ngFor="let item of homeItems" [itemDst]="item" (childSelected)="receiveChildren($event)"></app-item-aoo>
+      <div fxLayout="row" fxLayoutWrap>
+        <div fxFlex="100" fxLayout="column" fxLayoutAlign="center">
+          <fa-icon [icon]="faAddressBook" size="10x" [style.fill-opacity]=".2" style="text-align: center;"></fa-icon>
+          <vvfrubrica-sottouffici *ngIf="leftComponentSelected=='ufficiDipendenti'" [childrenItems]="childrenSelected"></vvfrubrica-sottouffici>
+          <vvfrubrica-personale *ngIf="leftComponentSelected=='componenti'"></vvfrubrica-personale>
         </div>
       </div>
     </div>
   </div>
 
-  <div fxFlex="60" fxLayout="column" class="divCenter" style="border: 1px solid black;">
-    <div fxLayout="row" fxLayoutWrap>
-      <div fxFlex="100" fxLayout="column">
-        <app-topleftbar></app-topleftbar>
-      </div>
-    </div>
-    <div fxLayout="row" fxLayoutWrap>
-      <div fxFlex="100" fxLayout="column" fxLayoutAlign="center center">
-        <fa-icon [icon]="faAddressBook" size="10x" [style.fill-opacity]=".2"></fa-icon>
-        <app-sottouffici [childrenItems]="childrenSelected"></app-sottouffici>
-      </div>
-    </div>
-  </div>
-</div>
-
-<router-outlet />
+</router-outlet>

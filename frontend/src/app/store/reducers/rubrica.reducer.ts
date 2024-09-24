@@ -1,7 +1,6 @@
-import { HttpClient } from "@angular/common/http";
-import { RubricaService } from "../../services/rubrica.service";
 import { RubricaActionType } from "../actions/rubrica.action";
 import { inizializeRubricaState, IRubricaState } from "../states/rubrica.state";
+import { IOffice } from "../../models/IOffice";
 
 
 export function rubricaReducer(
@@ -17,10 +16,13 @@ export function rubricaReducer(
       temp['ufficioSelezionato'] = action.rubrica[0]|| [];
       return temp;
     case RubricaActionType.SetUfficioSelezionato:
+      // temp['ufficioSelezionatoPrecedente'] = temp['ufficioSelezionato']; //action.ufficioSelezionatoPrecedente;
       temp['ufficioSelezionato'] = action.ufficioSelezionato;
-      return temp;
-    //case RubricaActionType.GetPersonale:
 
+      return temp;
+    case RubricaActionType.SetUfficioSelezionatoPrecedente:
+      temp['ufficioSelezionatoPrecedente'] = action.ufficioSelezionatoPrecedente;
+      return temp;
     default:
       return rubricaState
   }

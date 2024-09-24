@@ -2,3 +2,75 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+
+
+/************************************************/
+.accordion_container {
+  padding: 1px 1px 1px 0px;
+  background-color: red;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.accordion>input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.accordion .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.accordion>input[type="checkbox"]:checked~.content {
+  height: auto;
+  overflow: visible;
+}
+
+.accordion label {
+  display: block;
+}
+
+.accordion {
+  /* margin-bottom: 1em; */
+  /* border: 1px solid red; */
+  margin-left: 3rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.accordion>input[type="checkbox"]:checked~.content {
+  padding: 15px;
+  /* border: 1px solid #e8e8e8; */
+  border-top: 0;
+}
+
+.accordion .handle {
+  margin: 0;
+  /* font-size: 1.125em; */
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2em;
+}
+
+.accordion label {
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 15px;
+  /* background: #e8e8e8; */
+}
+
+.accordion label:hover,
+.accordion label:focus {
+  background: #d8d8d8;
+}
+
+.smallLabelFont {
+  font-size: 1.60rem;
+}

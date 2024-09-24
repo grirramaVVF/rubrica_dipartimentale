@@ -17,6 +17,13 @@ export enum RubricaActionType {
   SetUfficioSelezionatoSuccess = '[Set Ufficio Selezionato] Set Ufficio Selezionato Success',
   SetUfficioSelezionatoError = '[Set Ufficio Selezionato] Set Ufficio Selezionato Error',
 
+  GetUfficioSelezionatoPrecedente = '[Get Ufficio Selezionato Precednete] Get Ufficio Selezionato Precedente',
+  GetUfficioSelezionatoPrecedenteSuccess = '[Get Ufficio Selezionato Precednete] Get Ufficio Selezionato Precedente Success',
+  GetUfficioSelezionatoPrecedenteError = '[Get Ufficio Selezionato Precednete] Get Ufficio Selezionato Precedente Error',
+  SetUfficioSelezionatoPrecedente = '[Set Ufficio Selezionato Precednete] Set Ufficio Selezionato Precedente',
+  SetUfficioSelezionatoPrecedenteSuccess = '[Set Ufficio Selezionato Precednete] Set Ufficio Selezionato Precedente Success',
+  SetUfficioSelezionatoPrecedenteError = '[Set Ufficio Selezionato Precednete] Set Ufficio Selezionato Precedente Error',
+
 }
 
 export const GetHomeRubrica = createAction(
@@ -63,7 +70,7 @@ export const GetUfficioSelezionatoError = createAction(
 
 export const SetUfficioSelezionato = createAction(
   RubricaActionType.SetUfficioSelezionato,
-  props<{ufficioSelezionato: IOffice}>()
+  props<{ ufficioSelezionato: IOffice|null }>()
 );
 
 export const SetUfficioSelezionatoSuccess = createAction(
@@ -73,4 +80,32 @@ export const SetUfficioSelezionatoSuccess = createAction(
 
 export const SetUfficioSelezionatoError = createAction(
   RubricaActionType.SetUfficioSelezionatoError
+);
+
+export const GetUfficioSelezionatoPrecedente = createAction(
+  RubricaActionType.GetUfficioSelezionatoPrecedente,
+  //props<{rubrica: Array<IOffice>}>()
+);
+
+export const GetUfficioSelezionatoSuccessPrecedente = createAction(
+  RubricaActionType.GetUfficioSelezionatoPrecedenteSuccess,
+  //props<{rubrica: Array<IOffice>}>()
+);
+
+export const GetUfficioSelezionatoErrorPrecedente = createAction(
+  RubricaActionType.GetUfficioSelezionatoPrecedenteError
+);
+
+export const SetUfficioSelezionatoPrecedente = createAction(
+  RubricaActionType.SetUfficioSelezionatoPrecedente,
+  props<{ ufficioSelezionatoPrecedente: IOffice }>()
+);
+
+export const SetUfficioSelezionatoSuccessPrecedente = createAction(
+  RubricaActionType.GetUfficioSelezionatoPrecedenteSuccess,
+  //props<{rubrica: Array<IOffice>}>()
+);
+
+export const SetUfficioSelezionatoErrorPrecedente = createAction(
+  RubricaActionType.SetUfficioSelezionatoPrecedenteError
 );

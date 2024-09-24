@@ -7,9 +7,14 @@
         <span class="smallLabelFont">{{itemDst.nomeTitolare}}</span>
       </label>
     </h2>
-    <div class="content">
-      <p><strong>Descrizione:</strong>{{itemDst.descrizioneUfficio}}
-      </p>
+    <div *ngIf="ufficioSelezionato?.codiceUfficioSuperiore!=''">
+      <div *ngIf="codiceUfficioSelezionatoPadre==itemDst.codiceUfficio" class="">
+        <p  (click)="onClickUfficioSelezionatoPrecedente()">{{ufficioSelezionatoPrecedente.nomeUfficio}}</p>
+        <p  (click)="onClickUfficioSelezionato()">{{ufficioSelezionato.nomeUfficio}}</p>
+      </div>
     </div>
+    <!-- <div class="content">
+      <p><strong>Descrizione:</strong>{{itemDst.descrizioneUfficio}}</p>
+    </div> -->
   </section>
 </div>

@@ -3,10 +3,10 @@
   <input type="radio" name="checkTopLeft">Componenti
   <input type="radio" name="checkTopLeft">Descrizione
 </div> -->
-
 <mat-button-toggle-group [(ngModel)]="topLeftBar" name="topLeftBar" id="topLeftBar" aria-label="Font Style">
-  <mat-button-toggle checked="checked" value="ufficiDipendenti" (click)="onButtonClick()"
-    [className]="topLeftBar=='ufficiDipendenti'?'selectedButton':''">Uffici dipendenti</mat-button-toggle>
+  <mat-button-toggle checked="checked" value="ufficiDipendenti" (click)="onButtonClick()" id="pippo"
+    class="selectedButton" [className]="topLeftBar=='ufficiDipendenti'?'selectedButton':''">Uffici
+    dipendenti</mat-button-toggle>
   <mat-button-toggle value="componenti" (click)="onButtonClick()"
     [className]="topLeftBar=='componenti'?'selectedButton':''">Componenti</mat-button-toggle>
   <mat-button-toggle value="descrizione" (click)="onButtonClick()"

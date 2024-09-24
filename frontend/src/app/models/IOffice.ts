@@ -10,4 +10,7 @@ export interface IOffice{
   ordineVisualizzazione?: number;
   children:[];
   personale?: Array<IPersonale>;
+
+  //hasChildren():boolean;
+  //hasPersonale():boolean;
 }

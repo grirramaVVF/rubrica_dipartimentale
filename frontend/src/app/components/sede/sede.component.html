@@ -1,0 +1,18 @@
+<p>sede funziona solo con wuac accessibile!</p>
+
+<p style="text-align: center;font-weight: bold;">{{ufficio_padre_descr}}</p> 
+<br>
+<p *ngFor="let uff of listato" >
+<mat-card   (click)="doNavigate(uff.descrizione, uff.idSedePadre, uff.id)" style ="padding-top: 10px;padding-bottom: 10px;margin: 0 auto;border: 1px solid #000; max-width: 80%;text-align: center;"  role="button" appearance="outlined" class="is-focusable" >
+  <mat-card-title style="text-align: center;" >   
+    {{uff.descrizione}}
+  </mat-card-title>
+</mat-card> 
+</p>
+
+
+
+
+
+
+

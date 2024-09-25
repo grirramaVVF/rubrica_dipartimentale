@@ -17,6 +17,7 @@ import { selectHome } from './store/selectors/rubrica.selector';
 import { RubricaActionType } from './store/actions/rubrica.action';
 import { AsyncPipe, NgForOf } from '@angular/common';
 import { IOffice } from './models/IOffice';
+import { SedeComponent } from "./components/sede/sede.component";
 
 @Component({
   selector: 'app-root',
@@ -24,8 +25,7 @@ import { IOffice } from './models/IOffice';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   imports: [RouterOutlet, ItemAOOComponent, SideBarComponent, FontAwesomeModule, FlexLayoutModule, SottoufficiComponent, CercaComponent, ToplrftbarComponent,
-    AsyncPipe, NgForOf
-  ]
+    AsyncPipe, NgForOf, SedeComponent]
 })
 export class AppComponent {
   title = 'rubricadip';

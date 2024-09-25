@@ -26,6 +26,7 @@ $rubricaFE-theme: mat.define-theme((
 // that you are using.
 :root {
   @include mat.all-component-themes($rubricaFE-theme);
+  --primaryColorVVF: #ac1a17;
 }
 
 // Comment out the line below if you want to use the pre-defined typography utility classes.

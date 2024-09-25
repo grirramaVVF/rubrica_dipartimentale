@@ -1,0 +1,13 @@
+.topBottomLeftBordefRadius {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: var(--centerColor);
+  }
+  
+  .container {}
+  
+  .container app-item-aoo {
+    display: block;
+    margin-bottom: 10px;
+    /* Opzionale: aggiungi spaziatura tra i componenti */
+  }

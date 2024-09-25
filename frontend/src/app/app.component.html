@@ -1,38 +1,30 @@
-<div fxLayout="row" fxLayoutWrap class="divGlobal">
-  <div fxFlex="5" fxLayout="column">
-    <app-side-bar></app-side-bar>
-  </div>
 
-  <div fxFlex="35" fxLayout="column" class="topBottomLeftBordefRadius">
-    <div class="container">
-      <div fxLayout="row" fxLayoutWrap>
-        <div fxFlex="100" fxLayout="column">
-          <app-cerca></app-cerca>
-        </div>
-      </div>
 
-      <div fxLayout="row" fxLayoutWrap class="divCenter">
-        <div fxFlex="100" fxLayout="column" class="divCenter">
-          <app-item-aoo *ngFor="let item of homeItems" [itemDst]="item" (childSelected)="receiveChildren($event)"></app-item-aoo>
-          <!--  <app-sede></app-sede> -->
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div fxFlex="60" fxLayout="column" class="divCenter" style="border: 1px solid black;">
-    <div fxLayout="row" fxLayoutWrap>
-      <div fxFlex="100" fxLayout="column">
-        <app-topleftbar></app-topleftbar>
-      </div>
-    </div>
-    <div fxLayout="row" fxLayoutWrap>
-      <div fxFlex="100" fxLayout="column" fxLayoutAlign="center center">
-        <fa-icon [icon]="faAddressBook" size="10x" [style.fill-opacity]=".2"></fa-icon>
-        <app-sottouffici [childrenItems]="childrenSelected"></app-sottouffici>
-      </div>
-    </div>
-  </div>
+
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Rubrica Dipartimento</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu" aria-label="Example icon-button with menu icon">
+     <mat-icon>more_vert</mat-icon> 
+    <!--  menu -->
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item><a [routerLink]="['/home']">Home</a></button>
+      <button mat-menu-item><a [routerLink]="['/rubrica']">Rubrica</a></button>
+      <button mat-menu-item><a href="/login">Login</a></button>
+<!--      <button mat-menu-item><a href="/testbe">Test BE</a></button>  -->
+      <button mat-menu-item><a href="/sede">Sedi</a></button>
+    </mat-menu>
+  </mat-toolbar-row>
+  
+</mat-toolbar>
+
+
+
+
+<div>
+  <router-outlet style="width:90%"></router-outlet>
 </div>
-
-<router-outlet />

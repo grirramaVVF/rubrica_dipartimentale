@@ -5,7 +5,7 @@ import { Observable } from 'rxjs'  //oggetto che conterrà i dati asincroni rice
 import { HttpClient } from '@angular/common/http'  //oggetto che gestisce la chiamata
 
 
-import { ISede } from '../Interfacce/ISede';
+import { ISede } from '../models/ISede';
 
 @Injectable()
 export class SedeServizio {

@@ -45,11 +45,10 @@ export class Office { //extends IOffice {
       }
     }
 
-
     return temp;
   }
 
-  public findChild(office: IOffice, idOffice: string = ''): IOffice | null {
+  private findChild(office: IOffice, idOffice: string = ''): IOffice | null {
     let temp: IOffice | null = null;
 
     if (office.codiceUfficio == idOffice) {

@@ -5,7 +5,7 @@ import { IOffice } from '../../models/IOffice';
 import { AppState } from '../../store/states/app.state';
 import { Store } from '@ngrx/store';
 import { selectUfficioSelezionato } from '../../store/selectors/rubrica.selector';
-import { SetUfficioSelezionato } from '../../store/actions/rubrica.action';
+import { SetUfficioSelezionato, SetUfficioSelezionatoPrecedente } from '../../store/actions/rubrica.action';
 import { MatExpansionModule } from '@angular/material/expansion';
 
 @Component({
@@ -39,6 +39,7 @@ export class SottoufficiComponent {
     if (temp.length > 0) {
       if (temp[0].children.length > 0) {
         this.childSelected.emit(this.ufficioSelezionato);
+        this._storeApp$.dispatch(SetUfficioSelezionatoPrecedente({ ufficioSelezionatoPrecedente: this.ufficioSelezionato }));
         this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: temp[0] }));
       }
     }

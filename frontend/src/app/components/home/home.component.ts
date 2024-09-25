@@ -84,7 +84,7 @@ export class HomeComponent {
   }
 
   receiveChildren(children: IOffice) {
-    console.log("app: ", children);
+    //console.log("app: ", children);
     this.childrenSelected = []
     this.childrenSelected = children.children;
   }

@@ -1,5 +1,4 @@
 <div class="divSottuffici" *ngFor="let item of childrenItems">
-  <!-- <vvfrubrica-uffici [itemDst]="item"></vvfrubrica-uffici> -->
   <div class="accordion_container" style="background-color: {{item.coloreSfondo}};">
     <section class="accordion">
       <input type="checkbox" name="collapse" id="{{item.codiceUfficio}}" (click)="leggiSottoAlbero(item.codiceUfficio)">
@@ -8,22 +7,6 @@
           <span class="smallLabelFont">{{item.nomeTitolare}}</span>
         </label>
       </h2>
-
     </section>
   </div>
-
-  <!-- <div class="accordion_container" style="background-color: {{item.coloreSfondo}};">
-    <section class="accordion">
-      <input type="checkbox" name="collapse" id="{{item.codiceUfficio}}" (click)="leggiSottoAlbero(item.codiceUfficio)">
-      <h2 class="handle">
-        <label for="{{item.codiceUfficio}}">{{item.nomeUfficio}}<br>
-          <span class="smallLabelFont">{{item.nomeTitolare}}</span>
-        </label>
-      </h2>
-      <div class="content">
-        <p><strong>Descrizione:</strong>{{item.descrizioneUfficio}}
-        </p>
-      </div>
-    </section>
-  </div> -->
 </div>

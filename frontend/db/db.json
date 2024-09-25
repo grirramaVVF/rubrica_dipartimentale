@@ -45,6 +45,36 @@
               "contatto": "nome.cognome@vigilfuoco.it"
             }
           ]
+        },
+        {
+          "nominativo": "Cognome Nome",
+          "qualifica": "qualifica",
+          "codiceUfficio": "00.0",
+          "contatti": [
+            {
+              "tipo": "telefono",
+              "contatto": "1234567"
+            },
+            {
+              "tipo": "email",
+              "contatto": "nome.cognome@vigilfuoco.it"
+            }
+          ]
+        },
+        {
+          "nominativo": "Cognome Nome",
+          "qualifica": "qualifica",
+          "codiceUfficio": "00.0",
+          "contatti": [
+            {
+              "tipo": "telefono",
+              "contatto": "1234567"
+            },
+            {
+              "tipo": "email",
+              "contatto": "nome.cognome@vigilfuoco.it"
+            }
+          ]
         }
       ],
       "children": [

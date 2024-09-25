@@ -29,20 +29,18 @@ export class SottoufficiComponent {
       items => {
         this.ufficioSelezionato = { ...items };
         this.childrenItems = this.ufficioSelezionato?.children || [];
-        console.log('onInit sottoUfficio component: ',this.ufficioSelezionato?.nomeUfficio);
-
       }
     );
   }
 
   leggiSottoAlbero(codiceUO: string) {
-    console.log("sottoUffici: ", this.ufficioSelezionato, 'codice: ', codiceUO);
-    let temp = this.ufficioSelezionato.children.filter(element => element['codiceUfficio'] == codiceUO);
-    console.log("tempZZZ: ", temp);
+    let temp: Array<IOffice> = this.ufficioSelezionato.children.filter(element => element['codiceUfficio'] == codiceUO);
 
     if (temp.length > 0) {
-      this.childSelected.emit(this.ufficioSelezionato);
-      this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: temp[0] }));
+      if (temp[0].children.length > 0) {
+        this.childSelected.emit(this.ufficioSelezionato);
+        this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: temp[0] }));
+      }
     }
   }
 }

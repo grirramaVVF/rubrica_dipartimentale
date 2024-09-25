@@ -16,7 +16,7 @@ import { selectUfficioSelezionato, selectUfficioSelezionatoPrecedente } from '..
 })
 export class UfficiComponent {  // ItemAOOComponent {
 
-  @Input() codiceUfficioSelezionatoPadre: string = '';
+  //@Input() codiceUfficioSelezionatoPadre: string = '';
   @Input() itemDst: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
   @Output() childSelected = new EventEmitter<IOffice>();
   @Output() back = new EventEmitter<string>();
@@ -27,14 +27,13 @@ export class UfficiComponent {  // ItemAOOComponent {
   ufficioSelezionatoPrecedente$ = this._storeApp$.select(selectUfficioSelezionatoPrecedente);
   ufficioSelezionatoPrecedente: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
 
-
   constructor(private _storeApp$: Store<AppState>) { }
 
   ngOnInit(): void {
     this.ufficioSelezionato$.subscribe(
       items => {
         this.ufficioSelezionato = { ...items };
-        console.log('onInit ufficio component: ',this.ufficioSelezionato?.nomeUfficio);
+        //console.log('onInit ufficio component: ',this.ufficioSelezionato?.nomeUfficio);
       }
     );
 

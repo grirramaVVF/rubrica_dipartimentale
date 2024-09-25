@@ -8,13 +8,25 @@
       </label>
     </h2>
     <div *ngIf="ufficioSelezionato?.codiceUfficioSuperiore!=''">
-      <div *ngIf="codiceUfficioSelezionatoPadre==itemDst.codiceUfficio" class="">
-        <p  (click)="onClickUfficioSelezionatoPrecedente()">{{ufficioSelezionatoPrecedente.nomeUfficio}}</p>
-        <p  (click)="onClickUfficioSelezionato()">{{ufficioSelezionato.nomeUfficio}}</p>
+      {{itemDst.codiceUfficio+ ' - ' + ufficioSelezionato.codiceUfficioSuperiore}}
+      <!-- <div *ngIf="itemDst.codiceUfficio==ufficioSelezionato.codiceUfficioSuperiore" class=""> -->
+      <div class="">
+        <!--
+        <p *ngIf="ufficioSelezionatoPrecedente?.codiceUfficioSuperiore!=''"
+          (click)="onClickUfficioSelezionatoPrecedente()">
+          {{ufficioSelezionatoPrecedente.nomeUfficio}}
+        </p>
+        -->
+        <p *ngIf="ufficioSelezionato?.codiceUfficioSuperiore!=''" (click)="onClickUfficioSelezionato()"
+          style="border-color: {{ufficioSelezionato.coloreSfondo}};">
+          {{ufficioSelezionato.nomeUfficio}}
+        </p>
       </div>
     </div>
-    <!-- <div class="content">
+    <!--
+    <div class="content">
       <p><strong>Descrizione:</strong>{{itemDst.descrizioneUfficio}}</p>
-    </div> -->
+    </div>
+    -->
   </section>
 </div>

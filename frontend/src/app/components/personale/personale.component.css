@@ -5,6 +5,7 @@ h1{
 .divPersonale {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   /* width: 100%; */
   /* padding: 1rem; */
 }

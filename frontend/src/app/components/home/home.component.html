@@ -10,7 +10,7 @@
 
     <div fxLayout="row" fxLayoutWrap class="divCenter">
       <div fxFlex="100" fxLayout="column" class="divCenter">
-        <div class="divButtonNav">
+        <!-- <div class="divButtonNav">
           <button (click)="onBackClick()" class="buttonNav">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
               class="bi bi-arrow-return-left" viewBox="0 0 16 16">
@@ -28,10 +28,10 @@
             </svg>
             Azzera
           </button>
-        </div>
+        </div> -->
         <!--  currentItems -->
         <vvfrubrica-uffici *ngFor="let item of homeItems" [itemDst]="item"
-          [codiceUfficioSelezionatoPadre]="item.codiceUfficio" (childSelected)="receiveChildren($event)"
+          (childSelected)="receiveChildren($event)"
           (back)="receiveBack($event)"></vvfrubrica-uffici>
       </div>
     </div>

@@ -30,7 +30,7 @@ public class Startup
         }
         else
         {
-            var connectionString = "Server=localhost;Database=app_rub_dip;User=root;Password=;";
+            var connectionString = "Server=localhost;Database=app_rub_dip;User=root;Password=RubDip.r00t.24;";
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
         }

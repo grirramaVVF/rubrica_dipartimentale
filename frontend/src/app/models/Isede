@@ -2,5 +2,5 @@ export interface ISede {
     descrizione: string,
     tipo : string,
     idSedePadre : string,
-    idSede:string,
+    id:string,
 }

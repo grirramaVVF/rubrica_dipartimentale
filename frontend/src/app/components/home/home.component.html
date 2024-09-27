@@ -1,17 +1,17 @@
 <div class="row">
-    <div class="col">
+    <div class="col-sm-12 col-md-5">
         <app-cerca></app-cerca>
     </div>
-    <div class="col  border">
+    <div class="col-sm-12 col-md-7">
         <vvfrubrica-toprightbar (frameSelected)="receiveLeftFrameSelected($event)"></vvfrubrica-toprightbar>
     </div>
 </div>
 <div class="row">
-    <div class="col">
+    <div class="col-sm-12 col-md-5">
         <vvfrubrica-uffici *ngFor="let item of homeItems" [itemDst]="item" [idRootOfficeClick]="idComponentFather"
             (back)="receiveBack($event)" (idComponentFather)="receiveIdComponentFather($event)"></vvfrubrica-uffici>
     </div>
-    <div class="col">
+    <div class="col-sm-12 col-md-7">
         <div class="row ">
             <div class="col mx-auto" style="text-align: center;">
                 <fa-icon [icon]="faAddressBook" size="10x" [style.fill-opacity]=".2" class="mx-auto"></fa-icon>

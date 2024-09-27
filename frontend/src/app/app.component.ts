@@ -27,16 +27,17 @@ export class AppComponent {
         //this._storeApp$.dispatch({ type: AuthUserActionType.GetAuthToken });
         this._storeApp$.dispatch({ type: RubricaActionType.GetHomeRubrica });
 
+        /*
         let homeItems: Array<IOffice> = [];
         let sub: Subscription = this._storeApp$.select(selectHome)
             .subscribe(office => {
-                console.log("eeeeee: ", office);
+                console.log("office: ", office);
                 homeItems = [...office?.rubrica];
 
             });
         console.log("eeeeee: ", homeItems);
         this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: homeItems[0] }));
-
         sub.unsubscribe();
+        */
     }
 }

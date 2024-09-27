@@ -1,67 +1,27 @@
-<div class="row topBottomLeftBordefRadius">
-    <div class="col  border">
+<div class="row">
+    <div class="col">
         <app-cerca></app-cerca>
     </div>
     <div class="col  border">
         <vvfrubrica-toprightbar (frameSelected)="receiveLeftFrameSelected($event)"></vvfrubrica-toprightbar>
     </div>
-
 </div>
-
-
-
-<br><br><br><br>
-
-
 <div class="row">
     <div class="col">
+        <vvfrubrica-uffici *ngFor="let item of homeItems" [itemDst]="item" [idRootOfficeClick]="idComponentFather"
+            (back)="receiveBack($event)" (idComponentFather)="receiveIdComponentFather($event)"></vvfrubrica-uffici>
+    </div>
+    <div class="col">
+        <fa-icon [icon]="faAddressBook" size="10x" [style.fill-opacity]=".2" style="text-align: center;"></fa-icon>
+        <vvfrubrica-sottouffici *ngIf="leftComponentSelected=='ufficiDipendenti'"
+            [idComponentFather]="idComponentFather">
+        </vvfrubrica-sottouffici>
 
-        <div fxFlex="50" fxLayout="column" class="topBottomLeftBordefRadius">
-
-            <div class="container">
-                <div fxLayout="row" fxLayoutWrap>
-                    <div fxFlex="100" fxLayout="column">
-                        <app-cerca></app-cerca>
-                    </div>
-                </div>
-
-                <div fxLayout="row" fxLayoutWrap class="divCenter">
-                    <div fxFlex="100" fxLayout="column" class="divCenter">
-                        <!--  currentItems -->
-                        <!-- <vvfrubrica-uffici *ngFor="let item of homeItems" [itemDst]="item" (childSelected)="receiveChildren($event)"
-          (back)="receiveBack($event)"></vvfrubrica-uffici> -->
-                        <vvfrubrica-uffici *ngFor="let item of homeItems" [itemDst]="item"
-                            [idRootOfficeClick]="idComponentFather" (back)="receiveBack($event)"
-                            (idComponentFather)="receiveIdComponentFather($event)"></vvfrubrica-uffici>
-                    </div>
-                </div>
-            </div>
+        <div *ngIf="leftComponentSelected=='componenti'" class="divPersonaleContainer">
+            <vvfrubrica-personale></vvfrubrica-personale>
         </div>
-
-        <div fxFlex="50" fxLayout="column" class="divCenter">
-            <div fxLayout="row" fxLayoutWrap>
-                <div fxFlex="100" fxLayout="column">
-                    <vvfrubrica-toprightbar (frameSelected)="receiveLeftFrameSelected($event)"></vvfrubrica-toprightbar>
-                </div>
-            </div>
-            <div fxLayout="row" fxLayoutWrap>
-                <div fxFlex="100" fxLayout="column" fxLayoutAlign="center">
-                    <fa-icon [icon]="faAddressBook" size="10x" [style.fill-opacity]=".2"
-                        style="text-align: center;"></fa-icon>
-                    <vvfrubrica-sottouffici *ngIf="leftComponentSelected=='ufficiDipendenti'"
-                        [idComponentFather]="idComponentFather">
-                    </vvfrubrica-sottouffici>
-
-                    <div *ngIf="leftComponentSelected=='componenti'" class="divPersonaleContainer">
-                        <vvfrubrica-personale></vvfrubrica-personale>
-                    </div>
-                    <div class="divBorder" *ngIf="leftComponentSelected=='descrizione'"
-                        style="border-color: {{ufficioSelezionato?.coloreSfondo}};">
-                        {{ufficioSelezionato?.descrizioneUfficio}}</div>
-                </div>
-            </div>
-        </div>
-
-
+        <div class="divBorder" *ngIf="leftComponentSelected=='descrizione'"
+            style="border-color: {{ufficioSelezionato?.coloreSfondo}};">
+            {{ufficioSelezionato?.descrizioneUfficio}}</div>
     </div>
 </div>

@@ -2,40 +2,53 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 :root {
-  --centerColor: #f4f4ed;
-  --sideBarColor: #ac1a17;
-  --topLeftBarSelectedButton: #ab201d;
+    --centerColor: #f4f4ed;
+    --sideBarColor: #ac1a17;
+    --topLeftBarSelectedButton: #ab201d;
 
-  font-family: Titillium-Web, sans-serif;
-  /* font-family: "Noto Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    font-family: Titillium-Web, sans-serif;
+    /* font-family: "Noto Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol"; */
-  /* -webkit-font-smoothing: antialiased; */
-  /* -moz-osx-font-smoothing: grayscale; */
+    /* -webkit-font-smoothing: antialiased; */
+    /* -moz-osx-font-smoothing: grayscale; */
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  width: 99.9%;
-  ;
-  /* background-color: var(--sideBarColor); */
+    margin: 0;
+    padding: 0;
+    width: 99.9%;
+    ;
+    /* background-color: var(--sideBarColor); */
 }
 
 .divCenter {
-  background-color: var(--centerColor);
+    background-color: var(--centerColor);
 }
 
 .divGlobal {
-  background-color: var(--sideBarColor);
+    background-color: var(--sideBarColor);
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.topBottomLeftBordefRadius {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: var(--centerColor);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

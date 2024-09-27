@@ -25,7 +25,6 @@ import { SetUfficioSelezionato, SetUfficioSelezionatoPrecedente } from '../../st
     UfficiComponent,
     SideBarComponent,
     FontAwesomeModule,
-    FlexLayoutModule,
     SottoufficiComponent,
     CercaComponent,
     ToprightbarComponent,

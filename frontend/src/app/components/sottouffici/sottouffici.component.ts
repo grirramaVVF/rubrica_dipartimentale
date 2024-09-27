@@ -19,8 +19,8 @@ export class SottoufficiComponent {
   ufficioSelezionato$ = this._storeApp$.select(selectUfficioSelezionato);
   ufficioSelezionato: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
 
-  @Input() childrenItems: Array<IOffice> = [];
-  @Output() childSelected = new EventEmitter<IOffice>();
+  //@Input()   childrenItems: Array<IOffice> = [];
+  //@Output() childSelected = new EventEmitter<IOffice>();
 
   constructor(private _storeApp$: Store<AppState>) { }
 
@@ -28,7 +28,6 @@ export class SottoufficiComponent {
     this.ufficioSelezionato$.subscribe(
       items => {
         this.ufficioSelezionato = { ...items };
-        this.childrenItems = this.ufficioSelezionato?.children || [];
       }
     );
   }
@@ -37,11 +36,11 @@ export class SottoufficiComponent {
     let temp: Array<IOffice> = this.ufficioSelezionato.children.filter(element => element['codiceUfficio'] == codiceUO);
 
     if (temp.length > 0) {
-      if (temp[0].children.length > 0) {
-        this.childSelected.emit(this.ufficioSelezionato);
+      //if (temp[0].children.length > 0) {
+        //this.childSelected.emit(this.ufficioSelezionato);
         this._storeApp$.dispatch(SetUfficioSelezionatoPrecedente({ ufficioSelezionatoPrecedente: this.ufficioSelezionato }));
         this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: temp[0] }));
-      }
+      //}
     }
   }
 }

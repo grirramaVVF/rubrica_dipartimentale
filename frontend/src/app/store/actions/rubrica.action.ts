@@ -98,7 +98,7 @@ export const GetUfficioSelezionatoErrorPrecedente = createAction(
 
 export const SetUfficioSelezionatoPrecedente = createAction(
   RubricaActionType.SetUfficioSelezionatoPrecedente,
-  props<{ ufficioSelezionatoPrecedente: IOffice }>()
+  props<{ ufficioSelezionatoPrecedente: IOffice|null }>()
 );
 
 export const SetUfficioSelezionatoSuccessPrecedente = createAction(

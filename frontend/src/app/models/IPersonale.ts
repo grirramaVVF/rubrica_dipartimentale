@@ -1,7 +1,8 @@
 import { IContatto } from "./IContatto";
 
 export interface IPersonale{
-  nominativo: string;
+  cognome: string;
+  nome: string;
   qualifica: string;
   codiceUfficio: string;
   contatti: Array<IContatto>;

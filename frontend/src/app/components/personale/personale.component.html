@@ -3,14 +3,13 @@
 <div class="divPersonale">
   <div *ngFor="let persona of ufficioSelezionato?.personale" class="divPersonaleChild"
     style="border-color: {{ufficioSelezionato?.coloreSfondo}};">
-    <div>
+    <div class="divCerchio">
       <span class="circle" style="background-color: {{ufficioSelezionato?.coloreSfondo}}">
-        <span>MG</span>
+        <span>{{persona.cognome.charAt(0).toUpperCase()+persona.nome.charAt(0).toUpperCase()}}</span>
       </span>
     </div>
-    <div>
-      <p><strong>{{persona.qualifica}}</strong></p>
-      <p><strong>{{persona.nominativo}}</strong></p>
+    <div  class="divDatiPersona">
+      <p><strong>{{persona.qualifica}} {{persona.cognome}} {{persona.nome}}</strong></p>
       <p *ngFor="let contatto of persona.contatti">{{contatto.tipo}}: <strong>{{contatto.contatto}}</strong></p>
     </div>
   </div>

@@ -12,7 +12,7 @@
       <!-- <div *ngIf="itemDst.codiceUfficio==ufficioSelezionato.codiceUfficioSuperiore" class=""> -->
       <div class="">
         <p *ngIf="ufficioSelezionatoPrecedente?.codiceUfficioSuperiore!=''"
-          (click)="onClickUfficioSelezionatoPrecedente()">
+          (click)="onClickUfficioSelezionatoPrecedente()" style="border-color: {{ufficioSelezionato.coloreSfondo}};">
           {{ufficioSelezionatoPrecedente.nomeUfficio}}
         </p>
 
@@ -22,10 +22,5 @@
         </p>
       </div>
     </div>
-    <!--
-    <div class="content">
-      <p><strong>Descrizione:</strong>{{itemDst.descrizioneUfficio}}</p>
-    </div>
-    -->
   </section>
 </div>

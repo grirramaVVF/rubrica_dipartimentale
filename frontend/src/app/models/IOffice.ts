@@ -8,9 +8,6 @@ export interface IOffice{
   coloreSfondo?:string;
   descrizioneUfficio?: string;
   ordineVisualizzazione?: number;
-  children:[];
+  children:Array<IOffice>;
   personale?: Array<IPersonale>;
-
-  //hasChildren():boolean;
-  //hasPersonale():boolean;
 }

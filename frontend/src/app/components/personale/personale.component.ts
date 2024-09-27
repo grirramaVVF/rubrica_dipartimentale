@@ -22,7 +22,6 @@ export class PersonaleComponent {
     this.ufficioSelezionato$.subscribe(
       items => {
         this.ufficioSelezionato = { ...items };
-        console.log("personale: ", this.ufficioSelezionato?.personale);
       }
     );
   }

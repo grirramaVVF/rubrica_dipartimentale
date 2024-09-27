@@ -14,11 +14,8 @@ import { selectUfficioSelezionato, selectUfficioSelezionatoPrecedente } from '..
   templateUrl: './uffici.component.html',
   styleUrl: './uffici.component.css'
 })
-export class UfficiComponent {  // ItemAOOComponent {
-
-  //@Input() codiceUfficioSelezionatoPadre: string = '';
+export class UfficiComponent {
   @Input() itemDst: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
-  @Output() childSelected = new EventEmitter<IOffice>();
   @Output() back = new EventEmitter<string>();
 
   ufficioSelezionato$ = this._storeApp$.select(selectUfficioSelezionato);
@@ -33,7 +30,6 @@ export class UfficiComponent {  // ItemAOOComponent {
     this.ufficioSelezionato$.subscribe(
       items => {
         this.ufficioSelezionato = { ...items };
-        //console.log('onInit ufficio component: ',this.ufficioSelezionato?.nomeUfficio);
       }
     );
 
@@ -45,8 +41,6 @@ export class UfficiComponent {  // ItemAOOComponent {
   }
 
   leggiSottoAlbero(codiceUO: string) {
-    this.childSelected.emit(this.itemDst);
-    //console.log("ufficiCompnent: ", this.itemDst, 'codice: ', this.codiceUfficioSelezionatoPadre);
     this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: this.itemDst }));
   }
 
@@ -58,7 +52,6 @@ export class UfficiComponent {  // ItemAOOComponent {
 
   onClickUfficioSelezionato() {
     this.back.emit('back');
-
     //console.log('ufficio selezionato: ', this.ufficioSelezionato);
     //console.log('ufficio selezionato: ', this.ufficioSelezionatoPrecedente);
     //if (this.ufficioSelezionato.codiceUfficio != this.ufficioSelezionatoPrecedente.codiceUfficio) {

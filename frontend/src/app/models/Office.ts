@@ -57,9 +57,13 @@ export class Office { //extends IOffice {
     }
 
     if (this.hasChildren(office)) {
-      office.children.forEach(ele => {
+      for (let ele of office.children) {
         temp = this.findChild(ele, idOffice);
-      })
+
+        if (temp != null) {
+          break;
+        }
+      }
     }
 
     return temp;

@@ -12,16 +12,25 @@
             (back)="receiveBack($event)" (idComponentFather)="receiveIdComponentFather($event)"></vvfrubrica-uffici>
     </div>
     <div class="col">
-        <fa-icon [icon]="faAddressBook" size="10x" [style.fill-opacity]=".2" style="text-align: center;"></fa-icon>
-        <vvfrubrica-sottouffici *ngIf="leftComponentSelected=='ufficiDipendenti'"
-            [idComponentFather]="idComponentFather">
-        </vvfrubrica-sottouffici>
-
-        <div *ngIf="leftComponentSelected=='componenti'" class="divPersonaleContainer">
-            <vvfrubrica-personale></vvfrubrica-personale>
+        <div class="row ">
+            <div class="col mx-auto" style="text-align: center;">
+                <fa-icon [icon]="faAddressBook" size="10x" [style.fill-opacity]=".2" class="mx-auto"></fa-icon>
+            </div>
         </div>
-        <div class="divBorder" *ngIf="leftComponentSelected=='descrizione'"
-            style="border-color: {{ufficioSelezionato?.coloreSfondo}};">
-            {{ufficioSelezionato?.descrizioneUfficio}}</div>
+        <div class="row">
+            <div class="col">
+                <vvfrubrica-sottouffici *ngIf="leftComponentSelected=='ufficiDipendenti'"
+                    [idComponentFather]="idComponentFather">
+                </vvfrubrica-sottouffici>
+
+                <div *ngIf="leftComponentSelected=='componenti'" class="divPersonaleContainer">
+                    <vvfrubrica-personale></vvfrubrica-personale>
+                </div>
+                <div class="divBorder" *ngIf="leftComponentSelected=='descrizione'"
+                    style="border-color: {{ufficioSelezionato?.coloreSfondo}};">
+                    {{ufficioSelezionato?.descrizioneUfficio}}
+                </div>
+            </div>
+        </div>
     </div>
 </div>

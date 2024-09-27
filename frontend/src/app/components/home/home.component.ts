@@ -8,7 +8,6 @@ import { AppState } from '../../store/states/app.state';
 import { UfficiComponent } from '../uffici/uffici.component';
 import { SideBarComponent } from '../side-bar/side-bar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { SottoufficiComponent } from '../sottouffici/sottouffici.component';
 import { ToprightbarComponent } from '../toprightbar/toprightbar.component';
 import { AsyncPipe, NgForOf, NgIf } from '@angular/common';

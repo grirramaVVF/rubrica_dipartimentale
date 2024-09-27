@@ -7,36 +7,37 @@ import { selectUfficioSelezionato } from '../../store/selectors/rubrica.selector
 import { IOffice } from '../../models/IOffice';
 
 @Component({
-  selector: 'vvfrubrica-toprightbar',
-  standalone: true,
-  imports: [MatButtonToggleModule, FormsModule],
-  templateUrl: './toprightbar.component.html',
-  styleUrl: './toprightbar.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'vvfrubrica-toprightbar',
+    standalone: true,
+    imports: [MatButtonToggleModule, FormsModule],
+    templateUrl: './toprightbar.component.html',
+    styleUrl: './toprightbar.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToprightbarComponent {
-  topLeftBar: string = 'ufficiDipendenti';
+    checkTopRight: string = 'ufficiDipendenti';
 
-  ufficioSelezionato$ = this._storeApp$.select(selectUfficioSelezionato);
-  ufficioSelezionato?: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
+    ufficioSelezionato$ = this._storeApp$.select(selectUfficioSelezionato);
+    ufficioSelezionato?: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
 
-  @Output() frameSelected = new EventEmitter<string>();
+    @Output() frameSelected = new EventEmitter<string>();
 
-  constructor(private _storeApp$: Store<AppState>) { }
+    constructor(private _storeApp$: Store<AppState>) { }
 
-  ngOnInit() {
-    this.ufficioSelezionato$.subscribe(
-      items => {
-        this.ufficioSelezionato = { ...items };
+    ngOnInit() {
+        this.ufficioSelezionato$.subscribe(
+            items => {
+                this.ufficioSelezionato = { ...items };
 
-        if (this.ufficioSelezionato?.codiceUfficio) {
-          this.topLeftBar = 'ufficiDipendenti';
-        }
-      }
-    );
-  }
+                if (this.ufficioSelezionato?.codiceUfficio) {
+                    this.checkTopRight = 'ufficiDipendenti';
+                }
+            }
+        );
+    }
 
-  onButtonClick() {
-    this.frameSelected.emit(this.topLeftBar);
-  }
+    onButtonClick() {
+        console.log("dddddddddddddd: ", this.checkTopRight);
+        this.frameSelected.emit(this.checkTopRight);
+    }
 }

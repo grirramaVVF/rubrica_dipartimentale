@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { CercaComponent } from '../cerca/cerca.component';
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
-import { IAuthUserState, initialAuthState } from '../../store/states/authuser.state';
 import { selectHome, selectUfficioSelezionato } from '../../store/selectors/rubrica.selector';
 import { IOffice } from '../../models/IOffice';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../store/states/app.state';
-import { RubricaActionType, SetUfficioSelezionato, SetUfficioSelezionatoPrecedente } from '../../store/actions/rubrica.action';
 import { UfficiComponent } from '../uffici/uffici.component';
 import { SideBarComponent } from '../side-bar/side-bar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -18,7 +16,7 @@ import { PersonaleComponent } from '../personale/personale.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { Office } from '../../models/Office';
-
+import { SetUfficioSelezionato, SetUfficioSelezionatoPrecedente } from '../../store/actions/rubrica.action';
 
 @Component({
   selector: 'vvfrubrica-home',
@@ -45,7 +43,6 @@ export class HomeComponent {
   title = 'rubricadip';
   faAddressBook = faAddressBook;
 
-  //authUser: IAuthUserState = initialAuthState;
   homeItems$ = this._storeApp$.select(selectHome);
   homeItems: Array<IOffice> = [];
 
@@ -53,13 +50,11 @@ export class HomeComponent {
   ufficioSelezionato: IOffice | null = null; //{ codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
 
   leftComponentSelected: string = 'ufficiDipendenti';
+  idComponentFather: string = '';
 
   constructor(private _storeApp$: Store<AppState>) { }
 
   ngOnInit() {
-    //this._storeApp$.dispatch({ type: AuthUserActionType.GetAuthToken });
-    this._storeApp$.dispatch({ type: RubricaActionType.GetHomeRubrica });
-
     this.homeItems$.subscribe(
       items => {
         this.homeItems = [...items?.rubrica];
@@ -92,5 +87,9 @@ export class HomeComponent {
 
   receiveLeftFrameSelected(frame: string) {
     this.leftComponentSelected = frame;
+  }
+
+  receiveIdComponentFather(father: string) {
+    this.idComponentFather = father;
   }
 }

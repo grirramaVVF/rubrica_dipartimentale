@@ -1,7 +1,5 @@
 import { RubricaActionType } from "../actions/rubrica.action";
 import { inizializeRubricaState, IRubricaState } from "../states/rubrica.state";
-import { IOffice } from "../../models/IOffice";
-
 
 export function rubricaReducer(
   rubricaState: IRubricaState = inizializeRubricaState,
@@ -13,12 +11,11 @@ export function rubricaReducer(
   switch (action.type) {
     case RubricaActionType.GetHomeRubricaSuccess:
       temp['rubrica'] = action.rubrica;
-      temp['ufficioSelezionato'] = action.rubrica[0]|| [];
+      temp['ufficioSelezionato'] = null; //action.rubrica[0]|| [];
       return temp;
     case RubricaActionType.SetUfficioSelezionato:
       // temp['ufficioSelezionatoPrecedente'] = temp['ufficioSelezionato']; //action.ufficioSelezionatoPrecedente;
       temp['ufficioSelezionato'] = action.ufficioSelezionato;
-
       return temp;
     case RubricaActionType.SetUfficioSelezionatoPrecedente:
       temp['ufficioSelezionatoPrecedente'] = action.ufficioSelezionatoPrecedente;
@@ -27,4 +24,3 @@ export function rubricaReducer(
       return rubricaState
   }
 }
-

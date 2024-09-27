@@ -2,22 +2,12 @@ import { IOffice } from "../../models/IOffice";
 
 export interface IRubricaState {
   rubrica: Array<IOffice>;
-  ufficioSelezionato: IOffice;
-  ufficioSelezionatoPrecedente: IOffice;
+  ufficioSelezionato: IOffice | null;
+  ufficioSelezionatoPrecedente: IOffice | null;
 }
 
 export const inizializeRubricaState: IRubricaState = {
   rubrica: [],
-  ufficioSelezionato: {
-    codiceUfficio: "",
-    nomeUfficio: "",
-    nomeTitolare: "",
-    children: []
-  },
-  ufficioSelezionatoPrecedente: {
-    codiceUfficio: "",
-    nomeUfficio: "",
-    nomeTitolare: "",
-    children: []
-  }
+  ufficioSelezionato: null,
+  ufficioSelezionatoPrecedente: null
 }

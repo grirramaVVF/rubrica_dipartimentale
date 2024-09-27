@@ -17,6 +17,8 @@ import { selectUfficioSelezionato, selectUfficioSelezionatoPrecedente } from '..
 export class UfficiComponent {
   @Input() itemDst: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
   @Output() back = new EventEmitter<string>();
+  @Output() idComponentFather = new EventEmitter<string>();
+  @Input() idRootOfficeClick: string = '';
 
   ufficioSelezionato$ = this._storeApp$.select(selectUfficioSelezionato);
   ufficioSelezionato: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
@@ -38,20 +40,26 @@ export class UfficiComponent {
         this.ufficioSelezionatoPrecedente = { ...items };
       }
     );
+
+    this.idComponentFather.emit(this.itemDst.codiceUfficio);
   }
 
-  leggiSottoAlbero(codiceUO: string) {
+  leggiSottoAlbero() {
+    this.idComponentFather.emit(this.itemDst.codiceUfficio);
+    console.log('wwwwww: ', this.itemDst.codiceUfficio);
     this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: this.itemDst }));
   }
 
-  onClickUfficioSelezionatoPrecedente() {
-    this.back.emit('back');
-    //console.log('ufficio selezionato precedente: ', this.ufficioSelezionatoPrecedente);
-    //this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: this.ufficioSelezionatoPrecedente }));
-  }
+  // onClickUfficioSelezionatoPrecedente() {
+  //   this.back.emit('back');
+  //   this.idComponentFather.emit(this.itemDst.codiceUfficio);
+  //   //console.log('ufficio selezionato precedente: ', this.ufficioSelezionatoPrecedente);
+  //   //this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: this.ufficioSelezionatoPrecedente }));
+  // }
 
   onClickUfficioSelezionato() {
     this.back.emit('back');
+    this.idComponentFather.emit(this.itemDst.codiceUfficio);
     //console.log('ufficio selezionato: ', this.ufficioSelezionato);
     //console.log('ufficio selezionato: ', this.ufficioSelezionatoPrecedente);
     //if (this.ufficioSelezionato.codiceUfficio != this.ufficioSelezionatoPrecedente.codiceUfficio) {

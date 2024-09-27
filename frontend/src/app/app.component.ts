@@ -6,7 +6,10 @@ import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { Store } from '@ngrx/store';
 import { AppState } from './store/states/app.state';
-import { RubricaActionType } from './store/actions/rubrica.action';
+import { RubricaActionType, SetUfficioSelezionato } from './store/actions/rubrica.action';
+import { selectHome } from './store/selectors/rubrica.selector';
+import { Subscription } from 'rxjs';
+import { IOffice } from './models/IOffice';
 
 @Component({
   selector: 'vvfrubrica-root',
@@ -24,5 +27,17 @@ export class AppComponent {
   ngOnInit() {
     //this._storeApp$.dispatch({ type: AuthUserActionType.GetAuthToken });
     this._storeApp$.dispatch({ type: RubricaActionType.GetHomeRubrica });
+
+    let homeItems: Array<IOffice> = [];
+    let sub: Subscription = this._storeApp$.select(selectHome)
+      .subscribe(office => {
+        console.log("eeeeee: ",office);
+        homeItems=[...office?.rubrica];
+
+      });
+      console.log("eeeeee: ",homeItems);
+    this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: homeItems[0] }));
+
+    sub.unsubscribe();
   }
 }

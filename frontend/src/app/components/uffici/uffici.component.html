@@ -1,18 +1,16 @@
 <div class="accordion_container" style="background-color: {{itemDst.coloreSfondo}};">
   <section class="accordion">
     <input type="checkbox" name="collapse" id="{{itemDst.codiceUfficio}}"
-      (click)="leggiSottoAlbero(itemDst.codiceUfficio)">
+      (click)="leggiSottoAlbero()">
     <h2 class="handle">
       <label for="{{itemDst.codiceUfficio}}">{{itemDst.nomeUfficio}}<br>
         <span class="smallLabelFont">{{itemDst.nomeTitolare}}</span>
       </label>
     </h2>
-    <div *ngIf="ufficioSelezionato?.codiceUfficioSuperiore!=''">
-      {{itemDst.codiceUfficio+ ' - ' + ufficioSelezionato.codiceUfficioSuperiore}}
-      <!-- <div *ngIf="itemDst.codiceUfficio==ufficioSelezionato.codiceUfficioSuperiore" class=""> -->
-      <div class="">
+    <div *ngIf="idRootOfficeClick==itemDst.codiceUfficio">
+      <div *ngIf="ufficioSelezionato?.codiceUfficioSuperiore!=''">
         <p *ngIf="ufficioSelezionatoPrecedente?.codiceUfficioSuperiore!=''"
-          (click)="onClickUfficioSelezionatoPrecedente()" style="border-color: {{ufficioSelezionato.coloreSfondo}};">
+          (click)="onClickUfficioSelezionato()" style="border-color: {{ufficioSelezionato.coloreSfondo}};">
           {{ufficioSelezionatoPrecedente.nomeUfficio}}
         </p>
 

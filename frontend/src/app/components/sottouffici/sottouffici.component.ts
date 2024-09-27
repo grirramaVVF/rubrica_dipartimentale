@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { UfficiComponent } from "../uffici/uffici.component";
 import { NgForOf } from '@angular/common';
 import { IOffice } from '../../models/IOffice';
@@ -19,6 +19,7 @@ export class SottoufficiComponent {
   ufficioSelezionato$ = this._storeApp$.select(selectUfficioSelezionato);
   ufficioSelezionato: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
 
+  @Input() idComponentFather:string='';
   //@Input()   childrenItems: Array<IOffice> = [];
   //@Output() childSelected = new EventEmitter<IOffice>();
 
@@ -33,6 +34,8 @@ export class SottoufficiComponent {
   }
 
   leggiSottoAlbero(codiceUO: string) {
+    console.log('idComponentFather sottoufficio: ',this.idComponentFather);
+
     let temp: Array<IOffice> = this.ufficioSelezionato.children.filter(element => element['codiceUfficio'] == codiceUO);
 
     if (temp.length > 0) {

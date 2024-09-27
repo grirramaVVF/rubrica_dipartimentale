@@ -1,0 +1,27 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar.mat-primary {
+  background: brown;
+  color: #fff;
+}
+
+#main {
+  float: left;
+  height: 100%;
+  width: 100%;
+}  
+
+
+.mm_style {
+  background-color: brown; 
+  border: 1px solid white;
+  text-align: center;
+  color:white;
+  margin: 5px;
+  
+}
+.mm_style:hover {
+  background-color:red;
+}

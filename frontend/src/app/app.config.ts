@@ -7,10 +7,12 @@ import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { provideRouterStore } from '@ngrx/router-store';
 import { appState } from './store/states/app.state';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withInterceptors, withFetch } from '@angular/common/http';
 import { provideEffects } from '@ngrx/effects';
 import { AuthUserEffects } from './store/effects/authuser.effects';
 import { RubricaEffects } from './store/effects/rubrica.effects';
+import { authInterceptor } from './interceptors/auth.interceptor';
+import { cfVariableReducer } from './store/reducers/cf-variable.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -22,5 +24,7 @@ export const appConfig: ApplicationConfig = {
     provideRouterStore(),
     provideHttpClient(),
     provideEffects(AuthUserEffects), provideAnimationsAsync(),
+    provideHttpClient(withInterceptors([authInterceptor]),withFetch()), // Registra l'intercettore
+    //provideStore({cfVariable : cfVariableReducer}),
   ],
 };

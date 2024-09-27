@@ -39,4 +39,16 @@ export class AppComponent {
 
         sub.unsubscribe();
     }
+
+  livello_ufficio = 0;
+  data: any;
+  errorMessage: string | null = null;
+
+Goto_SediCentrali() {
+this.livello_ufficio = 1;
+}
+
+Goto_SediTerritoriali() {
+this.livello_ufficio = 2; 
+}
 }

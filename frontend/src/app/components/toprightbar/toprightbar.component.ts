@@ -1,10 +1,11 @@
-import { Component, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { FormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../store/states/app.state';
-import { selectUfficioSelezionato } from '../../store/selectors/rubrica.selector';
+import { selectHomeTabSelected, selectUfficioSelezionato } from '../../store/selectors/rubrica.selector';
 import { IOffice } from '../../models/IOffice';
+import { SetHomeTabSelected } from '../../store/actions/rubrica.action';
 
 @Component({
     selector: 'vvfrubrica-toprightbar',
@@ -15,29 +16,20 @@ import { IOffice } from '../../models/IOffice';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToprightbarComponent {
-    checkTopRight: string = 'ufficiDipendenti';
+    checkTopRight$ = this._storeApp$.select(selectHomeTabSelected);
+    checkTopRight: string = '';
 
     ufficioSelezionato$ = this._storeApp$.select(selectUfficioSelezionato);
-    ufficioSelezionato?: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
-
-    @Output() frameSelected = new EventEmitter<string>();
+    ufficioSelezionato?: IOffice | null = null;
 
     constructor(private _storeApp$: Store<AppState>) { }
 
     ngOnInit() {
-        this.ufficioSelezionato$.subscribe(
-            items => {
-                this.ufficioSelezionato = { ...items };
-
-                if (this.ufficioSelezionato?.codiceUfficio) {
-                    this.checkTopRight = 'ufficiDipendenti';
-                }
-            }
-        );
+        this.ufficioSelezionato$.subscribe(items => this.ufficioSelezionato = { ...items });
+        this.checkTopRight$.subscribe(comp => this.checkTopRight = comp);
     }
 
     onButtonClick() {
-        console.log("dddddddddddddd: ", this.checkTopRight);
-        this.frameSelected.emit(this.checkTopRight);
+        this._storeApp$.dispatch(SetHomeTabSelected({ homeTabSelected: this.checkTopRight }));
     }
 }

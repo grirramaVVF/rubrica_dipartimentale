@@ -46,24 +46,11 @@ export class UfficiComponent {
 
   leggiSottoAlbero() {
     this.idComponentFather.emit(this.itemDst.codiceUfficio);
-    console.log('wwwwww: ', this.itemDst.codiceUfficio);
     this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: this.itemDst }));
   }
-
-  // onClickUfficioSelezionatoPrecedente() {
-  //   this.back.emit('back');
-  //   this.idComponentFather.emit(this.itemDst.codiceUfficio);
-  //   //console.log('ufficio selezionato precedente: ', this.ufficioSelezionatoPrecedente);
-  //   //this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: this.ufficioSelezionatoPrecedente }));
-  // }
 
   onClickUfficioSelezionato() {
     this.back.emit('back');
     this.idComponentFather.emit(this.itemDst.codiceUfficio);
-    //console.log('ufficio selezionato: ', this.ufficioSelezionato);
-    //console.log('ufficio selezionato: ', this.ufficioSelezionatoPrecedente);
-    //if (this.ufficioSelezionato.codiceUfficio != this.ufficioSelezionatoPrecedente.codiceUfficio) {
-    //  this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: this.ufficioSelezionato }));
-    //}
   }
 }

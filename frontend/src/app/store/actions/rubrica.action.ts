@@ -17,13 +17,19 @@ export enum RubricaActionType {
   SetUfficioSelezionatoSuccess = '[Set Ufficio Selezionato] Set Ufficio Selezionato Success',
   SetUfficioSelezionatoError = '[Set Ufficio Selezionato] Set Ufficio Selezionato Error',
 
-  GetUfficioSelezionatoPrecedente = '[Get Ufficio Selezionato Precednete] Get Ufficio Selezionato Precedente',
-  GetUfficioSelezionatoPrecedenteSuccess = '[Get Ufficio Selezionato Precednete] Get Ufficio Selezionato Precedente Success',
-  GetUfficioSelezionatoPrecedenteError = '[Get Ufficio Selezionato Precednete] Get Ufficio Selezionato Precedente Error',
-  SetUfficioSelezionatoPrecedente = '[Set Ufficio Selezionato Precednete] Set Ufficio Selezionato Precedente',
-  SetUfficioSelezionatoPrecedenteSuccess = '[Set Ufficio Selezionato Precednete] Set Ufficio Selezionato Precedente Success',
-  SetUfficioSelezionatoPrecedenteError = '[Set Ufficio Selezionato Precednete] Set Ufficio Selezionato Precedente Error',
+  GetUfficioSelezionatoPrecedente = '[Get Ufficio Selezionato Precedente] Get Ufficio Selezionato Precedente',
+  GetUfficioSelezionatoPrecedenteSuccess = '[Get Ufficio Selezionato Precedente] Get Ufficio Selezionato Precedente Success',
+  GetUfficioSelezionatoPrecedenteError = '[Get Ufficio Selezionato Precedente] Get Ufficio Selezionato Precedente Error',
+  SetUfficioSelezionatoPrecedente = '[Set Ufficio Selezionato Precedente] Set Ufficio Selezionato Precedente',
+  SetUfficioSelezionatoPrecedenteSuccess = '[Set Ufficio Selezionato Precedente] Set Ufficio Selezionato Precedente Success',
+  SetUfficioSelezionatoPrecedenteError = '[Set Ufficio Selezionato Precedente] Set Ufficio Selezionato Precedente Error',
 
+  GetHomeTabSelected = '[Get HomeTabSelected] Get HomeTabSelected',
+  GetHomeTabSelectedSuccess = '[Get HomeTabSelected] Get HomeTabSelected Success',
+  GetHomeTabSelectedError = '[Get HomeTabSelected] Get HomeTabSelected Error',
+  SetHomeTabSelected = '[Set HomeTabSelected] Set HomeTabSelected',
+  SetHomeTabSelectedSuccess = '[Set HomeTabSelected] Set HomeTabSelected Success',
+  SetHomeTabSelectedError = '[Set HomeTabSelected] Set HomeTabSelected Error',
 }
 
 export const GetHomeRubrica = createAction(
@@ -108,4 +114,30 @@ export const SetUfficioSelezionatoSuccessPrecedente = createAction(
 
 export const SetUfficioSelezionatoErrorPrecedente = createAction(
   RubricaActionType.SetUfficioSelezionatoPrecedenteError
+);
+
+export const GetHomeTabSelected = createAction(
+  RubricaActionType.GetHomeTabSelected,
+);
+
+export const GetHomeTabSelectedSuccess = createAction(
+  RubricaActionType.GetHomeTabSelectedSuccess,
+);
+
+export const GetHomeTabSelectedError = createAction(
+  RubricaActionType.GetHomeTabSelectedError
+);
+
+export const SetHomeTabSelected = createAction(
+  RubricaActionType.SetHomeTabSelected,
+  props<{ homeTabSelected: string }>()
+);
+
+export const SetHomeTabSelectedSuccess = createAction(
+  RubricaActionType.SetHomeTabSelectedSuccess,
+  //props<{rubrica: Array<IOffice>}>()
+);
+
+export const SetHomeTabSelectedError = createAction(
+  RubricaActionType.SetHomeTabSelectedError
 );

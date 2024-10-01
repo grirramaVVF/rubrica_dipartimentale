@@ -15,7 +15,7 @@ import { PersonaleComponent } from '../personale/personale.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { Office } from '../../models/Office';
-import { SetHomeTabSelected, SetUfficioSelezionato, SetUfficioSelezionatoPrecedente } from '../../store/actions/rubrica.action';
+import { RubricaActionType, SetHomeTabSelected, SetUfficioSelezionato, SetUfficioSelezionatoPrecedente } from '../../store/actions/rubrica.action';
 
 @Component({
     selector: 'vvfrubrica-home',
@@ -51,9 +51,13 @@ export class HomeComponent {
     leftComponentSelected: string = 'ufficiDipendenti';
     idComponentFather: string = '';
 
+    elencoUfficiSelesionati: Array<IOffice> | null = null;
+
     constructor(private _storeApp$: Store<AppState>) { }
 
     ngOnInit() {
+        this._storeApp$.dispatch({ type: RubricaActionType.GetHomeRubrica });
+
         this.homeItems$.subscribe(
             items => {
                 this.homeItems = [...items?.rubrica];

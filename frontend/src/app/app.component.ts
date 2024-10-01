@@ -5,10 +5,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import { Store } from '@ngrx/store';
 import { AppState } from './store/states/app.state';
-import { RubricaActionType, SetUfficioSelezionato } from './store/actions/rubrica.action';
-import { selectHome } from './store/selectors/rubrica.selector';
-import { Subscription } from 'rxjs';
-import { IOffice } from './models/IOffice';
+// import { RubricaActionType, SetUfficioSelezionato } from './store/actions/rubrica.action';
+// import { selectHome } from './store/selectors/rubrica.selector';
+// import { Subscription } from 'rxjs';
+// import { IOffice } from './models/IOffice';
 
 @Component({
     selector: 'vvfrubrica-root',
@@ -21,11 +21,15 @@ export class AppComponent {
     title = 'rubricadip';
     faAddressBook = faAddressBook;
 
+    livello_ufficio = 0;
+    data: any;
+    errorMessage: string | null = null;
+
     constructor(private _storeApp$: Store<AppState>) { }
 
     ngOnInit() {
         //this._storeApp$.dispatch({ type: AuthUserActionType.GetAuthToken });
-        this._storeApp$.dispatch({ type: RubricaActionType.GetHomeRubrica });
+        //this._storeApp$.dispatch({ type: RubricaActionType.GetHomeRubrica });
 
         /*
         let homeItems: Array<IOffice> = [];
@@ -41,15 +45,11 @@ export class AppComponent {
         */
     }
 
-  livello_ufficio = 0;
-  data: any;
-  errorMessage: string | null = null;
+    Goto_SediCentrali() {
+        this.livello_ufficio = 1;
+    }
 
-Goto_SediCentrali() {
-this.livello_ufficio = 1;
-}
-
-Goto_SediTerritoriali() {
-this.livello_ufficio = 2; 
-}
+    Goto_SediTerritoriali() {
+        this.livello_ufficio = 2;
+    }
 }

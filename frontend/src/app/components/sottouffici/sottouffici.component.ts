@@ -18,10 +18,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 export class SottoufficiComponent {
   ufficioSelezionato$ = this._storeApp$.select(selectUfficioSelezionato);
   ufficioSelezionato: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
-
   @Input() idComponentFather:string='';
-  //@Input()   childrenItems: Array<IOffice> = [];
-  //@Output() childSelected = new EventEmitter<IOffice>();
 
   constructor(private _storeApp$: Store<AppState>) { }
 
@@ -34,7 +31,7 @@ export class SottoufficiComponent {
   }
 
   leggiSottoAlbero(codiceUO: string) {
-    console.log('idComponentFather sottoufficio: ',this.idComponentFather);
+    // console.log('idComponentFather sottoufficio: ',this.idComponentFather);
 
     let temp: Array<IOffice> = this.ufficioSelezionato.children.filter(element => element['codiceUfficio'] == codiceUO);
 

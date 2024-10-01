@@ -19,12 +19,14 @@ import { RubricaActionType } from '../../store/actions/rubrica.action';
 import { AsyncPipe, NgForOf } from '@angular/common';
 import { IOffice } from '../../models/IOffice';
 import { SedeComponent } from "../sede/sede.component";
+import { UfficioComponent } from "../ufficio/ufficio.component";
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-rubrica',
   standalone: true,
   imports: [RouterOutlet, ItemAOOComponent, SideBarComponent, FontAwesomeModule, FlexLayoutModule, SottoufficiComponent, CercaComponent, ToplrftbarComponent,
-    AsyncPipe, NgForOf, SedeComponent],
+    AsyncPipe, NgForOf, SedeComponent,UfficioComponent],
   templateUrl: './rubrica.component.html',
   styleUrl: './rubrica.component.css'
 })
@@ -36,6 +38,8 @@ export class RubricaComponent {
   homeItems: Array<IOffice> = [];
 
   childrenSelected: Array<IOffice> = [];
+  uffVariable$: Observable<string>;
+
 
   /*da gestire altrove */
   // CapoCorpo: string = "#495380";
@@ -45,8 +49,11 @@ export class RubricaComponent {
   // ONA: string = "#e1e1e1";
 
   constructor(private _storeApp$: Store<AppState>,
-    private authService: AuthService
-  ) { }
+    private authService: AuthService, private store: Store<{ uffVariable: string }>
+  ) { 
+    this.uffVariable$ = this.store.select('uffVariable');
+    this.uffVariable$.subscribe(value => console.log('Observable emitted the next value: ' + value));
+  }
 
   ngOnInit() {
     this._storeApp$.dispatch({ type: AuthUserActionType.GetAuthToken });

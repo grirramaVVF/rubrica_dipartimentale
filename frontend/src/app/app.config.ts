@@ -12,7 +12,7 @@ import { provideEffects } from '@ngrx/effects';
 import { AuthUserEffects } from './store/effects/authuser.effects';
 import { RubricaEffects } from './store/effects/rubrica.effects';
 import { authInterceptor } from './interceptors/auth.interceptor';
-import { cfVariableReducer } from './store/reducers/cf-variable.reducer';
+import { uffVariableReducer } from './store/reducers/uff-variable.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -25,6 +25,6 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     provideEffects(AuthUserEffects), provideAnimationsAsync(),
     provideHttpClient(withInterceptors([authInterceptor]),withFetch()), // Registra l'intercettore
-    provideStore({cfVariable : cfVariableReducer}), 
+    provideStore({uffVariable : uffVariableReducer}), 
   ],
 };

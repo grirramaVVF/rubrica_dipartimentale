@@ -1,0 +1,25 @@
+
+    <p style="text-align: center;font-weight: bold;">{{ufficio_padre_descr}}</p> 
+    <br>
+        
+    <p *ngFor="let uff of listato" > 
+    
+    <mat-accordion>
+    
+      <mat-expansion-panel style="margin: 0 auto;border: 1px solid #000; max-width: 60%;">
+       
+        <mat-expansion-panel-header style="background-color: lightgray;">
+          <mat-panel-title >
+            {{uff.descrizione}}
+          </mat-panel-title>
+          <mat-panel-description>
+          </mat-panel-description>    
+        </mat-expansion-panel-header>
+    
+      <app-contattiufficio  [id_ufficio]="uff.idUfficio" ></app-contattiufficio>  
+    
+      </mat-expansion-panel>
+    
+    </mat-accordion>
+    
+    </p>

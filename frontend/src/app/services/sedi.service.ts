@@ -2,18 +2,21 @@ import { Injectable } from '@angular/core'
 import { Observable } from 'rxjs'  //oggetto che conterrà i dati asincroni ricevuti dalle chiamate
 import { HttpClient } from '@angular/common/http'  //oggetto che gestisce la chiamata
 import { ISede } from '../models/ISede';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class SedeServizio {
-    constructor(
-        private chiamata: HttpClient
-    ) { }
+    private host: string = environment.apiGetChildSedeFromWauc;
 
-    //dichiaro l'url da contattare (address point)
-    private urlDaContattare: string = "http://localhost:5298/api/Rubrica/Ricerche/GetChildSedeFromWauc?IdSede=";
-
+    constructor(private chiamata: HttpClient) { }
 
     getUffici(id: string): Observable<Array<ISede>> {
-        return this.chiamata.get<Array<ISede>>(`${this.urlDaContattare}${id}`);
+        console.log(id);
+
+        if (id == '001') {
+            return this.chiamata.get<Array<ISede>>(`${this.host}`);
+        }
+
+        return this.chiamata.get<Array<ISede>>(`${this.host}${id}`);
     }
 }

@@ -397,5 +397,772 @@
         }
       ]
     }
+  ],
+  "GetChildSedeFromWauc":[
+    {
+      "id": "002",
+      "codice": "1A",
+      "codDistaccamento": "8000",
+      "descrizione": "DIREZIONE CENTRALE PER L'EMERGENZA E IL SOCCORSO TECNICO E L'ANTINCENDIO BOSCHIVO",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE CENTRALE",
+      "tipoOriginale": "DIR",
+      "tipologiaDistaccamento": {
+        "codice": "0",
+        "descrizione": "UFFICIO CENTRALE"
+      },
+      "provincia": "RM",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": "DCEMER"
+    },
+    {
+      "id": "003",
+      "codice": "3A",
+      "codDistaccamento": "8000",
+      "descrizione": "DIREZIONE CENTRALE PER LA PREVENZIONE E LA SICUREZZA TECNICA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE CENTRALE",
+      "tipoOriginale": "DIR",
+      "tipologiaDistaccamento": {
+        "codice": "0",
+        "descrizione": "UFFICIO CENTRALE"
+      },
+      "provincia": "RM",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": "DCPREV"
+    },
+    {
+      "id": "005",
+      "codice": "2A",
+      "codDistaccamento": "8000",
+      "descrizione": "DIREZIONE CENTRALE PER LA FORMAZIONE",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE CENTRALE",
+      "tipoOriginale": "DIR",
+      "tipologiaDistaccamento": {
+        "codice": "0",
+        "descrizione": "UFFICIO CENTRALE"
+      },
+      "provincia": "RM",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": "DCFORM"
+    },
+    {
+      "id": "007",
+      "codice": "6A",
+      "codDistaccamento": "8000",
+      "descrizione": "DIREZIONE CENTRALE PER LE RISORSE FINANZIARIE",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE CENTRALE",
+      "tipoOriginale": "DIR",
+      "tipologiaDistaccamento": {
+        "codice": "0",
+        "descrizione": "UFFICIO CENTRALE"
+      },
+      "provincia": "RM",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": "DCRISFIN"
+    },
+    {
+      "id": "009",
+      "codice": "8A",
+      "codDistaccamento": "8000",
+      "descrizione": "DIREZIONE CENTRALE PER LE RISORSE LOGISTICHE E STRUMENTALI",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE CENTRALE",
+      "tipoOriginale": "DIR",
+      "tipologiaDistaccamento": {
+        "codice": "0",
+        "descrizione": "UFFICIO CENTRALE"
+      },
+      "provincia": "RM",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": "DCRISLOG"
+    },
+    {
+      "id": "01",
+      "codice": "01",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. PIEMONTE",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "TO",
+      "coordinate": "45.05147,7.62078",
+      "idSedePadre": "001",
+      "codAOO": "DIR-PIE"
+    },
+    {
+      "id": "013",
+      "codice": "12A",
+      "codDistaccamento": "8000",
+      "descrizione": "UFFICI DI STAFF DEL CAPO DEL C.N.VV.F.",
+      "tipo": "UFC",
+      "descTipo": "UFFICI AD USO PARTICOLARE",
+      "tipoOriginale": "UFP",
+      "tipologiaDistaccamento": {
+        "codice": "0",
+        "descrizione": "UFFICIO CENTRALE"
+      },
+      "provincia": "RM",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": "STAFFCNVVF"
+    },
+    {
+      "id": "014",
+      "codice": "13A",
+      "codDistaccamento": "8000",
+      "descrizione": "UFFICIO DI COLLEGAMENTO DEL CAPO DEL DIPARTIMENTO E DEL CAPO DEL C.N.VV.F.",
+      "tipo": "UFC",
+      "descTipo": "UFFICI AD USO PARTICOLARE",
+      "tipoOriginale": "UFP",
+      "tipologiaDistaccamento": {
+        "codice": "0",
+        "descrizione": "UFFICIO CENTRALE"
+      },
+      "provincia": "RM",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "02",
+      "codice": "02",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. LOMBARDIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "MI",
+      "coordinate": "45.46489,9.17972",
+      "idSedePadre": "001",
+      "codAOO": "DIR-LOM"
+    },
+    {
+      "id": "03",
+      "codice": "03",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. LIGURIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "GE",
+      "coordinate": "44.40921,8.90521",
+      "idSedePadre": "001",
+      "codAOO": "DIR-LIG"
+    },
+    {
+      "id": "04",
+      "codice": "04",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. VENETO",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "PD",
+      "coordinate": "45.40998,11.87337",
+      "idSedePadre": "001",
+      "codAOO": "DIR-VEN"
+    },
+    {
+      "id": "05",
+      "codice": "05",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. FRIULI VENEZIA GIULIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "TS",
+      "coordinate": "45.64855,13.76876",
+      "idSedePadre": "001",
+      "codAOO": "DIR-FVG"
+    },
+    {
+      "id": "06",
+      "codice": "06",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. EMILIA ROMAGNA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "BO",
+      "coordinate": "44.535506,11.368185",
+      "idSedePadre": "001",
+      "codAOO": "DIR-EMI"
+    },
+    {
+      "id": "07",
+      "codice": "07",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. TOSCANA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "FI",
+      "coordinate": "43.78091,11.26828",
+      "idSedePadre": "001",
+      "codAOO": "DIR-TOS"
+    },
+    {
+      "id": "09",
+      "codice": "09",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. MARCHE",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "AN",
+      "coordinate": "43.60838,13.51542",
+      "idSedePadre": "001",
+      "codAOO": "DIR-MAR"
+    },
+    {
+      "id": "10",
+      "codice": "10",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. LAZIO",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "RM",
+      "coordinate": "41.82691,12.45946",
+      "idSedePadre": "001",
+      "codAOO": "DIR-LAZ"
+    },
+    {
+      "id": "12",
+      "codice": "12",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. UMBRIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "PG",
+      "coordinate": "43.10535,12.39194",
+      "idSedePadre": "001",
+      "codAOO": "DIR-UMB"
+    },
+    {
+      "id": "13",
+      "codice": "13",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. CAMPANIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "NA",
+      "coordinate": "40.86588,14.29312",
+      "idSedePadre": "001",
+      "codAOO": "DIR-CAM"
+    },
+    {
+      "id": "15",
+      "codice": "15",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. PUGLIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "BA",
+      "coordinate": "41.11185,16.90165",
+      "idSedePadre": "001",
+      "codAOO": "DIR-PUG"
+    },
+    {
+      "id": "16",
+      "codice": "16",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. CALABRIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "CZ",
+      "coordinate": "38.91112,16.57481",
+      "idSedePadre": "001",
+      "codAOO": "DIR-CAL"
+    },
+    {
+      "id": "17",
+      "codice": "17",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. SARDEGNA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "CA",
+      "coordinate": "39.247166,9.117922",
+      "idSedePadre": "001",
+      "codAOO": "DIR-SAR"
+    },
+    {
+      "id": "18",
+      "codice": "18",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. SICILIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "PA",
+      "coordinate": "38.12285,13.35766",
+      "idSedePadre": "001",
+      "codAOO": "DIR-SIC"
+    },
+    {
+      "id": "19",
+      "codice": "19",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. BASILICATA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "PZ",
+      "coordinate": "40.64405,15.83283",
+      "idSedePadre": "001",
+      "codAOO": "DIR-BAS"
+    },
+    {
+      "id": "20",
+      "codice": "20",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. ABRUZZO",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "AQ",
+      "coordinate": "42.371063,13.349061",
+      "idSedePadre": "001",
+      "codAOO": "DIR-ABR"
+    },
+    {
+      "id": "21",
+      "codice": "21",
+      "codDistaccamento": "0",
+      "descrizione": "DIREZIONE REGIONALE VV.F. MOLISE",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "CB",
+      "coordinate": "41.56611,14.66530",
+      "idSedePadre": "001",
+      "codAOO": "DIR-MOL"
+    },
+    {
+      "id": "50",
+      "codice": "50",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE LAZIO",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "RM",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "51",
+      "codice": "51",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE MARCHE",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "AN",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "52",
+      "codice": "52",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE UMBRIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "PG",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "53",
+      "codice": "53",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE ABRUZZO",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "AQ",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "54",
+      "codice": "54",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE CAMPANIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "NA",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "55",
+      "codice": "55",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE LIGURIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "GE",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "56",
+      "codice": "56",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE MOLISE",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "CB",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "57",
+      "codice": "57",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE VENETO",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "VE",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "58",
+      "codice": "58",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE SICILIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "CT",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "59",
+      "codice": "59",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE PIEMONTE",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "TO",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "60",
+      "codice": "60",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE LOMBARDIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "MI",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "61",
+      "codice": "61",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE FRIULI VENEZIA GIULIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "TS",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "62",
+      "codice": "62",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE EMILIA ROMAGNA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "TS",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "63",
+      "codice": "63",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE TOSCANA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "FI",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "64",
+      "codice": "64",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE PUGLIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "BA",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "65",
+      "codice": "65",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE BASILICATA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "MT",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "66",
+      "codice": "66",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE CALABRIA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "CZ",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "67",
+      "codice": "67",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE SARDEGNA",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "CA",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "68",
+      "codice": "68",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE DCPST",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "RM",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    },
+    {
+      "id": "69",
+      "codice": "69",
+      "codDistaccamento": "0",
+      "descrizione": "COMANDO DI CRATERE DCFORM",
+      "tipo": "DIR",
+      "descTipo": "DIREZIONE REGIONALE",
+      "tipoOriginale": "ISP",
+      "tipologiaDistaccamento": {
+        "codice": "9",
+        "descrizione": "DIREZIONE REGIONALE"
+      },
+      "provincia": "RM",
+      "coordinate": "",
+      "idSedePadre": "001",
+      "codAOO": ""
+    }
   ]
 }

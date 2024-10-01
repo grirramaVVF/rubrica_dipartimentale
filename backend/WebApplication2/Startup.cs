@@ -57,6 +57,19 @@ public class Startup
   
         });
 
+
+        // Disabiliare Cors : Configura il servizio CORS per consentire tutte le richieste
+        services.AddCors(options =>
+        {
+            options.AddPolicy("AllowAll", builder =>
+            {
+                builder.AllowAnyOrigin()   // Consente richieste da qualsiasi origine
+                       .AllowAnyMethod()   // Consente tutti i metodi HTTP (GET, POST, PUT, DELETE, ecc.)
+                       .AllowAnyHeader();  // Consente tutte le intestazioni
+            });
+        });
+
+
         services.AddControllers();
         services.AddHttpClient<WuacService>();
 
@@ -112,6 +125,9 @@ public class Startup
 
         app.UseAuthentication();
         app.UseAuthorization();
+
+        // Disattivare Cors : Applica la policy CORS definita sopra
+        app.UseCors("AllowAll");
 
         app.UseSwagger();
         app.UseSwaggerUI(c =>

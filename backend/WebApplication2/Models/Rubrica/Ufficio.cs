@@ -12,7 +12,7 @@ namespace ApiRubricaDipartimentale.Models.Rubrica
         public int IdUfficioPadre { get; set; }
 
         /* IdSede rappresenta IdSede in WAUC */
-        public int IdSede { get; set; }
+        public string IdSede { get; set; }
         public string Descrizione { get; set; }
         public string Telefono { get; set; }
         public string Voip { get; set; }

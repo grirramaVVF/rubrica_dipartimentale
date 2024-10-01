@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiRubricaDipartimentale")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7e34eb261504f8c96b3f908668b40f776aa1546")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ea13c13b643b19f6cb40f547c0ea098b7e7b277")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiRubricaDipartimentale")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiRubricaDipartimentale")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

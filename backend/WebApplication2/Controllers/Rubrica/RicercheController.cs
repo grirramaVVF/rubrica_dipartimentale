@@ -1,5 +1,6 @@
 ﻿using ApiRubricaDipartimentale.Services;
 using Microsoft.AspNetCore.Mvc;
+using ApiRubricaDipartimentale.Data;
 
 namespace ApiRubricaDipartimentale.Controllers.Rubrica
 {
@@ -8,10 +9,12 @@ namespace ApiRubricaDipartimentale.Controllers.Rubrica
     public class RicercheController : ControllerBase
     {
         private readonly WuacService _wuacApiService;
+        private readonly ApplicationDbContext _db_context;
 
-        public RicercheController(WuacService wuacApiService)
+        public RicercheController(WuacService wuacApiService,ApplicationDbContext db_context)
         {
             _wuacApiService = wuacApiService;
+            _db_context = db_context;
         }
 
         [HttpGet("Cerca")]
@@ -22,9 +25,10 @@ namespace ApiRubricaDipartimentale.Controllers.Rubrica
         }
 
         [HttpGet("GetUfficiByIdSede")]
-        public IActionResult GetUfficiByIdSede([FromQuery] int IdSede)
+        public IActionResult GetUfficiByIdSede([FromQuery] string IdSede)
         {
-            var offices = new List<string> { "Office1", "Office2" }; // Simulated data
+            //var offices = new List<string> { "Office1", "Office2" }; // Simulated data
+            var offices = _db_context.Uffici.Where(u => u.IdSede == IdSede).ToList();
             return Ok(offices);
         }
 
@@ -68,6 +72,30 @@ namespace ApiRubricaDipartimentale.Controllers.Rubrica
         {
             var officesAndMembers = new List<string> { "Office1: User1, User2", "Office2: User3, User4" }; // Simulated data
             return Ok(officesAndMembers);
+        }
+
+        [HttpGet("GetContattiByIdUfficio")]
+        public IActionResult GetContattiByIdUfficio([FromQuery] int IdUfficio)
+        {
+            //var officeMembers = new List<string> { "UserX", "UserY" }; // Simulated data
+            var officeMembers = _db_context.ContattoHasUfficios.Where(u => u.IdUfficio == IdUfficio).ToList();
+            
+            var joinResult = _db_context.Contatti
+                //.Where(u => u.IdUfficio == IdUfficio)
+                .Join(
+                _db_context.ContattoHasUfficios,
+                c => c.IdContatto,  // Chiave primaria
+                u => u.IdContatto,    // Chiave esterna
+                (c, u) => new
+                {
+                    UfficioId = u.IdUfficio,
+                    ContattoCognome = c.Cognome,
+                    ContattoTelefono = c.Telefono,
+                })
+                .Where(result => result.UfficioId == IdUfficio);  // Condizione WHERE
+                ;
+     
+            return Ok(joinResult);
         }
 
         [HttpGet("GetColoreDellaSede")]

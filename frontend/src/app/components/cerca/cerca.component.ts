@@ -3,7 +3,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
-    selector: 'app-cerca',
+    selector: 'vvfrubrica-cerca',
     standalone: true,
     templateUrl: './cerca.component.html',
     styleUrl: './cerca.component.css',

@@ -5,10 +5,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import { Store } from '@ngrx/store';
 import { AppState } from './store/states/app.state';
-// import { RubricaActionType, SetUfficioSelezionato } from './store/actions/rubrica.action';
-// import { selectHome } from './store/selectors/rubrica.selector';
-// import { Subscription } from 'rxjs';
-// import { IOffice } from './models/IOffice';
 
 @Component({
     selector: 'vvfrubrica-root',
@@ -28,21 +24,6 @@ export class AppComponent {
     constructor(private _storeApp$: Store<AppState>) { }
 
     ngOnInit() {
-        //this._storeApp$.dispatch({ type: AuthUserActionType.GetAuthToken });
-        //this._storeApp$.dispatch({ type: RubricaActionType.GetHomeRubrica });
-
-        /*
-        let homeItems: Array<IOffice> = [];
-        let sub: Subscription = this._storeApp$.select(selectHome)
-            .subscribe(office => {
-                console.log("office: ", office);
-                homeItems = [...office?.rubrica];
-
-            });
-        console.log("eeeeee: ", homeItems);
-        this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: homeItems[0] }));
-        sub.unsubscribe();
-        */
     }
 
     Goto_SediCentrali() {

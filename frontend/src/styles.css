@@ -25,8 +25,12 @@ body {
     margin: 0;
     padding: 0;
     width: 99.9%;
-    ;
-    /* background-color: var(--sideBarColor); */
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 .divCenter {
@@ -43,12 +47,75 @@ body {
     background-color: var(--centerColor);
 }
 
-html,
-body {
-    height: 100%;
+.divCardSedi {
+    padding: 1px 1px 1px 0px;
+    background-color: red;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
 }
 
-body {
+.divCardSediContent>input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+}
+
+.divCardSediContent .content {
+    overflow-y: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+}
+
+.divCardSediContent>input[type="checkbox"]:checked~.content {
+    height: auto;
+    overflow: visible;
+}
+
+.divCardSediContent label {
+    display: block;
+}
+
+.divCardSediContent {
+    /* margin-bottom: 1em; */
+    /* border: 1px solid red; */
+    margin-left: 3rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.divCardSediContent>input[type="checkbox"]:checked~.content {
+    padding: 15px;
+    /* border: 1px solid #e8e8e8; */
+    border-top: 0;
+}
+
+.divCardSediContent .handle {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    /* font-size: 1.125em; */
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2em;
+}
+
+.divCardSediContent label {
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 15px;
+    /* background: #e8e8e8; */
+}
+
+.divCardSediContent label:hover,
+.divCardSediContent label:focus {
+    background: #d8d8d8;
+}
+
+.smallLabelFont {
+    font-size: 1.60rem;
+}
+
+.accordion p:last-child {
+    margin-bottom: 0;
 }

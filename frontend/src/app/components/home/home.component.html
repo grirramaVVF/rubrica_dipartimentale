@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-sm-12 col-md-5">
-        <app-cerca></app-cerca>
+        <vvfrubrica-cerca></vvfrubrica-cerca>
     </div>
     <div class="col-sm-12 col-md-7">
         <vvfrubrica-toprightbar></vvfrubrica-toprightbar>
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col">
                 <vvfrubrica-sottouffici *ngIf="leftComponentSelected=='ufficiDipendenti'"
-                    [idComponentFather]="idComponentFather">
+                    [idComponentFather]="idComponentFather" (clickSubOffice)="clickSubOffice($event)">
                 </vvfrubrica-sottouffici>
 
                 <div *ngIf="leftComponentSelected=='componenti'" class="divPersonaleContainer">

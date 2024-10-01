@@ -1,1168 +1,692 @@
 {
-  "profile": {
-    "name": "typicode"
-  },
-  "createtoken": {
-    "success": true,
-    "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3MjEyOTE3NDYsImlhdCI6MTcyMTI5MTc0NiwianRpIjoiaWQxMjM0NTYiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0IiwibmFtZSI6IiIsInN1YiI6IkFBQUJCQjAwRjEwQjEyM0siLCJpc3MiOiJBcHBSdWJEaXAiLCJ0aXBvIjoiVlZGIiwic2VkaSI6W3siY29kU2VkZSI6MSwiaXNTdXBlclVzZXIiOnRydWUsInVmZmljaSI6W3siaWRVZmYiOjEsImlkUHJvZmlsbyI6MX0seyJpZFVmZiI6MiwiaWRQcm9maWxvIjoxfV19XX0.htBoH9V6PzbnEXGZ7W3AyYCrMDHt7QsRn8hYe_EYBj-j4m6bpGL9dZUFwl8-m5GlFlatREFFDosoLkFnsV1qiQ"
-  },
-  "ufficiRubrica": [
-    {
-      "codiceUfficio": "00.0",
-      "codiceUfficioSuperiore": "",
-      "nomeTitolare": "Prefetto Franceschelli",
-      "nomeUfficio": "Capo Dipartimento",
-      "coloreSfondo": "#495380",
-      "ordineVisualizzazione": 1,
-      "descrizioneUfficio": "Capo Dipartimento Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-      "personale": [
+    "profile": {
+        "name": "typicode"
+    },
+    "createtoken": {
+        "success": true,
+        "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3MjEyOTE3NDYsImlhdCI6MTcyMTI5MTc0NiwianRpIjoiaWQxMjM0NTYiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0IiwibmFtZSI6IiIsInN1YiI6IkFBQUJCQjAwRjEwQjEyM0siLCJpc3MiOiJBcHBSdWJEaXAiLCJ0aXBvIjoiVlZGIiwic2VkaSI6W3siY29kU2VkZSI6MSwiaXNTdXBlclVzZXIiOnRydWUsInVmZmljaSI6W3siaWRVZmYiOjEsImlkUHJvZmlsbyI6MX0seyJpZFVmZiI6MiwiaWRQcm9maWxvIjoxfV19XX0.htBoH9V6PzbnEXGZ7W3AyYCrMDHt7QsRn8hYe_EYBj-j4m6bpGL9dZUFwl8-m5GlFlatREFFDosoLkFnsV1qiQ"
+    },
+    "ufficiRubrica": [
         {
-          "cognome": "Cognome",
-          "nome": "Nome",
-          "qualifica": "qualifica",
-          "codiceUfficio": "00.0",
-          "contatti": [
-            {
-              "tipo": "telefono",
-              "contatto": "1234567"
-            },
-            {
-              "tipo": "email",
-              "contatto": "nome.cognome@vigilfuoco.it"
-            }
-          ]
-        },
-        {
-          "cognome": "Cognome",
-          "nome": "Nome",
-          "qualifica": "qualifica",
-          "codiceUfficio": "00.0",
-          "contatti": [
-            {
-              "tipo": "telefono",
-              "contatto": "1234567"
-            },
-            {
-              "tipo": "email",
-              "contatto": "nome.cognome@vigilfuoco.it"
-            }
-          ]
-        },
-        {
-          "cognome": "Cognome",
-          "nome": "Nome",
-          "qualifica": "qualifica",
-          "codiceUfficio": "00.0",
-          "contatti": [
-            {
-              "tipo": "telefono",
-              "contatto": "1234567"
-            },
-            {
-              "tipo": "email",
-              "contatto": "nome.cognome@vigilfuoco.it"
-            }
-          ]
-        },
-        {
-          "cognome": "Cognome",
-          "nome": "Nome",
-          "qualifica": "qualifica",
-          "codiceUfficio": "00.0",
-          "contatti": [
-            {
-              "tipo": "telefono",
-              "contatto": "1234567"
-            },
-            {
-              "tipo": "email",
-              "contatto": "nome.cognome@vigilfuoco.it"
-            }
-          ]
-        }
-      ],
-      "children": [
-        {
-          "codiceUfficio": "00.1000",
-          "codiceUfficioSuperiore": "00.0",
-          "nomeUfficio": "Direzione centrale per la Difesa Civile e le attività di Protezione Civile",
-          "nomeTitolare": "figlio1",
-          "coloreSfondo": "#495380",
-          "descrizioneUfficio": "figlio1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-          "children": [
-            {
-              "codiceUfficio": "00.10001",
-              "codiceUfficioSuperiore": "00.1000",
-              "coloreSfondo": "#495380",
-              "nomeUfficio": "figlio1.1",
-              "nomeTitolare": "nome titolare",
-              "descrizioneUfficio": "figlio1.1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-              "children": [
+            "codiceUfficio": "00.0",
+            "codiceUfficioSuperiore": "",
+            "nomeTitolare": "Prefetto Franceschelli",
+            "nomeUfficio": "Capo Dipartimento",
+            "coloreSfondo": "#495380",
+            "ordineVisualizzazione": 1,
+            "descrizioneUfficio": "Capo Dipartimento Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+            "personale": [
                 {
-                  "codiceUfficio": "00.1003",
-                  "codiceUfficioSuperiore": "00.10001",
-                  "coloreSfondo": "#495380",
-                  "nomeUfficio": "figlio1.1.1",
-                  "nomeTitolare": "nome titolare",
-                  "descrizioneUfficio": "figlio1.1.1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-                  "children": [],
-                  "personale": [
-                    {
-                      "cognome": "Cognome",
-                      "nome": "Nome",
-                      "qualifica": "qualifica",
-                      "codiceUfficio": "00.0",
-                      "contatti": [
+                    "cognome": "Cognome",
+                    "nome": "Nome",
+                    "qualifica": "qualifica",
+                    "codiceUfficio": "00.0",
+                    "contatti": [
                         {
-                          "tipo": "telefono",
-                          "contatto": "1234567"
+                            "tipo": "telefono",
+                            "contatto": "1234567"
                         },
                         {
-                          "tipo": "email",
-                          "contatto": "nome.cognome@vigilfuoco.it"
+                            "tipo": "email",
+                            "contatto": "nome.cognome@vigilfuoco.it"
                         }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "personale": [
+                    ]
+                },
                 {
-                  "cognome": "Cognome",
-                  "nome": "Nome",
-                  "qualifica": "qualifica",
-                  "codiceUfficio": "00.0",
-                  "contatti": [
-                    {
-                      "tipo": "telefono",
-                      "contatto": "1234567"
-                    },
-                    {
-                      "tipo": "email",
-                      "contatto": "nome.cognome@vigilfuoco.it"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "codiceUfficio": "00.1001",
-          "codiceUfficioSuperiore": "00.0",
-          "coloreSfondo": "#495380",
-          "nomeUfficio": "figlio2",
-          "nomeTitolare": "nome titolare",
-          "descrizioneUfficio": "figlio2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-          "children": [
-            {
-              "codiceUfficio": "00.1002",
-              "codiceUfficioSuperiore": "00.1001",
-              "coloreSfondo": "#495380",
-              "nomeUfficio": "figlio2.1",
-              "nomeTitolare": "nome titolare",
-              "descrizioneUfficio": "figlio2.1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "codiceUfficio": "01.0",
-      "codiceUfficioSuperiore": "",
-      "nomeUfficio": "Capo del Corpo Nazionale dei Vigili del Fuoco Vice Capo Dipartimento Vicario",
-      "nomeTitolare": "Ing. Carlo Dall'Oppio",
-      "coloreSfondo": "#840101",
-      "ordineVisualizzazione": 2,
-      "descrizioneUfficio": "222 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-      "personale": [
-        {
-          "cognome": "Cognome",
-          "nome": "Nome",
-          "qualifica": "qualifica",
-          "codiceUfficio": "00.0",
-          "contatti": [
-            {
-              "tipo": "telefono",
-              "contatto": "1234567"
-            },
-            {
-              "tipo": "email",
-              "contatto": "nome.cognome@vigilfuoco.it"
-            }
-          ]
-        },
-        {
-          "cognome": "Cognome",
-          "nome": "Nome",
-          "qualifica": "qualifica",
-          "codiceUfficio": "00.0",
-          "contatti": [
-            {
-              "tipo": "telefono",
-              "contatto": "1234567"
-            },
-            {
-              "tipo": "email",
-              "contatto": "nome.cognome@vigilfuoco.it"
-            }
-          ]
-        }
-      ],
-      "children": [
-        {
-          "codiceUfficio": "01.1000",
-          "codiceUfficioSuperiore": "01.0",
-          "nomeUfficio": "figlio3",
-          "nomeTitolare": "figlio3",
-          "coloreSfondo": "#840101",
-          "descrizioneUfficio": "figlio3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-          "children": [
-            {
-              "codiceUfficio": "01.1002",
-              "codiceUfficioSuperiore": "01.1000",
-              "nomeUfficio": "sottofiglio3.1",
-              "nomeTitolare": "sottofiglio3.1",
-              "coloreSfondo": "#840101",
-              "descrizioneUfficio": "sottofiglio3.1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-              "children": []
-            }
-          ]
-        },
-        {
-          "codiceUfficio": "01.1001",
-          "codiceUfficioSuperiore": "01.0",
-          "coloreSfondo": "#840101",
-          "nomeUfficio": "figlio4",
-          "nomeTitolare": "nome titolare",
-          "descrizioneUfficio": "figlio4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-          "children": [
-            {
-              "codiceUfficio": "01.1002",
-              "codiceUfficioSuperiore": "01.1001",
-              "coloreSfondo": "#840101",
-              "nomeUfficio": "figlio4.1",
-              "nomeTitolare": "nome titolare",
-              "descrizioneUfficio": "figlio4.1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "codiceUfficio": "02.0",
-      "codiceUfficioSuperiore": "",
-      "nomeUfficio": "Ufficio di collegamento del Capo Dipartimento e del Capo del CNVVF",
-      "nomeTitolare": "Ing. Carlo Dall'Oppio",
-      "coloreSfondo": "#ff7c7c",
-      "ordineVisualizzazione": 3,
-      "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-      "children": [
-        {
-          "codiceUfficio": "02.1000",
-          "codiceUfficioSuperiore": "02.0",
-          "nomeUfficio": "figlio5",
-          "nomeTitolare": "figlio5",
-          "coloreSfondo": "#ff7c7c",
-          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-          "children": []
-        },
-        {
-          "codiceUfficio": "02.1001",
-          "codiceUfficioSuperiore": "02.0",
-          "coloreSfondo": "#ff7c7c",
-          "nomeUfficio": "figlio6",
-          "nomeTitolare": "nome titolare",
-          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-          "children": [
-            {
-              "codiceUfficio": "02.1002",
-              "codiceUfficioSuperiore": "02.1001",
-              "coloreSfondo": "#ff7c7c",
-              "nomeUfficio": "figlio6.1",
-              "nomeTitolare": "nome titolare",
-              "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "codiceUfficio": "03.0",
-      "codiceUfficioSuperiore": "",
-      "nomeUfficio": "Ufficio number X",
-      "nomeTitolare": "Nome e Cognome",
-      "coloreSfondo": "#ffdcdc",
-      "ordineVisualizzazione": 4,
-      "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-      "children": [
-        {
-          "codiceUfficio": "03.1000",
-          "codiceUfficioSuperiore": "03.0",
-          "nomeUfficio": "figlio7",
-          "nomeTitolare": "figlio7",
-          "coloreSfondo": "#ffdcdc",
-          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-          "children": []
-        },
-        {
-          "codiceUfficio": "03.1001",
-          "codiceUfficioSuperiore": "03.0",
-          "coloreSfondo": "#ffdcdc",
-          "nomeUfficio": "figlio8",
-          "nomeTitolare": "nome titolare",
-          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-          "children": [
-            {
-              "codiceUfficio": "03.1002",
-              "codiceUfficioSuperiore": "03.1001",
-              "coloreSfondo": "#ffdcdc",
-              "nomeUfficio": "figlio8.1",
-              "nomeTitolare": "nome titolare",
-              "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "codiceUfficio": "04.0",
-      "codiceUfficioSuperiore": "",
-      "nomeUfficio": "Opera Nazionale Assistenza",
-      "nomeTitolare": "nome titolare",
-      "coloreSfondo": "#e1e1e1",
-      "ordineVisualizzazione": 5,
-      "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-      "children": [
-        {
-          "codiceUfficio": "04.1000",
-          "codiceUfficioSuperiore": "04.0",
-          "nomeUfficio": "figlio9",
-          "nomeTitolare": "figlio9",
-          "coloreSfondo": "#e1e1e1",
-          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-          "children": [
-            {
-              "codiceUfficio": "04.1001",
-              "codiceUfficioSuperiore": "04.1000",
-              "nomeUfficio": "figlio9.1",
-              "nomeTitolare": "figlio9.1",
-              "coloreSfondo": "#e1e1e1",
-              "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-              "children": []
-            },
-            {
-              "codiceUfficio": "04.1002",
-              "codiceUfficioSuperiore": "04.1000",
-              "coloreSfondo": "#e1e1e1",
-              "nomeUfficio": "figlio9.2",
-              "nomeTitolare": "nome titolare",
-              "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-              "children": [
+                    "cognome": "Cognome",
+                    "nome": "Nome",
+                    "qualifica": "qualifica",
+                    "codiceUfficio": "00.0",
+                    "contatti": [
+                        {
+                            "tipo": "telefono",
+                            "contatto": "1234567"
+                        },
+                        {
+                            "tipo": "email",
+                            "contatto": "nome.cognome@vigilfuoco.it"
+                        }
+                    ]
+                },
                 {
-                  "codiceUfficio": "04.1002",
-                  "codiceUfficioSuperiore": "04.1002",
-                  "coloreSfondo": "#e1e1e1",
-                  "nomeUfficio": "figlio9.2.1",
-                  "nomeTitolare": "nome titolare",
-                  "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-                  "children": []
+                    "cognome": "Cognome",
+                    "nome": "Nome",
+                    "qualifica": "qualifica",
+                    "codiceUfficio": "00.0",
+                    "contatti": [
+                        {
+                            "tipo": "telefono",
+                            "contatto": "1234567"
+                        },
+                        {
+                            "tipo": "email",
+                            "contatto": "nome.cognome@vigilfuoco.it"
+                        }
+                    ]
+                },
+                {
+                    "cognome": "Cognome",
+                    "nome": "Nome",
+                    "qualifica": "qualifica",
+                    "codiceUfficio": "00.0",
+                    "contatti": [
+                        {
+                            "tipo": "telefono",
+                            "contatto": "1234567"
+                        },
+                        {
+                            "tipo": "email",
+                            "contatto": "nome.cognome@vigilfuoco.it"
+                        }
+                    ]
                 }
-              ]
-            }
-          ]
+            ],
+            "children": [
+                {
+                    "codiceUfficio": "00.1000",
+                    "codiceUfficioSuperiore": "00.0",
+                    "nomeUfficio": "Direzione centrale per la Difesa Civile e le attività di Protezione Civile",
+                    "nomeTitolare": "figlio1",
+                    "coloreSfondo": "#495380",
+                    "descrizioneUfficio": "figlio1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                    "children": [
+                        {
+                            "codiceUfficio": "00.10001",
+                            "codiceUfficioSuperiore": "00.1000",
+                            "coloreSfondo": "#495380",
+                            "nomeUfficio": "figlio1.1",
+                            "nomeTitolare": "nome titolare",
+                            "descrizioneUfficio": "figlio1.1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                            "children": [
+                                {
+                                    "codiceUfficio": "00.1003",
+                                    "codiceUfficioSuperiore": "00.10001",
+                                    "coloreSfondo": "#495380",
+                                    "nomeUfficio": "figlio1.1.1",
+                                    "nomeTitolare": "nome titolare",
+                                    "descrizioneUfficio": "figlio1.1.1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                                    "children": [],
+                                    "personale": [
+                                        {
+                                            "cognome": "Cognome",
+                                            "nome": "Nome",
+                                            "qualifica": "qualifica",
+                                            "codiceUfficio": "00.0",
+                                            "contatti": [
+                                                {
+                                                    "tipo": "telefono",
+                                                    "contatto": "1234567"
+                                                },
+                                                {
+                                                    "tipo": "email",
+                                                    "contatto": "nome.cognome@vigilfuoco.it"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "personale": [
+                                {
+                                    "cognome": "Cognome",
+                                    "nome": "Nome",
+                                    "qualifica": "qualifica",
+                                    "codiceUfficio": "00.0",
+                                    "contatti": [
+                                        {
+                                            "tipo": "telefono",
+                                            "contatto": "1234567"
+                                        },
+                                        {
+                                            "tipo": "email",
+                                            "contatto": "nome.cognome@vigilfuoco.it"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "codiceUfficio": "00.1001",
+                    "codiceUfficioSuperiore": "00.0",
+                    "coloreSfondo": "#495380",
+                    "nomeUfficio": "figlio2",
+                    "nomeTitolare": "nome titolare",
+                    "descrizioneUfficio": "figlio2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                    "children": [
+                        {
+                            "codiceUfficio": "00.1002",
+                            "codiceUfficioSuperiore": "00.1001",
+                            "coloreSfondo": "#495380",
+                            "nomeUfficio": "figlio2.1",
+                            "nomeTitolare": "nome titolare",
+                            "descrizioneUfficio": "figlio2.1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "codiceUfficio": "04.1001",
-          "codiceUfficioSuperiore": "04.0",
-          "coloreSfondo": "#e1e1e1",
-          "nomeUfficio": "figlio10",
-          "nomeTitolare": "Nome ritolare",
-          "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-          "children": [
-            {
-              "codiceUfficio": "04.1002",
-              "codiceUfficioSuperiore": "04.1001",
-              "coloreSfondo": "#e1e1e1",
-              "nomeUfficio": "figlio10.1",
-              "nomeTitolare": "nome titolare",
-              "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-              "children": []
-            }
-          ]
+            "codiceUfficio": "01.0",
+            "codiceUfficioSuperiore": "",
+            "nomeUfficio": "Capo del Corpo Nazionale dei Vigili del Fuoco Vice Capo Dipartimento Vicario",
+            "nomeTitolare": "Ing. Carlo Dall'Oppio",
+            "coloreSfondo": "#840101",
+            "ordineVisualizzazione": 2,
+            "descrizioneUfficio": "222 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+            "personale": [
+                {
+                    "cognome": "Cognome",
+                    "nome": "Nome",
+                    "qualifica": "qualifica",
+                    "codiceUfficio": "00.0",
+                    "contatti": [
+                        {
+                            "tipo": "telefono",
+                            "contatto": "1234567"
+                        },
+                        {
+                            "tipo": "email",
+                            "contatto": "nome.cognome@vigilfuoco.it"
+                        }
+                    ]
+                },
+                {
+                    "cognome": "Cognome",
+                    "nome": "Nome",
+                    "qualifica": "qualifica",
+                    "codiceUfficio": "00.0",
+                    "contatti": [
+                        {
+                            "tipo": "telefono",
+                            "contatto": "1234567"
+                        },
+                        {
+                            "tipo": "email",
+                            "contatto": "nome.cognome@vigilfuoco.it"
+                        }
+                    ]
+                }
+            ],
+            "children": [
+                {
+                    "codiceUfficio": "01.1000",
+                    "codiceUfficioSuperiore": "01.0",
+                    "nomeUfficio": "figlio3",
+                    "nomeTitolare": "figlio3",
+                    "coloreSfondo": "#840101",
+                    "descrizioneUfficio": "figlio3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                    "children": [
+                        {
+                            "codiceUfficio": "01.1002",
+                            "codiceUfficioSuperiore": "01.1000",
+                            "nomeUfficio": "sottofiglio3.1",
+                            "nomeTitolare": "sottofiglio3.1",
+                            "coloreSfondo": "#840101",
+                            "descrizioneUfficio": "sottofiglio3.1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "codiceUfficio": "01.1001",
+                    "codiceUfficioSuperiore": "01.0",
+                    "coloreSfondo": "#840101",
+                    "nomeUfficio": "figlio4",
+                    "nomeTitolare": "nome titolare",
+                    "descrizioneUfficio": "figlio4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                    "children": [
+                        {
+                            "codiceUfficio": "01.1002",
+                            "codiceUfficioSuperiore": "01.1001",
+                            "coloreSfondo": "#840101",
+                            "nomeUfficio": "figlio4.1",
+                            "nomeTitolare": "nome titolare",
+                            "descrizioneUfficio": "figlio4.1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "codiceUfficio": "02.0",
+            "codiceUfficioSuperiore": "",
+            "nomeUfficio": "Ufficio di collegamento del Capo Dipartimento e del Capo del CNVVF",
+            "nomeTitolare": "Ing. Carlo Dall'Oppio",
+            "coloreSfondo": "#ff7c7c",
+            "ordineVisualizzazione": 3,
+            "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+            "children": [
+                {
+                    "codiceUfficio": "02.1000",
+                    "codiceUfficioSuperiore": "02.0",
+                    "nomeUfficio": "figlio5",
+                    "nomeTitolare": "figlio5",
+                    "coloreSfondo": "#ff7c7c",
+                    "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                    "children": []
+                },
+                {
+                    "codiceUfficio": "02.1001",
+                    "codiceUfficioSuperiore": "02.0",
+                    "coloreSfondo": "#ff7c7c",
+                    "nomeUfficio": "figlio6",
+                    "nomeTitolare": "nome titolare",
+                    "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                    "children": [
+                        {
+                            "codiceUfficio": "02.1002",
+                            "codiceUfficioSuperiore": "02.1001",
+                            "coloreSfondo": "#ff7c7c",
+                            "nomeUfficio": "figlio6.1",
+                            "nomeTitolare": "nome titolare",
+                            "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "codiceUfficio": "03.0",
+            "codiceUfficioSuperiore": "",
+            "nomeUfficio": "Ufficio number X",
+            "nomeTitolare": "Nome e Cognome",
+            "coloreSfondo": "#ffdcdc",
+            "ordineVisualizzazione": 4,
+            "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+            "children": [
+                {
+                    "codiceUfficio": "03.1000",
+                    "codiceUfficioSuperiore": "03.0",
+                    "nomeUfficio": "figlio7",
+                    "nomeTitolare": "figlio7",
+                    "coloreSfondo": "#ffdcdc",
+                    "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                    "children": []
+                },
+                {
+                    "codiceUfficio": "03.1001",
+                    "codiceUfficioSuperiore": "03.0",
+                    "coloreSfondo": "#ffdcdc",
+                    "nomeUfficio": "figlio8",
+                    "nomeTitolare": "nome titolare",
+                    "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                    "children": [
+                        {
+                            "codiceUfficio": "03.1002",
+                            "codiceUfficioSuperiore": "03.1001",
+                            "coloreSfondo": "#ffdcdc",
+                            "nomeUfficio": "figlio8.1",
+                            "nomeTitolare": "nome titolare",
+                            "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "codiceUfficio": "04.0",
+            "codiceUfficioSuperiore": "",
+            "nomeUfficio": "Opera Nazionale Assistenza",
+            "nomeTitolare": "nome titolare",
+            "coloreSfondo": "#e1e1e1",
+            "ordineVisualizzazione": 5,
+            "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+            "children": [
+                {
+                    "codiceUfficio": "04.1000",
+                    "codiceUfficioSuperiore": "04.0",
+                    "nomeUfficio": "figlio9",
+                    "nomeTitolare": "figlio9",
+                    "coloreSfondo": "#e1e1e1",
+                    "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                    "children": [
+                        {
+                            "codiceUfficio": "04.1001",
+                            "codiceUfficioSuperiore": "04.1000",
+                            "nomeUfficio": "figlio9.1",
+                            "nomeTitolare": "figlio9.1",
+                            "coloreSfondo": "#e1e1e1",
+                            "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                            "children": []
+                        },
+                        {
+                            "codiceUfficio": "04.1002",
+                            "codiceUfficioSuperiore": "04.1000",
+                            "coloreSfondo": "#e1e1e1",
+                            "nomeUfficio": "figlio9.2",
+                            "nomeTitolare": "nome titolare",
+                            "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                            "children": [
+                                {
+                                    "codiceUfficio": "04.1002",
+                                    "codiceUfficioSuperiore": "04.1002",
+                                    "coloreSfondo": "#e1e1e1",
+                                    "nomeUfficio": "figlio9.2.1",
+                                    "nomeTitolare": "nome titolare",
+                                    "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "codiceUfficio": "04.1001",
+                    "codiceUfficioSuperiore": "04.0",
+                    "coloreSfondo": "#e1e1e1",
+                    "nomeUfficio": "figlio10",
+                    "nomeTitolare": "Nome ritolare",
+                    "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                    "children": [
+                        {
+                            "codiceUfficio": "04.1002",
+                            "codiceUfficioSuperiore": "04.1001",
+                            "coloreSfondo": "#e1e1e1",
+                            "nomeUfficio": "figlio10.1",
+                            "nomeTitolare": "nome titolare",
+                            "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "GetChildSedeFromWauc":[
-    {
-      "id": "002",
-      "codice": "1A",
-      "codDistaccamento": "8000",
-      "descrizione": "DIREZIONE CENTRALE PER L'EMERGENZA E IL SOCCORSO TECNICO E L'ANTINCENDIO BOSCHIVO",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE CENTRALE",
-      "tipoOriginale": "DIR",
-      "tipologiaDistaccamento": {
-        "codice": "0",
-        "descrizione": "UFFICIO CENTRALE"
-      },
-      "provincia": "RM",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": "DCEMER"
-    },
-    {
-      "id": "003",
-      "codice": "3A",
-      "codDistaccamento": "8000",
-      "descrizione": "DIREZIONE CENTRALE PER LA PREVENZIONE E LA SICUREZZA TECNICA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE CENTRALE",
-      "tipoOriginale": "DIR",
-      "tipologiaDistaccamento": {
-        "codice": "0",
-        "descrizione": "UFFICIO CENTRALE"
-      },
-      "provincia": "RM",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": "DCPREV"
-    },
-    {
-      "id": "005",
-      "codice": "2A",
-      "codDistaccamento": "8000",
-      "descrizione": "DIREZIONE CENTRALE PER LA FORMAZIONE",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE CENTRALE",
-      "tipoOriginale": "DIR",
-      "tipologiaDistaccamento": {
-        "codice": "0",
-        "descrizione": "UFFICIO CENTRALE"
-      },
-      "provincia": "RM",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": "DCFORM"
-    },
-    {
-      "id": "007",
-      "codice": "6A",
-      "codDistaccamento": "8000",
-      "descrizione": "DIREZIONE CENTRALE PER LE RISORSE FINANZIARIE",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE CENTRALE",
-      "tipoOriginale": "DIR",
-      "tipologiaDistaccamento": {
-        "codice": "0",
-        "descrizione": "UFFICIO CENTRALE"
-      },
-      "provincia": "RM",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": "DCRISFIN"
-    },
-    {
-      "id": "009",
-      "codice": "8A",
-      "codDistaccamento": "8000",
-      "descrizione": "DIREZIONE CENTRALE PER LE RISORSE LOGISTICHE E STRUMENTALI",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE CENTRALE",
-      "tipoOriginale": "DIR",
-      "tipologiaDistaccamento": {
-        "codice": "0",
-        "descrizione": "UFFICIO CENTRALE"
-      },
-      "provincia": "RM",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": "DCRISLOG"
-    },
-    {
-      "id": "01",
-      "codice": "01",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. PIEMONTE",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "TO",
-      "coordinate": "45.05147,7.62078",
-      "idSedePadre": "001",
-      "codAOO": "DIR-PIE"
-    },
-    {
-      "id": "013",
-      "codice": "12A",
-      "codDistaccamento": "8000",
-      "descrizione": "UFFICI DI STAFF DEL CAPO DEL C.N.VV.F.",
-      "tipo": "UFC",
-      "descTipo": "UFFICI AD USO PARTICOLARE",
-      "tipoOriginale": "UFP",
-      "tipologiaDistaccamento": {
-        "codice": "0",
-        "descrizione": "UFFICIO CENTRALE"
-      },
-      "provincia": "RM",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": "STAFFCNVVF"
-    },
-    {
-      "id": "014",
-      "codice": "13A",
-      "codDistaccamento": "8000",
-      "descrizione": "UFFICIO DI COLLEGAMENTO DEL CAPO DEL DIPARTIMENTO E DEL CAPO DEL C.N.VV.F.",
-      "tipo": "UFC",
-      "descTipo": "UFFICI AD USO PARTICOLARE",
-      "tipoOriginale": "UFP",
-      "tipologiaDistaccamento": {
-        "codice": "0",
-        "descrizione": "UFFICIO CENTRALE"
-      },
-      "provincia": "RM",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "02",
-      "codice": "02",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. LOMBARDIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "MI",
-      "coordinate": "45.46489,9.17972",
-      "idSedePadre": "001",
-      "codAOO": "DIR-LOM"
-    },
-    {
-      "id": "03",
-      "codice": "03",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. LIGURIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "GE",
-      "coordinate": "44.40921,8.90521",
-      "idSedePadre": "001",
-      "codAOO": "DIR-LIG"
-    },
-    {
-      "id": "04",
-      "codice": "04",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. VENETO",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "PD",
-      "coordinate": "45.40998,11.87337",
-      "idSedePadre": "001",
-      "codAOO": "DIR-VEN"
-    },
-    {
-      "id": "05",
-      "codice": "05",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. FRIULI VENEZIA GIULIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "TS",
-      "coordinate": "45.64855,13.76876",
-      "idSedePadre": "001",
-      "codAOO": "DIR-FVG"
-    },
-    {
-      "id": "06",
-      "codice": "06",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. EMILIA ROMAGNA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "BO",
-      "coordinate": "44.535506,11.368185",
-      "idSedePadre": "001",
-      "codAOO": "DIR-EMI"
-    },
-    {
-      "id": "07",
-      "codice": "07",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. TOSCANA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "FI",
-      "coordinate": "43.78091,11.26828",
-      "idSedePadre": "001",
-      "codAOO": "DIR-TOS"
-    },
-    {
-      "id": "09",
-      "codice": "09",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. MARCHE",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "AN",
-      "coordinate": "43.60838,13.51542",
-      "idSedePadre": "001",
-      "codAOO": "DIR-MAR"
-    },
-    {
-      "id": "10",
-      "codice": "10",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. LAZIO",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "RM",
-      "coordinate": "41.82691,12.45946",
-      "idSedePadre": "001",
-      "codAOO": "DIR-LAZ"
-    },
-    {
-      "id": "12",
-      "codice": "12",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. UMBRIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "PG",
-      "coordinate": "43.10535,12.39194",
-      "idSedePadre": "001",
-      "codAOO": "DIR-UMB"
-    },
-    {
-      "id": "13",
-      "codice": "13",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. CAMPANIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "NA",
-      "coordinate": "40.86588,14.29312",
-      "idSedePadre": "001",
-      "codAOO": "DIR-CAM"
-    },
-    {
-      "id": "15",
-      "codice": "15",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. PUGLIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "BA",
-      "coordinate": "41.11185,16.90165",
-      "idSedePadre": "001",
-      "codAOO": "DIR-PUG"
-    },
-    {
-      "id": "16",
-      "codice": "16",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. CALABRIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "CZ",
-      "coordinate": "38.91112,16.57481",
-      "idSedePadre": "001",
-      "codAOO": "DIR-CAL"
-    },
-    {
-      "id": "17",
-      "codice": "17",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. SARDEGNA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "CA",
-      "coordinate": "39.247166,9.117922",
-      "idSedePadre": "001",
-      "codAOO": "DIR-SAR"
-    },
-    {
-      "id": "18",
-      "codice": "18",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. SICILIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "PA",
-      "coordinate": "38.12285,13.35766",
-      "idSedePadre": "001",
-      "codAOO": "DIR-SIC"
-    },
-    {
-      "id": "19",
-      "codice": "19",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. BASILICATA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "PZ",
-      "coordinate": "40.64405,15.83283",
-      "idSedePadre": "001",
-      "codAOO": "DIR-BAS"
-    },
-    {
-      "id": "20",
-      "codice": "20",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. ABRUZZO",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "AQ",
-      "coordinate": "42.371063,13.349061",
-      "idSedePadre": "001",
-      "codAOO": "DIR-ABR"
-    },
-    {
-      "id": "21",
-      "codice": "21",
-      "codDistaccamento": "0",
-      "descrizione": "DIREZIONE REGIONALE VV.F. MOLISE",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "CB",
-      "coordinate": "41.56611,14.66530",
-      "idSedePadre": "001",
-      "codAOO": "DIR-MOL"
-    },
-    {
-      "id": "50",
-      "codice": "50",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE LAZIO",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "RM",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "51",
-      "codice": "51",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE MARCHE",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "AN",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "52",
-      "codice": "52",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE UMBRIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "PG",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "53",
-      "codice": "53",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE ABRUZZO",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "AQ",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "54",
-      "codice": "54",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE CAMPANIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "NA",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "55",
-      "codice": "55",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE LIGURIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "GE",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "56",
-      "codice": "56",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE MOLISE",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "CB",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "57",
-      "codice": "57",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE VENETO",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "VE",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "58",
-      "codice": "58",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE SICILIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "CT",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "59",
-      "codice": "59",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE PIEMONTE",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "TO",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "60",
-      "codice": "60",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE LOMBARDIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "MI",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "61",
-      "codice": "61",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE FRIULI VENEZIA GIULIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "TS",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "62",
-      "codice": "62",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE EMILIA ROMAGNA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "TS",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "63",
-      "codice": "63",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE TOSCANA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "FI",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "64",
-      "codice": "64",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE PUGLIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "BA",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "65",
-      "codice": "65",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE BASILICATA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "MT",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "66",
-      "codice": "66",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE CALABRIA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "CZ",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "67",
-      "codice": "67",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE SARDEGNA",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "CA",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "68",
-      "codice": "68",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE DCPST",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "RM",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    },
-    {
-      "id": "69",
-      "codice": "69",
-      "codDistaccamento": "0",
-      "descrizione": "COMANDO DI CRATERE DCFORM",
-      "tipo": "DIR",
-      "descTipo": "DIREZIONE REGIONALE",
-      "tipoOriginale": "ISP",
-      "tipologiaDistaccamento": {
-        "codice": "9",
-        "descrizione": "DIREZIONE REGIONALE"
-      },
-      "provincia": "RM",
-      "coordinate": "",
-      "idSedePadre": "001",
-      "codAOO": ""
-    }
-  ]
+    ],
+    "GetChildSedeFromWauc": [
+        {
+            "id": "02",
+            "codice": "02",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. LOMBARDIA",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "MI",
+            "coordinate": "45.46489,9.17972",
+            "idSedePadre": "001",
+            "codAOO": "DIR-LOM"
+        },
+        {
+            "id": "03",
+            "codice": "03",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. LIGURIA",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "GE",
+            "coordinate": "44.40921,8.90521",
+            "idSedePadre": "001",
+            "codAOO": "DIR-LIG"
+        },
+        {
+            "id": "04",
+            "codice": "04",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. VENETO",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "PD",
+            "coordinate": "45.40998,11.87337",
+            "idSedePadre": "001",
+            "codAOO": "DIR-VEN"
+        },
+        {
+            "id": "05",
+            "codice": "05",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. FRIULI VENEZIA GIULIA",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "TS",
+            "coordinate": "45.64855,13.76876",
+            "idSedePadre": "001",
+            "codAOO": "DIR-FVG"
+        },
+        {
+            "id": "06",
+            "codice": "06",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. EMILIA ROMAGNA",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "BO",
+            "coordinate": "44.535506,11.368185",
+            "idSedePadre": "001",
+            "codAOO": "DIR-EMI"
+        },
+        {
+            "id": "07",
+            "codice": "07",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. TOSCANA",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "FI",
+            "coordinate": "43.78091,11.26828",
+            "idSedePadre": "001",
+            "codAOO": "DIR-TOS"
+        },
+        {
+            "id": "09",
+            "codice": "09",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. MARCHE",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "AN",
+            "coordinate": "43.60838,13.51542",
+            "idSedePadre": "001",
+            "codAOO": "DIR-MAR"
+        },
+        {
+            "id": "10",
+            "codice": "10",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. LAZIO",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "RM",
+            "coordinate": "41.82691,12.45946",
+            "idSedePadre": "001",
+            "codAOO": "DIR-LAZ"
+        },
+        {
+            "id": "12",
+            "codice": "12",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. UMBRIA",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "PG",
+            "coordinate": "43.10535,12.39194",
+            "idSedePadre": "001",
+            "codAOO": "DIR-UMB"
+        },
+        {
+            "id": "13",
+            "codice": "13",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. CAMPANIA",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "NA",
+            "coordinate": "40.86588,14.29312",
+            "idSedePadre": "001",
+            "codAOO": "DIR-CAM"
+        },
+        {
+            "id": "15",
+            "codice": "15",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. PUGLIA",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "BA",
+            "coordinate": "41.11185,16.90165",
+            "idSedePadre": "001",
+            "codAOO": "DIR-PUG"
+        },
+        {
+            "id": "16",
+            "codice": "16",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. CALABRIA",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "CZ",
+            "coordinate": "38.91112,16.57481",
+            "idSedePadre": "001",
+            "codAOO": "DIR-CAL"
+        },
+        {
+            "id": "17",
+            "codice": "17",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. SARDEGNA",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "CA",
+            "coordinate": "39.247166,9.117922",
+            "idSedePadre": "001",
+            "codAOO": "DIR-SAR"
+        },
+        {
+            "id": "18",
+            "codice": "18",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. SICILIA",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "PA",
+            "coordinate": "38.12285,13.35766",
+            "idSedePadre": "001",
+            "codAOO": "DIR-SIC"
+        },
+        {
+            "id": "19",
+            "codice": "19",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. BASILICATA",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "PZ",
+            "coordinate": "40.64405,15.83283",
+            "idSedePadre": "001",
+            "codAOO": "DIR-BAS"
+        },
+        {
+            "id": "20",
+            "codice": "20",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. ABRUZZO",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "AQ",
+            "coordinate": "42.371063,13.349061",
+            "idSedePadre": "001",
+            "codAOO": "DIR-ABR"
+        },
+        {
+            "id": "21",
+            "codice": "21",
+            "codDistaccamento": "0",
+            "descrizione": "DIREZIONE REGIONALE VV.F. MOLISE",
+            "tipo": "DIR",
+            "descTipo": "DIREZIONE REGIONALE",
+            "tipoOriginale": "ISP",
+            "tipologiaDistaccamento": {
+                "codice": "9",
+                "descrizione": "DIREZIONE REGIONALE"
+            },
+            "provincia": "CB",
+            "coordinate": "41.56611,14.66530",
+            "idSedePadre": "001",
+            "codAOO": "DIR-MOL"
+        }
+    ]
 }

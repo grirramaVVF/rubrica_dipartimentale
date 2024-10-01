@@ -56,7 +56,7 @@ p {
 
 
 /************************************************/
-.accordion_container {
+/* .accordion_container {
   padding: 1px 1px 1px 0px;
   background-color: red;
   border-radius: 10px;
@@ -86,8 +86,6 @@ p {
 }
 
 .accordion {
-  /* margin-bottom: 1em; */
-  /* border: 1px solid red; */
   margin-left: 3rem;
   background-color: white;
   padding: 1rem;
@@ -96,13 +94,11 @@ p {
 
 .accordion>input[type="checkbox"]:checked~.content {
   padding: 15px;
-  /* border: 1px solid #e8e8e8; */
   border-top: 0;
 }
 
 .accordion .handle {
   margin: 0;
-  /* font-size: 1.125em; */
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.2em;
@@ -113,36 +109,9 @@ p {
   cursor: pointer;
   font-weight: bold;
   padding: 15px;
-  /* background: #e8e8e8; */
 }
 
 .accordion label:hover,
 .accordion label:focus {
   background: #d8d8d8;
-}
-
-.smallLabelFont {
-  font-size: 1.60rem;
-}
-
-/* .accordion .handle label:before {
-  font-family: 'fontawesome';
-  content: "\f054";
-  display: inline-block;
-  margin-right: 10px;
-  font-size: .58em;
-  line-height: 1.556em;
-  vertical-align: middle;
 } */
-
-/* .accordion>input[type="checkbox"]:checked~.handle label:before {
-  content: "\f078";
-} */
-
-.accordion {
-  /* max-width: 65em; */
-}
-
-.accordion p:last-child {
-  margin-bottom: 0;
-}

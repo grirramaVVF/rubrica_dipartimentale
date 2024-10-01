@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
 import { CercaComponent } from '../cerca/cerca.component';
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
-import { selectHome, selectHomeTabSelected, selectUfficioSelezionato } from '../../store/selectors/rubrica.selector';
+import {
+    selectElencoUfficiSelezionati,
+    selectHome,
+    selectHomeTabSelected,
+    selectUfficioSelezionato
+} from '../../store/selectors/rubrica.selector';
 import { IOffice } from '../../models/IOffice';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../store/states/app.state';
@@ -15,7 +20,14 @@ import { PersonaleComponent } from '../personale/personale.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { Office } from '../../models/Office';
-import { RubricaActionType, SetHomeTabSelected, SetUfficioSelezionato, SetUfficioSelezionatoPrecedente } from '../../store/actions/rubrica.action';
+import {
+    AddElencoUfficiSelezionati,
+    DelElencoUfficiSelezionati,
+    RubricaActionType,
+    SetHomeTabSelected,
+    SetUfficioSelezionato,
+    SetUfficioSelezionatoPrecedente
+} from '../../store/actions/rubrica.action';
 
 @Component({
     selector: 'vvfrubrica-home',
@@ -51,18 +63,14 @@ export class HomeComponent {
     leftComponentSelected: string = 'ufficiDipendenti';
     idComponentFather: string = '';
 
-    elencoUfficiSelesionati: Array<IOffice> | null = null;
+    elencoUfficiSelezionati$ = this._storeApp$.select(selectElencoUfficiSelezionati);
+    elencoUfficiSelezionati: Array<IOffice | null> | null = null;
 
     constructor(private _storeApp$: Store<AppState>) { }
 
     ngOnInit() {
         this._storeApp$.dispatch({ type: RubricaActionType.GetHomeRubrica });
-
-        this.homeItems$.subscribe(
-            items => {
-                this.homeItems = [...items?.rubrica];
-            }
-        );
+        this.homeItems$.subscribe(items => this.homeItems = [...items?.rubrica]);
 
         this.ufficioSelezionato$.subscribe(
             items => {
@@ -76,9 +84,8 @@ export class HomeComponent {
             }
         );
 
-        this.leftComponentSelected$.subscribe(comp => {
-            this.leftComponentSelected = comp;
-        });
+        this.leftComponentSelected$.subscribe(comp => this.leftComponentSelected = comp);
+        this.elencoUfficiSelezionati$.subscribe(ele => this.elencoUfficiSelezionati = ele);
     }
 
     receiveBack(back: string) {
@@ -88,6 +95,7 @@ export class HomeComponent {
         let prevOffice: IOffice | null = testVar.findOffice(this.ufficioSelezionato?.codiceUfficioSuperiore);
 
         if (prevOffice != null) {
+            this.searchIfExiste();
             this._storeApp$.dispatch(SetUfficioSelezionatoPrecedente({ ufficioSelezionatoPrecedente: this.ufficioSelezionato }));
             this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: prevOffice }));
         }
@@ -99,5 +107,34 @@ export class HomeComponent {
 
     receiveIdComponentFather(father: string) {
         this.idComponentFather = father;
+    }
+
+    clickSubOffice(idSubOffice: string = '') {
+        console.log('idSubOffice: ', idSubOffice);
+        let temp: Array<IOffice> = this.ufficioSelezionato?.children.filter(element => element['codiceUfficio'] == idSubOffice) ?? [];
+
+        if (temp.length > 0) {
+            this._storeApp$.dispatch(AddElencoUfficiSelezionati({ ufficioSelezionato: this.ufficioSelezionato }));
+            this._storeApp$.dispatch(SetUfficioSelezionatoPrecedente({ ufficioSelezionatoPrecedente: this.ufficioSelezionato }));
+            this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: temp[0] }));
+        }
+    }
+
+    searchIfExiste() {
+        let trovato: boolean = false;
+        for (let off of this.elencoUfficiSelezionati ?? []) {
+            console.log('zzzzzz: ');
+
+            if (off?.codiceUfficio == this.ufficioSelezionato?.codiceUfficio) {
+                this._storeApp$.dispatch(DelElencoUfficiSelezionati({ ufficioSelezionato: this.ufficioSelezionato }));
+                trovato = true;
+                break;
+            }
+        }
+
+        if (!trovato) {
+            console.log('trovato');
+            this._storeApp$.dispatch(AddElencoUfficiSelezionati({ ufficioSelezionato: this.ufficioSelezionato }));
+        }
     }
 }

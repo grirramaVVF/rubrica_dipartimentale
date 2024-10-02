@@ -25,8 +25,8 @@ import {
     DelElencoUfficiSelezionati,
     RubricaActionType,
     SetHomeTabSelected,
+    SetIdSelectedOfficeComponent,
     SetUfficioSelezionato,
-    SetUfficioSelezionatoPrecedente
 } from '../../store/actions/rubrica.action';
 
 @Component({
@@ -66,37 +66,51 @@ export class HomeComponent {
     elencoUfficiSelezionati$ = this._storeApp$.select(selectElencoUfficiSelezionati);
     elencoUfficiSelezionati: Array<IOffice | null> | null = null;
 
+    testVar: Office = new Office();
+
     constructor(private _storeApp$: Store<AppState>) { }
 
     ngOnInit() {
         this._storeApp$.dispatch({ type: RubricaActionType.GetHomeRubrica });
-        this.homeItems$.subscribe(items => this.homeItems = [...items?.rubrica]);
+        this.homeItems$.subscribe(items => {
+            this.homeItems = [...items?.rubrica];
+            this.testVar.setOffices(this.homeItems);
+        });
 
         this.ufficioSelezionato$.subscribe(
             items => {
                 this.ufficioSelezionato = { ...items };
 
                 if (Object.keys(this.ufficioSelezionato ?? {}).length > 0) {
+                    let txtHomeTabSelected = 'ufficiDipendenti';
+
                     if (this.ufficioSelezionato?.children.length == 0) {
-                        this._storeApp$.dispatch(SetHomeTabSelected({ homeTabSelected: "componenti" }));
+                        txtHomeTabSelected = 'componenti';
                     }
+                    this._storeApp$.dispatch(SetHomeTabSelected({ homeTabSelected: txtHomeTabSelected }));
                 }
             }
         );
 
         this.leftComponentSelected$.subscribe(comp => this.leftComponentSelected = comp);
         this.elencoUfficiSelezionati$.subscribe(ele => this.elencoUfficiSelezionati = ele);
+        this._storeApp$.dispatch(SetIdSelectedOfficeComponent({ id: this.homeItems[0].codiceUfficio }));
+    }
+
+    returnLastSelectedOffice(): IOffice | null {
+        let tempElencoUfficiSelezionati: Array<IOffice | null> | null = [...(this.elencoUfficiSelezionati ?? [])];
+        return tempElencoUfficiSelezionati?.pop() ?? null;
     }
 
     receiveBack(back: string) {
-        let testVar = new Office();
-        testVar.setOffices(this.homeItems);
-
-        let prevOffice: IOffice | null = testVar.findOffice(this.ufficioSelezionato?.codiceUfficioSuperiore);
+        let prevOffice: IOffice | null = this.returnLastSelectedOffice();
 
         if (prevOffice != null) {
-            this.searchIfExiste();
-            this._storeApp$.dispatch(SetUfficioSelezionatoPrecedente({ ufficioSelezionatoPrecedente: this.ufficioSelezionato }));
+            if (this.searchIfExiste(prevOffice)) {
+                this.popOfficeInList();
+                prevOffice = this.returnLastSelectedOffice();
+            }
+
             this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: prevOffice }));
         }
     }
@@ -110,31 +124,35 @@ export class HomeComponent {
     }
 
     clickSubOffice(idSubOffice: string = '') {
-        console.log('idSubOffice: ', idSubOffice);
         let temp: Array<IOffice> = this.ufficioSelezionato?.children.filter(element => element['codiceUfficio'] == idSubOffice) ?? [];
 
         if (temp.length > 0) {
-            this._storeApp$.dispatch(AddElencoUfficiSelezionati({ ufficioSelezionato: this.ufficioSelezionato }));
-            this._storeApp$.dispatch(SetUfficioSelezionatoPrecedente({ ufficioSelezionatoPrecedente: this.ufficioSelezionato }));
+            if (!this.searchIfExiste(temp[0])) {
+                this.appendOfficeInList(temp[0]);
+            }
+
             this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: temp[0] }));
         }
     }
 
-    searchIfExiste() {
+    searchIfExiste(offices: IOffice | null): boolean {
         let trovato: boolean = false;
-        for (let off of this.elencoUfficiSelezionati ?? []) {
-            console.log('zzzzzz: ');
 
-            if (off?.codiceUfficio == this.ufficioSelezionato?.codiceUfficio) {
-                this._storeApp$.dispatch(DelElencoUfficiSelezionati({ ufficioSelezionato: this.ufficioSelezionato }));
+        for (let office of this.elencoUfficiSelezionati ?? []) {
+            if (office?.codiceUfficio == offices?.codiceUfficio) {
                 trovato = true;
                 break;
             }
         }
 
-        if (!trovato) {
-            console.log('trovato');
-            this._storeApp$.dispatch(AddElencoUfficiSelezionati({ ufficioSelezionato: this.ufficioSelezionato }));
-        }
+        return trovato;
+    }
+
+    appendOfficeInList(office: IOffice | null) {
+        this._storeApp$.dispatch(AddElencoUfficiSelezionati({ ufficioSelezionato: office }));
+    }
+
+    popOfficeInList() {
+        this._storeApp$.dispatch(DelElencoUfficiSelezionati());
     }
 }

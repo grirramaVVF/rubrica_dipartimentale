@@ -16,8 +16,8 @@ import { SetHomeTabSelected } from '../../store/actions/rubrica.action';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToprightbarComponent {
-    checkTopRight$ = this._storeApp$.select(selectHomeTabSelected);
-    checkTopRight: string = '';
+    checkTopRightSelected$ = this._storeApp$.select(selectHomeTabSelected);
+    checkTopRightSelected: string = '';
 
     ufficioSelezionato$ = this._storeApp$.select(selectUfficioSelezionato);
     ufficioSelezionato?: IOffice | null = null;
@@ -26,10 +26,14 @@ export class ToprightbarComponent {
 
     ngOnInit() {
         this.ufficioSelezionato$.subscribe(items => this.ufficioSelezionato = { ...items });
-        this.checkTopRight$.subscribe(comp => this.checkTopRight = comp);
+        this.checkTopRightSelected$.subscribe(comp => {
+            console.log("zzzzzzzzzzzzzzzzzxxxxxxxxxxxxxx: ",comp);
+            this.checkTopRightSelected = comp;
+            console.log("zzzzzzzzzzzzzzzzzxxxxxxxxxxxxxx: ",this.checkTopRightSelected);
+        });
     }
 
     onButtonClick() {
-        this._storeApp$.dispatch(SetHomeTabSelected({ homeTabSelected: this.checkTopRight }));
+        this._storeApp$.dispatch(SetHomeTabSelected({ homeTabSelected: this.checkTopRightSelected }));
     }
 }

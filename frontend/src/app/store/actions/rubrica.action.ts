@@ -26,13 +26,9 @@ export enum RubricaActionType {
     DelElencoUfficiSelezionati = '[Del Elenco Ufficio Selezionato] Del Elenco Ufficio Selezionato',
     DelElencoUfficiSelezionatiSuccess = '[Del Elenco Ufficio Selezionato] Del Ufficio Selezionato Success',
     DelElencoUfficiSelezionatiError = '[Del Elenco Ufficio Selezionato] Del Elenco Ufficio Selezionato Error',
-
-    GetUfficioSelezionatoPrecedente = '[Get Ufficio Selezionato Precedente] Get Ufficio Selezionato Precedente',
-    GetUfficioSelezionatoPrecedenteSuccess = '[Get Ufficio Selezionato Precedente] Get Ufficio Selezionato Precedente Success',
-    GetUfficioSelezionatoPrecedenteError = '[Get Ufficio Selezionato Precedente] Get Ufficio Selezionato Precedente Error',
-    SetUfficioSelezionatoPrecedente = '[Set Ufficio Selezionato Precedente] Set Ufficio Selezionato Precedente',
-    SetUfficioSelezionatoPrecedenteSuccess = '[Set Ufficio Selezionato Precedente] Set Ufficio Selezionato Precedente Success',
-    SetUfficioSelezionatoPrecedenteError = '[Set Ufficio Selezionato Precedente] Set Ufficio Selezionato Precedente Error',
+    EmptyElencoUfficiSelezionati = '[Empty Elenco Ufficio Selezionato] Empty Elenco Ufficio Selezionato',
+    EmptyElencoUfficiSelezionatiSuccess = '[Empty Elenco Ufficio Selezionato] Empty Ufficio Selezionato Success',
+    EmptyElencoUfficiSelezionatiError = '[Empty Elenco Ufficio Selezionato] Empty Elenco Ufficio Selezionato Error',
 
     GetHomeTabSelected = '[Get HomeTabSelected] Get HomeTabSelected',
     GetHomeTabSelectedSuccess = '[Get HomeTabSelected] Get HomeTabSelected Success',
@@ -40,6 +36,13 @@ export enum RubricaActionType {
     SetHomeTabSelected = '[Set HomeTabSelected] Set HomeTabSelected',
     SetHomeTabSelectedSuccess = '[Set HomeTabSelected] Set HomeTabSelected Success',
     SetHomeTabSelectedError = '[Set HomeTabSelected] Set HomeTabSelected Error',
+
+    GetIdSelectedOfficeComponent = '[Get IdSelectedOfficeComponent] Get IdSelectedOfficeComponent',
+    GetIdSelectedOfficeComponentSuccess = '[Get IdSelectedOfficeComponent Success] Get IdSelectedOfficeComponent Success',
+    GetIdSelectedOfficeComponentError = '[Get IdSelectedOfficeComponent Error] Get IdSelectedOfficeComponent Error',
+    SetIdSelectedOfficeComponent = '[Set IdSelectedOfficeComponent] Set IdSelectedOfficeComponent',
+    SetIdSelectedOfficeComponentSuccess = '[Set IdSelectedOfficeComponent Success] Set IdSelectedOfficeComponent Success',
+    SetIdSelectedOfficeComponentError = '[Set IdSelectedOfficeComponent Errore] Set IdSelectedOfficeComponent Error',
 }
 
 export const GetHomeRubrica = createAction(
@@ -98,34 +101,6 @@ export const SetUfficioSelezionatoError = createAction(
     RubricaActionType.SetUfficioSelezionatoError
 );
 
-export const GetUfficioSelezionatoPrecedente = createAction(
-    RubricaActionType.GetUfficioSelezionatoPrecedente,
-    //props<{rubrica: Array<IOffice>}>()
-);
-
-export const GetUfficioSelezionatoSuccessPrecedente = createAction(
-    RubricaActionType.GetUfficioSelezionatoPrecedenteSuccess,
-    //props<{rubrica: Array<IOffice>}>()
-);
-
-export const GetUfficioSelezionatoErrorPrecedente = createAction(
-    RubricaActionType.GetUfficioSelezionatoPrecedenteError
-);
-
-export const SetUfficioSelezionatoPrecedente = createAction(
-    RubricaActionType.SetUfficioSelezionatoPrecedente,
-    props<{ ufficioSelezionatoPrecedente: IOffice | null }>()
-);
-
-export const SetUfficioSelezionatoSuccessPrecedente = createAction(
-    RubricaActionType.GetUfficioSelezionatoPrecedenteSuccess,
-    //props<{rubrica: Array<IOffice>}>()
-);
-
-export const SetUfficioSelezionatoErrorPrecedente = createAction(
-    RubricaActionType.SetUfficioSelezionatoPrecedenteError
-);
-
 export const GetHomeTabSelected = createAction(
     RubricaActionType.GetHomeTabSelected,
 );
@@ -182,7 +157,7 @@ export const AddElencoUfficiSelezionatiError = createAction(
 
 export const DelElencoUfficiSelezionati = createAction(
     RubricaActionType.DelElencoUfficiSelezionati,
-    props<{ ufficioSelezionato: IOffice | null }>()
+    //props<{ ufficioSelezionato: IOffice | null }>()
 );
 
 export const DelElencoUfficiSelezionatiSuccess = createAction(
@@ -190,6 +165,48 @@ export const DelElencoUfficiSelezionatiSuccess = createAction(
     //props<{rubrica: Array<IOffice>}>()
 );
 
+export const EmptyElencoUfficiSelezionatiError = createAction(
+    RubricaActionType.EmptyElencoUfficiSelezionatiError
+);
+
+export const EmptyElencoUfficiSelezionati = createAction(
+    RubricaActionType.EmptyElencoUfficiSelezionati,
+    //props<{ ufficioSelezionato: IOffice | null }>()
+);
+
+export const EmptyElencoUfficiSelezionatiSuccess = createAction(
+    RubricaActionType.EmptyElencoUfficiSelezionatiSuccess,
+    //props<{rubrica: Array<IOffice>}>()
+);
+
 export const DelElencoUfficiSelezionatiError = createAction(
     RubricaActionType.DelElencoUfficiSelezionatiError
+);
+
+export const GetIdSelectedOfficeComponent = createAction(
+    RubricaActionType.GetIdSelectedOfficeComponent,
+    //props<{rubrica: Array<IOffice>}>()
+);
+
+export const GetIdSelectedOfficeComponentSuccess = createAction(
+    RubricaActionType.GetIdSelectedOfficeComponentSuccess,
+    //props<{rubrica: Array<IOffice>}>()
+);
+
+export const GetIdSelectedOfficeComponentError = createAction(
+    RubricaActionType.GetIdSelectedOfficeComponentError
+);
+
+export const SetIdSelectedOfficeComponent = createAction(
+    RubricaActionType.SetIdSelectedOfficeComponent,
+    props<{ id: string }>()
+);
+
+export const SetIdSelectedOfficeComponentSuccess = createAction(
+    RubricaActionType.SetIdSelectedOfficeComponentSuccess,
+    //props<{rubrica: Array<IOffice>}>()
+);
+
+export const SetIdSelectedOfficeComponentError = createAction(
+    RubricaActionType.SetIdSelectedOfficeComponentError
 );

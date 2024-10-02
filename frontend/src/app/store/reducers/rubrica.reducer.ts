@@ -12,15 +12,16 @@ export function rubricaReducer(
     switch (action.type) {
         case RubricaActionType.GetHomeRubricaSuccess:
             temp['rubrica'] = action.rubrica;
-            // temp['ufficioSelezionato'] = null; //action.rubrica[0]|| [];
             temp['ufficioSelezionato'] = action.rubrica[0] || [];
+            temp['idSelectedOfficeComponent'] = action.rubrica[0].codiceUfficio || [];
+
+            let d: Array<IOffice | null> | null = [...(temp['elencoUfficiSelezionati'] ?? [])];
+            d?.push(action.rubrica[0] ?? null);
+            temp['elencoUfficiSelezionati'] = d;
+
             return temp;
         case RubricaActionType.SetUfficioSelezionato:
-            // temp['ufficioSelezionatoPrecedente'] = temp['ufficioSelezionato']; //action.ufficioSelezionatoPrecedente;
             temp['ufficioSelezionato'] = action.ufficioSelezionato;
-            return temp;
-        case RubricaActionType.SetUfficioSelezionatoPrecedente:
-            temp['ufficioSelezionatoPrecedente'] = action.ufficioSelezionatoPrecedente;
             return temp;
         case RubricaActionType.AddElencoUfficiSelezionati:
             {
@@ -29,17 +30,21 @@ export function rubricaReducer(
                 temp['elencoUfficiSelezionati'] = d;
                 return temp;
             }
+        case RubricaActionType.EmptyElencoUfficiSelezionati:
+            temp['elencoUfficiSelezionati'] = [];
+            return temp;
         case RubricaActionType.DelElencoUfficiSelezionati:
             {
-                console.log('dddd: ', action.ufficioSelezionato);
                 let d: Array<IOffice | null> | null = [...(temp['elencoUfficiSelezionati'] ?? [])];
                 d?.pop();
                 temp['elencoUfficiSelezionati'] = d;
-                //console.log('dddd: ', d);
                 return temp;
             }
         case RubricaActionType.SetHomeTabSelected:
             temp['homeTabSelected'] = action.homeTabSelected;
+            return temp;
+        case RubricaActionType.SetIdSelectedOfficeComponent:
+            temp['idSelectedOfficeComponent'] = action.id;
             return temp;
         default:
             return rubricaState

@@ -6,25 +6,13 @@
                 <span class="smallLabelFont">{{itemDst.nomeTitolare}}</span>
             </label>
         </h2>
-        <div *ngIf="idRootOfficeClick==itemDst.codiceUfficio">
-            <div *ngIf="ufficioSelezionato?.codiceUfficioSuperiore!=''">
-                <p *ngIf="ufficioSelezionatoPrecedente?.codiceUfficioSuperiore!=''"
-                    (click)="onClickUfficioSelezionato()" style="border-color: {{ufficioSelezionato?.coloreSfondo}};">
-                    {{ufficioSelezionatoPrecedente?.nomeUfficio}}
-                </p>
-                <p *ngIf="ufficioSelezionato?.codiceUfficioSuperiore!=''" (click)="onClickUfficioSelezionato()"
-                    style="border-color: {{ufficioSelezionato?.coloreSfondo}};">
-                    {{ufficioSelezionato?.nomeUfficio}}
-                </p>
-            </div>
-
-            <!-- <hr>
+        <div *ngIf="idSelectedOfficeComponent==itemDst.codiceUfficio">
             <div *ngFor="let office of elencoUfficiSelezionati">
                 <p (click)="onClickUfficioSelezionato()" style=" border-color: {{ufficioSelezionato?.coloreSfondo}};"
                     *ngIf="office?.codiceUfficioSuperiore!=''">
                     {{office?.nomeUfficio}}
                 </p>
-            </div> -->
+            </div>
         </div>
     </section>
 </div>

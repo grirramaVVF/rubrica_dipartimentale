@@ -20,12 +20,6 @@ export const selectElencoUfficiSelezionati = createSelector(
     (state: any) => state.elencoUfficiSelezionati
 );
 
-export const selectUfficioSelezionatoPrecedente = createSelector(
-    selectRubricaState,
-    // (state:Array<IOffice>) => state
-    (state: any) => state.ufficioSelezionatoPrecedente
-);
-
 export const selectPersonale = createSelector(
     selectRubricaState,
     (state: any) => state.ufficioSelezionato.personale
@@ -34,4 +28,9 @@ export const selectPersonale = createSelector(
 export const selectHomeTabSelected = createSelector(
     selectRubricaState,
     (state: any) => state.homeTabSelected
+);
+
+export const selectIdSelectedOfficeComponent = createSelector(
+    selectRubricaState,
+    (state: any) => state.idSelectedOfficeComponent
 );

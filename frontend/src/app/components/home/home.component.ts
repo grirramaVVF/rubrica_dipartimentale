@@ -94,7 +94,7 @@ export class HomeComponent {
 
         this.leftComponentSelected$.subscribe(comp => this.leftComponentSelected = comp);
         this.elencoUfficiSelezionati$.subscribe(ele => this.elencoUfficiSelezionati = ele);
-        this._storeApp$.dispatch(SetIdSelectedOfficeComponent({ id: this.homeItems[0].codiceUfficio }));
+        this._storeApp$.dispatch(SetIdSelectedOfficeComponent({ id: this.homeItems[0]?.codiceUfficio }));
     }
 
     returnLastSelectedOffice(): IOffice | null {
@@ -104,6 +104,8 @@ export class HomeComponent {
 
     receiveBack(back: string) {
         let prevOffice: IOffice | null = this.returnLastSelectedOffice();
+
+        console.log('prevOffice:  ', prevOffice);
 
         if (prevOffice != null) {
             if (this.searchIfExiste(prevOffice)) {

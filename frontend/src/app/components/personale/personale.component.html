@@ -1,16 +1,19 @@
-<h1>Elenco contatti</h1>
+<h1>
+    <fa-icon [icon]="faAddressBook" size="1x" [style.fill-opacity]=".2" class="mx-auto"></fa-icon>
+    Elenco contatti
+</h1>
 <hr>
 <div class="divPersonale">
-  <div *ngFor="let persona of ufficioSelezionato?.personale" class="divPersonaleChild"
-    style="border-color: {{ufficioSelezionato?.coloreSfondo}};">
-    <div class="divCerchio">
-      <span class="circle" style="background-color: {{ufficioSelezionato?.coloreSfondo}}">
-        <span>{{persona.cognome.charAt(0).toUpperCase()+persona.nome.charAt(0).toUpperCase()}}</span>
-      </span>
+    <div *ngFor="let persona of ufficioSelezionato?.personale" class="divPersonaleChild"
+        style="border-color: {{ufficioSelezionato?.coloreSfondo}};">
+        <div class="divCerchio">
+            <span class="circle" style="background-color: {{ufficioSelezionato?.coloreSfondo}}">
+                <span>{{persona.cognome.charAt(0).toUpperCase()+persona.nome.charAt(0).toUpperCase()}}</span>
+            </span>
+        </div>
+        <div class="divDatiPersona">
+            <p><strong>{{persona.qualifica}} {{persona.cognome}} {{persona.nome}}</strong></p>
+            <p *ngFor="let contatto of persona.contatti">{{contatto.tipo}}: <strong>{{contatto.contatto}}</strong></p>
+        </div>
     </div>
-    <div  class="divDatiPersona">
-      <p><strong>{{persona.qualifica}} {{persona.cognome}} {{persona.nome}}</strong></p>
-      <p *ngFor="let contatto of persona.contatti">{{contatto.tipo}}: <strong>{{contatto.contatto}}</strong></p>
-    </div>
-  </div>
 </div>

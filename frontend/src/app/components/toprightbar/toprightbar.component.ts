@@ -18,6 +18,7 @@ import { SetHomeTabSelected } from '../../store/actions/rubrica.action';
 export class ToprightbarComponent {
     checkTopRightSelected$ = this._storeApp$.select(selectHomeTabSelected);
     checkTopRightSelected: string = '';
+    checkTopRight: string = '';
 
     ufficioSelezionato$ = this._storeApp$.select(selectUfficioSelezionato);
     ufficioSelezionato?: IOffice | null = null;
@@ -27,9 +28,8 @@ export class ToprightbarComponent {
     ngOnInit() {
         this.ufficioSelezionato$.subscribe(items => this.ufficioSelezionato = { ...items });
         this.checkTopRightSelected$.subscribe(comp => {
-            console.log("zzzzzzzzzzzzzzzzzxxxxxxxxxxxxxx: ",comp);
             this.checkTopRightSelected = comp;
-            console.log("zzzzzzzzzzzzzzzzzxxxxxxxxxxxxxx: ",this.checkTopRightSelected);
+            console.log("checkTopRightSelected: ", this.checkTopRightSelected);
         });
     }
 

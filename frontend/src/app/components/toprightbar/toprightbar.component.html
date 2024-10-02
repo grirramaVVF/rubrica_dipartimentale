@@ -1,13 +1,13 @@
 <form>
     <div class="toggle">
         <input type="radio" [(ngModel)]="checkTopRightSelected" name="checkTopRight" id="idRadioUfficio"
-            value="ufficiDipendenti" (change)="onButtonClick()" />
+            value="ufficiDipendenti" (change)="onButtonClick()" [checked]="checkTopRight === checkTopRightSelected" />
         <label for="idRadioUfficio">Uffici dipendenti</label>
         <input type="radio" [(ngModel)]="checkTopRightSelected" name="checkTopRight" id="idRadioComponenti"
-            value="componenti" (change)="onButtonClick()" />
+            value="componenti" (change)="onButtonClick()" [checked]="checkTopRight === checkTopRightSelected" />
         <label for="idRadioComponenti">Componenti</label>
-        <input type="radio" [(ngModel)]="checkTopRightSelected" name="checkTopRight" id="idRadioDescizione" value="descrizione"
-            (change)="onButtonClick()" />
+        <input type="radio" [(ngModel)]="checkTopRightSelected" name="checkTopRight" id="idRadioDescizione"
+            value="descrizione" (change)="onButtonClick()" [checked]="checkTopRight === checkTopRightSelected" />
         <label for="idRadioDescizione">Descrizione</label>
     </div>
 </form>

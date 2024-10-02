@@ -4,7 +4,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { IOffice } from '../../models/IOffice';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../store/states/app.state';
-import { EmptyElencoUfficiSelezionati, SetIdSelectedOfficeComponent, SetUfficioSelezionato } from '../../store/actions/rubrica.action';
+import { AddElencoUfficiSelezionati, EmptyElencoUfficiSelezionati, SetIdSelectedOfficeComponent, SetUfficioSelezionato } from '../../store/actions/rubrica.action';
 import {
     selectElencoUfficiSelezionati,
     selectIdSelectedOfficeComponent,
@@ -41,10 +41,12 @@ export class UfficiComponent {
 
     leggiSottoAlbero() {
         this._storeApp$.dispatch(SetIdSelectedOfficeComponent({ id: this.itemDst.codiceUfficio }));
-        console.log('devo azzerare l\'elencoUfficiSelezionati');
+
         if (this.itemDst.codiceUfficioSuperiore == '') {
             this._storeApp$.dispatch(EmptyElencoUfficiSelezionati());
+            this._storeApp$.dispatch(AddElencoUfficiSelezionati({ufficioSelezionato:this.itemDst}));
         }
+
         this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: this.itemDst }));
     }
 

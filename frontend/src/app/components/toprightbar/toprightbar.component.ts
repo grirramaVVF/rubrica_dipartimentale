@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { FormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
@@ -17,6 +17,7 @@ import { SetHomeTabSelected } from '../../store/actions/rubrica.action';
 })
 export class ToprightbarComponent {
     checkTopRightSelected$ = this._storeApp$.select(selectHomeTabSelected);
+    @Input()
     checkTopRightSelected: string = '';
     checkTopRight: string = '';
 
@@ -27,10 +28,7 @@ export class ToprightbarComponent {
 
     ngOnInit() {
         this.ufficioSelezionato$.subscribe(items => this.ufficioSelezionato = { ...items });
-        this.checkTopRightSelected$.subscribe(comp => {
-            this.checkTopRightSelected = comp;
-            console.log("checkTopRightSelected: ", this.checkTopRightSelected);
-        });
+        this.checkTopRightSelected$.subscribe(comp => this.checkTopRightSelected = comp);
     }
 
     onButtonClick() {

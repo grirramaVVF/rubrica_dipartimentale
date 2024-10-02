@@ -14,7 +14,7 @@ import { AppState } from './store/states/app.state';
     imports: [RouterOutlet, SideBarComponent, FontAwesomeModule]
 })
 export class AppComponent {
-    title = 'rubricadip';
+    title = 'Rubrica Dipartimentale';
     faAddressBook = faAddressBook;
 
     livello_ufficio = 0;

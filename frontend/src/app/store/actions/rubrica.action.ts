@@ -6,6 +6,10 @@ export enum RubricaActionType {
     GetHomeRubricaSuccess = '[Get Home Rubrica] Get Home Rubrica Success',
     GetHomeRubricaError = '[Get Home Rubrica] Get Home Rubrica Error',
 
+    GetUfficiPeriferici = '[Get Uffici Periferici] Get Uffici Periferici',
+    GetUfficiPerifericiSuccess = '[Get Uffici Periferici] Get Uffici Periferici Success',
+    GetUfficiPerifericiError = '[Get Uffici Periferici] Get Uffici Periferici Error',
+
     GetPersonale = '[Get Personale] Get Personale',
     GetPersonaleSuccess = '[Get Personale] Get Personale',
     GetPersonaleError = '[Get Personale] Get Personale Error',
@@ -57,6 +61,20 @@ export const GetHomeRubricaSuccess = createAction(
 
 export const GetHomeRubricaError = createAction(
     RubricaActionType.GetHomeRubricaError
+);
+
+export const GetUfficiPeriferici = createAction(
+    RubricaActionType.GetUfficiPeriferici,
+    //props<{rubrica: Array<IOffice>}>()
+);
+
+export const GetUfficiPerifericiSuccess = createAction(
+    RubricaActionType.GetUfficiPerifericiSuccess,
+    //props<{rubrica: Array<IOffice>}>()
+);
+
+export const GetUfficiPerifericiError = createAction(
+    RubricaActionType.GetUfficiPerifericiError
 );
 
 export const GetPersonale = createAction(

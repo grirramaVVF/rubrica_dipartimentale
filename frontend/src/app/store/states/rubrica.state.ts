@@ -6,6 +6,7 @@ export interface IRubricaState {
     elencoUfficiSelezionati: Array<IOffice | null> | null;
     homeTabSelected: string;
     idSelectedOfficeComponent: string;
+    rubricaUfficiPeriferici: Array<IOffice>;
 }
 
 export const inizializeRubricaState: IRubricaState = {
@@ -14,4 +15,5 @@ export const inizializeRubricaState: IRubricaState = {
     elencoUfficiSelezionati: [],
     homeTabSelected: 'ufficiDipendenti',
     idSelectedOfficeComponent: '',
+    rubricaUfficiPeriferici: [],
 }

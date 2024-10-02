@@ -4,18 +4,23 @@ import { HttpClient } from '@angular/common/http';
 import { IOffice } from '../models/IOffice';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class RubricaService {
+    private host: string = environment.apiGetHome;
 
-  private host: string = environment.apiGetHome;
+    constructor(private http: HttpClient) { }
 
-  constructor(private http: HttpClient) {
+    getHome(queryString: string = "") {
+        if (queryString == "") {
+            queryString = "centrali";
+        };
 
-  }
+        return this.http.get<IOffice[]>(this.host + queryString);
+    }
 
-  getHome() {
-    let queryString: string = "";
-    return this.http.get<IOffice[]>(this.host + queryString);
-  }
+    getUfficiPeriferici() {
+        let queryString: string = "periferia";
+        return this.http.get<IOffice[]>(this.host + queryString);
+    }
 }

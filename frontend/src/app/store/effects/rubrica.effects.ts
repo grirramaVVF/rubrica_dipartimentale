@@ -8,24 +8,40 @@ import { Store } from "@ngrx/store";
 
 @Injectable()
 export class RubricaEffects {
-  loadHome$ = createEffect(
-    () => this.actions$.pipe(
-      ofType(RubricaActionType.GetHomeRubrica),
-      exhaustMap(
-        () => this.rubricaService$.getHome()
-          .pipe(
-            map((result: any) => {
-              return ({ type: RubricaActionType.GetHomeRubricaSuccess, rubrica: result })
-            }),
-            catchError(() => of({ type: RubricaActionType.GetHomeRubricaError }))
-          )
-      )
-    )
-  );
+    loadHome$ = createEffect(
+        () => this.actions$.pipe(
+            ofType(RubricaActionType.GetHomeRubrica),
+            exhaustMap(
+                () => this.rubricaService$.getHome()
+                    .pipe(
+                        map((result: any) => {
+                            return ({ type: RubricaActionType.GetHomeRubricaSuccess, rubrica: result })
+                        }),
+                        catchError(() => of({ type: RubricaActionType.GetHomeRubricaError }))
+                    )
+            )
+        )
+    );
 
-  constructor(
-    private actions$: Actions,
-    private rubricaService$: RubricaService,
-    private appStore$: Store<AppState>
-  ) { }
+    loadUfficiPeriferici$ = createEffect(
+        () => this.actions$.pipe(
+            ofType(RubricaActionType.GetUfficiPeriferici),
+            exhaustMap(
+                () => this.rubricaService$.getUfficiPeriferici()
+                    .pipe(
+                        map((result: any) => {
+                            // return ({ type: RubricaActionType.GetUfficiPerifericiSuccess, rubricaUfficiPeriferici: result })
+                            return ({ type: RubricaActionType.GetUfficiPerifericiSuccess, rubrica: result })
+                        }),
+                        catchError(() => of({ type: RubricaActionType.GetUfficiPerifericiError }))
+                    )
+            )
+        )
+    );
+
+    constructor(
+        private actions$: Actions,
+        private rubricaService$: RubricaService,
+        private appStore$: Store<AppState>
+    ) { }
 }

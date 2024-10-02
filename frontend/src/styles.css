@@ -41,6 +41,18 @@ body {
     background-color: var(--sideBarColor);
 }
 
+.divBorder {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0.5rem;
+    margin-top: 2rem;
+    margin-right: 1rem;;
+    padding: 0.6rem;
+    font-size: 1.4rem;
+    text-align: justify;
+  }
+
 .topBottomLeftBordefRadius {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;

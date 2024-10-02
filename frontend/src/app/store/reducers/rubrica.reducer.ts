@@ -15,9 +15,24 @@ export function rubricaReducer(
             temp['ufficioSelezionato'] = action.rubrica[0] || [];
             temp['idSelectedOfficeComponent'] = action.rubrica[0].codiceUfficio || [];
 
-            let d: Array<IOffice | null> | null = [...(temp['elencoUfficiSelezionati'] ?? [])];
-            d?.push(action.rubrica[0] ?? null);
-            temp['elencoUfficiSelezionati'] = d;
+            {
+                let d: Array<IOffice | null> | null = [...(temp['elencoUfficiSelezionati'] ?? [])];
+                d?.push(action.rubrica[0] ?? null);
+                temp['elencoUfficiSelezionati'] = d;
+            }
+
+            return temp;
+        case RubricaActionType.GetUfficiPerifericiSuccess:
+            // temp['rubricaUfficiPeriferici'] = action.rubricaUfficiPeriferici;
+            temp['rubrica'] = action.rubrica;
+            temp['ufficioSelezionato'] = action.rubrica[0] || [];
+            temp['idSelectedOfficeComponent'] = action.rubrica[0].codiceUfficio || [];
+
+            {
+                let d: Array<IOffice | null> | null = [...(temp['elencoUfficiSelezionati'] ?? [])];
+                d?.push(action.rubrica[0] ?? null);
+                temp['elencoUfficiSelezionati'] = d;
+            }
 
             return temp;
         case RubricaActionType.SetUfficioSelezionato:

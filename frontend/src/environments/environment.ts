@@ -2,7 +2,8 @@ export const environment = {
     production: true,
     homeLink: '/',
     apiCreateToken: 'da settare',
-    apiGetHome: 'http://localhost:3000/ufficiRubrica', // https://localhost:7252/api/Rubrica/Ufficio/Read?CodiceUfficio=UfficiCentrali
+    apiGetHome: 'http://localhost:3000/ufficiRubrica?tipologiaUfficio=', // https://localhost:7252/api/Rubrica/Ufficio/Read?CodiceUfficio=UfficiCentrali
+    apiGetUfficiPeriferici: 'http://localhost:5298/api/Rubrica/Ricerche/GetChildSedeFromWauc?IdSede=',
     apiGetChildSedeFromWauc: 'http://localhost:5298/api/Rubrica/Ricerche/GetChildSedeFromWauc?IdSede=',
 
     // generata con openssl rand -hex 64 per HS512

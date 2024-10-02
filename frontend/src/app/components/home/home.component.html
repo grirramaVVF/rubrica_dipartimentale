@@ -34,6 +34,11 @@
                 </div>
                 <div class="divBorder" *ngIf="leftComponentSelected=='descrizione'"
                     style="border-color: {{ufficioSelezionato?.coloreSfondo}};">
+                    <h2 class="text-center">
+                        <fa-icon [icon]="faAddressBook" size="1x" [style.fill-opacity]=".2" class="mx-auto"></fa-icon>
+                        Descrizione
+                    </h2>
+                    <hr>
                     {{ufficioSelezionato?.descrizioneUfficio}}
                 </div>
             </div>

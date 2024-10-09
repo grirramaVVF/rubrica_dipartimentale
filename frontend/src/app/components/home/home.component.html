@@ -8,7 +8,9 @@
 </div>
 <div class="row">
     <!-- <div class="col-sm-12 col-md-5 vh-100"  style="overflow-x: hidden; overflow-y: auto;"> -->
-    <div class="col-sm-12 col-md-5">
+    <!-- <div class="col-sm-12 col-md-5 h-100 overflow-y-scroll" style="overflow-y: visible;"> -->
+    <!-- <div class="col-sm-12 col-md-5"  style="max-height: 100vh; overflow-y: hidden;"> -->
+        <div class="col-sm-12 col-md-5"  style="max-height: 100vh; overflow-y: auto;">
         <vvfrubrica-uffici *ngFor="let item of homeItems" [itemDst]="item"
             (back)="receiveBack($event)"></vvfrubrica-uffici>
     </div>

@@ -1,26 +1,34 @@
-<div class="row m mt-5 vh-100">
+<div class="row mt-5 vh-100 align-top">
     <div class="col"></div>
-    <div class="col-4 my-auto vh-100">
-        <div class="form-group border rounded p-4">
-            <h2>Login</h2>
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                <div class="form-group">
-                    <label for="username">username</label>
-                    <input id="username" type="text" class="form-control" formControlName="username"
-                        placeholder="Inserisci la tua username" />
-                </div>
+    <div class="col-sm-12 col-md-6 align-top">
+        <div class="row align-top p-4">
+            <div class="col-sm-12 col-md-2 text-end align-middle mt-4 me-4">
+                <fa-icon [icon]="faAddressBook" size="10x" [style.fill-opacity]=".2" class="mx-auto"></fa-icon>
+            </div>
+            <div class="col align-top">
+                <div class="form-group align-top p-4">
+                    <h2>Login</h2>
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group" class="mb-2">
+                            <label for="username">Utente</label>
+                            <input id="username" type="text" class="form-control" formControlName="username"
+                                placeholder="Inserisci la tua username" />
+                        </div>
 
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input id="password" type="password" class="form-control" formControlName="password"
-                        placeholder="Inserisci la tua password" />
-                    <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error">
-                        La password è obbligatoria.
-                    </div>
-                </div>
+                        <div class="form-group mb-2">
+                            <label for="password">Password</label>
+                            <input id="password" type="password" class="form-control" formControlName="password"
+                                placeholder="Inserisci la tua password" />
+                            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+                                class="error">
+                                La password è obbligatoria.
+                            </div>
+                        </div>
 
-                <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Accedi</button>
-            </form>
+                        <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Accedi</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     <div class="col"></div>

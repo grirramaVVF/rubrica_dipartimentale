@@ -23,4 +23,15 @@ export class RubricaService {
         let queryString: string = "periferia";
         return this.http.get<IOffice[]>(this.host + queryString);
     }
+
+    getSearch(params: string) {
+        if (params.length > 0) {
+            let queryString = 'nomeTitolare=' + params + '&descrizioneUfficio=' + params + '&cognome=' + params + '&nome=' + params;
+
+            console.log("ccxxxzzxxs: ",queryString);
+
+            return this.http.get<IOffice[]>(this.host + queryString);
+        }
+        return [];
+    }
 }

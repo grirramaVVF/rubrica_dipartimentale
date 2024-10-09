@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 interface AuthResponse {
     token: string;
@@ -13,7 +14,8 @@ interface AuthResponse {
     providedIn: 'root',
 })
 export class AuthService {
-    private apiUrl = 'http://localhost:5298/api/Auth/'; // URL del server per l'autenticazione
+    // private apiUrl = 'http://localhost:5298/api/Auth/'; // URL del server per l'autenticazione
+    private apiUrl = environment.apiCreateToken;
     private isLoggedInSubject = new BehaviorSubject<boolean>(false);
 
     constructor(private http: HttpClient, private router: Router) {
@@ -22,8 +24,14 @@ export class AuthService {
     }
 
     login(username: string, password: string): Observable<AuthResponse> {
+        const headers = { 'content-type': 'application/json' }
+        const body = JSON.stringify({ username, password });
+        console.log(body);
+        //return this.http.post<AuthResponse>(this.apiUrl + 'people', body, { 'headers': headers })
+
         return this.http
-            .post<AuthResponse>(`${this.apiUrl}Token/Create`, { username, password })
+            // .post<AuthResponse>(`${this.apiUrl}Token/Create`, { username, password })
+            .post<AuthResponse>(`${this.apiUrl}`, body, { 'headers': headers })
             .pipe(
                 tap((response) => {
                     this.saveToken(response.token);

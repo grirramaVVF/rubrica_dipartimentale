@@ -28,6 +28,7 @@ import {
     SetIdSelectedOfficeComponent,
     SetUfficioSelezionato,
 } from '../../store/actions/rubrica.action';
+import { UfficiFormComponent } from '../uffici-form/uffici-form.component';
 
 @Component({
     selector: 'vvfrubrica-home',
@@ -38,6 +39,7 @@ import {
         FontAwesomeModule,
         SottoufficiComponent,
         CercaComponent,
+        UfficiFormComponent,
         ToprightbarComponent,
         AsyncPipe,
         NgForOf,

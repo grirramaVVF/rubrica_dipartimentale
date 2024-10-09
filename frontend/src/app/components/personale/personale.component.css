@@ -1,59 +1,59 @@
 h1 {
-  text-align: center;
+    text-align: center;
 }
 
 .divPersonale {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  align-items: stretch;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
 
 .divPersonale .divPersonaleChild {
-  border: 1px solid red;
-  background-color: white;
-  border-radius: 10px;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  display: flex;
-  /* align-items: stretch; */
-  /* flex-basis: fit-content; */
-  flex-grow: 1;
+    border: 1px solid red;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    /* align-items: stretch; */
+    /* flex-basis: fit-content; */
+    flex-grow: 1;
 }
 
 .divPersonaleChild div {
-  max-width: 30%;
+    max-width: 30%;
 }
 
 .divPersonaleChild .divCerchio {
-  margin-left: 0.5rem;
+    margin-left: 0.5rem;
 }
 
-.divPersonaleChild .divDatiPersona{
-  margin-top: 0;
-  margin-left: 1rem;
-  padding-top: 0rem;
+.divPersonaleChild .divDatiPersona {
+    margin-top: 0;
+    margin-left: 1rem;
+    padding-top: 0rem;
 
 }
 
 .divPersonaleChild div>p {
-  font-size: 1.2rem;
-  width: max-content;
+    font-size: 1.2rem;
+    width: max-content;
 }
 
 .circle {
-  display: inline-block;
-  line-height: 0px;
-  border-radius: 50%;
-  font-size: 32px;
-  background-color: green;
-  color: white;
+    display: inline-block;
+    line-height: 0px;
+    border-radius: 50%;
+    font-size: 32px;
+    background-color: green;
+    color: white;
 }
 
 .circle span {
-  display: inline-block;
-  padding-top: 50%;
-  padding-bottom: 50%;
-  margin-left: 8px;
-  margin-right: 8px;
+    display: inline-block;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    margin-left: 8px;
+    margin-right: 8px;
 }

@@ -1,6 +1,19 @@
 <div class="divSottuffici" *ngFor="let item of ufficioSelezionato.children">
-    <div class="accordion_container" style="background-color: {{item.coloreSfondo}};">
-        <section class="accordion">
+    <div class="divCardSedi" style="background-color: {{item.coloreSfondo}};">
+        <div class="divCardButtonBar">
+            <ul class="nav nav-pills flex-column mx-auto my-auto">
+                <li class="nav-item">
+                    <fa-icon [icon]="faPlusCircle" size="1x" (click)="onAddClick()"></fa-icon>
+                </li>
+                <li class="nav-item">
+                    <fa-icon [icon]="faEdit" size="1x" (click)="onEditClick()"></fa-icon>
+                </li>
+                <li class="nav-item">
+                    <fa-icon [icon]="faTrashAlt" size="1x" (click)="onDelClick()"></fa-icon>
+                </li>
+            </ul>
+        </div>
+        <section class="divCardSediContent">
             <input type="checkbox" name="collapse" id="{{item.codiceUfficio}}"
                 (click)="leggiSottoAlbero(item.codiceUfficio)">
             <h2 class="handle">

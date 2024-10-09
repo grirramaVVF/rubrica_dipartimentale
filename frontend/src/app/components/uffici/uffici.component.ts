@@ -10,15 +10,21 @@ import {
     selectIdSelectedOfficeComponent,
     selectUfficioSelezionato,
 } from '../../store/selectors/rubrica.selector';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faEdit, faPlusCircle, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
     selector: 'vvfrubrica-uffici',
     standalone: true,
-    imports: [CommonModule, MatExpansionModule, NgIf],
+    imports: [CommonModule, MatExpansionModule, NgIf, FontAwesomeModule],
     templateUrl: './uffici.component.html',
     styleUrl: './uffici.component.css'
 })
 export class UfficiComponent {
+    faEdit = faEdit;
+    faPlusCircle = faPlusCircle;
+    faTrashAlt = faTrashAlt;
+
     @Input() itemDst: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
     @Output() back = new EventEmitter<string>();
 
@@ -44,7 +50,7 @@ export class UfficiComponent {
 
         if (this.itemDst.codiceUfficioSuperiore == '') {
             this._storeApp$.dispatch(EmptyElencoUfficiSelezionati());
-            this._storeApp$.dispatch(AddElencoUfficiSelezionati({ufficioSelezionato:this.itemDst}));
+            this._storeApp$.dispatch(AddElencoUfficiSelezionati({ ufficioSelezionato: this.itemDst }));
         }
 
         this._storeApp$.dispatch(SetUfficioSelezionato({ ufficioSelezionato: this.itemDst }));
@@ -52,5 +58,17 @@ export class UfficiComponent {
 
     onClickUfficioSelezionato() {
         this.back.emit('back');
+    }
+
+    onAddClick() {
+        console.log('addd');
+    }
+
+    onEditClick() {
+        console.log('editt');
+    }
+
+    onDelClick() {
+        console.log('delll');
     }
 }

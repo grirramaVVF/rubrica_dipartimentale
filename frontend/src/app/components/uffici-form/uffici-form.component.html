@@ -1,1 +1,150 @@
-<p>uffici-form works!</p>
+<div class="modal-header my-2 py-2">
+    <h4 class="modal-title pull-left">{{ title }}</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="mb-3 row">
+        <label for="idDescrizione" class="col-sm-12 col-md-2 col-form-label">Descrizione</label>
+        <div class="col-sm-12 col-md-10">
+            <input type="text" class="form-control" id="idDescrizione" value="{{ufficio?.nomeUfficio}}">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="idDescrizione" class="col-sm-12 col-md-2 col-form-label">Titolare</label>
+        <div class="col-sm-12 col-md-10">
+            <input type="text" class="form-control" id="idTitolare" value="{{ufficio?.nomeTitolare}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-10 p-2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Contatto</th>
+                        <th class="text-end">
+                            <button type="button" class="btn btn-danger px-4" title="Aggiungi ufficio">
+                                <fa-icon [icon]="faPlusCircle" size="1x" (click)="onAddClick()"></fa-icon>
+                            </button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of list">
+                        <td>{{item.tipo}}</td>
+                        <td>{{item.contatto}}</td>
+                        <td class="text-end">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-danger px-3" title="Modifica ufficio">
+                                    <fa-icon [icon]="faEdit" size="1x" (click)="onEditClick()"></fa-icon>
+                                </button>
+                                <button type="button" class="btn btn-danger px-3" title="Cancella ufficio">
+                                    <fa-icon [icon]="faTrashAlt" size="1x" (click)="onDelClick()"></fa-icon>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-12 col-md-2">
+            <div class="row">
+                <div class="col mt-2">
+                    <label for="idPiano" class="text-end pe-0">Piano</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col  mt-2">
+                    <input type="text" class="form-control" id="idPiano">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col  mt-2">
+                    <label for="idStanza" class="text-end pe-0">Stanza</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-2">
+                    <input type="text" class="form-control" id="idStanza">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col  mt-2">
+                    <label for="idStanza" class="text-end pe-0">Colore</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col  mt-2">
+                    <input type="text" class="form-control" id="idStanza" value="{{ufficio?.coloreSfondo}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="bsModalRef.hide()">{{ closeBtnName }}</button>
+</div>
+
+<!-- <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-sizes-name1"> -->
+<!-- <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header m-0 p-1">
+            <h4 id="dialog-sizes-name1" class="modal-title ps-3">{{title}}</h4>
+            <button type="button" class="close text-right" aria-label="Close" (click)="bsModalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <div class="modal-body">
+            <div class="mb-3 row">
+                <label for="idDescrizione" class="col-sm-12 col-md-1 col-form-label">Descrizione</label>
+                <div class="col-sm-12 col-md-11">
+                    <input type="text" class="form-control" id="idDescrizione" value="">
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="idPiano" class="col-sm-12 col-md-1 col-form-label text-end pe-0">Piano</label>
+                <div class="col-sm-12 col-md-1">
+                    <input type="text" class="form-control" id="idPiano">
+                </div>
+                <label for="idStanza" class="col-sm-12 col-md-1 col-form-label text-end pe-0">Stanza</label>
+                <div class="col-sm-12 col-md-1">
+                    <input type="text" class="form-control" id="idStanza">
+                </div>
+                <div class="col"></div>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">{{ closeBtnName
+                }}</button>
+        </div>
+    </div>
+</div> -->
+<!-- </div> -->
+
+<!-- <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-sizes-name1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="dialog-sizes-name1" class="modal-title pull-left">Large modal</h4>
+                <button type="button" class="btn-close close pull-right" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true" class="visually-hidden">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+        </div>
+    </div>
+</div> -->

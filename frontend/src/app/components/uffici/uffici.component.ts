@@ -12,6 +12,8 @@ import {
 } from '../../store/selectors/rubrica.selector';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faEdit, faPlusCircle, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { UfficiFormComponent } from '../uffici-form/uffici-form.component';
 
 @Component({
     selector: 'vvfrubrica-uffici',
@@ -25,6 +27,8 @@ export class UfficiComponent {
     faPlusCircle = faPlusCircle;
     faTrashAlt = faTrashAlt;
 
+    bsModalRef?: BsModalRef | null;
+
     @Input() itemDst: IOffice = { codiceUfficio: "", coloreSfondo: "#ffffff", nomeUfficio: "", nomeTitolare: "", children: [] };
     @Output() back = new EventEmitter<string>();
 
@@ -37,7 +41,7 @@ export class UfficiComponent {
     idSelectedOfficeComponent$ = this._storeApp$.select(selectIdSelectedOfficeComponent);
     idSelectedOfficeComponent: string = '';
 
-    constructor(private _storeApp$: Store<AppState>) { }
+    constructor(private _storeApp$: Store<AppState>, private modalService: BsModalService,) { }
 
     ngOnInit(): void {
         this.ufficioSelezionato$.subscribe(items => this.ufficioSelezionato = { ...items });
@@ -61,14 +65,36 @@ export class UfficiComponent {
     }
 
     onAddClick() {
-        console.log('addd');
+        const initialState = {
+            title: 'Aggiungi Sotto Ufficio',
+            list: []
+        };
+
+        this.openModal(initialState);
     }
 
     onEditClick() {
-        console.log('editt');
+        const initialState = {
+            title: 'Modifica Ufficio',
+            ufficio: this.itemDst,
+            list: [
+                { tipo: 'telefono', contatto: '33333333333' },
+                { tipo: 'email', contatto: '33333333333' },
+                { tipo: 'pec', contatto: '33333333333' },
+                { tipo: 'voip', contatto: '33333333333' },
+            ],
+
+        };
+
+        this.openModal(initialState);
     }
 
     onDelClick() {
         console.log('delll');
+    }
+
+    openModal(initialState: object) {
+        this.bsModalRef = this.modalService.show(UfficiFormComponent, { initialState, class: 'gray modal-xl', backdrop: 'static' });
+
     }
 }

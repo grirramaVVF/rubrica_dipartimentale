@@ -29,6 +29,9 @@ import {
     SetUfficioSelezionato,
 } from '../../store/actions/rubrica.action';
 import { UfficiFormComponent } from '../uffici-form/uffici-form.component';
+// import { ModalModule } from 'ngx-bootstrap/modal';
+// import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+
 
 @Component({
     selector: 'vvfrubrica-home',
@@ -53,6 +56,7 @@ import { UfficiFormComponent } from '../uffici-form/uffici-form.component';
 })
 export class HomeComponent {
     faAddressBook = faAddressBook;
+    // bsModalRef?: BsModalRef | null;
 
     homeItems$ = this._storeApp$.select(selectHome);
     homeItems: Array<IOffice> = [];

@@ -1,0 +1,194 @@
+<div class="modal-header my-2 py-2">
+    <h4 class="modal-title pull-left">{{ title }}</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="mb-3 row">
+        <label for="idDescrizione" class="col-sm-12 col-md-2 col-form-label">Descrizione</label>
+        <div class="col-sm-12 col-md-10">
+            <input type="text" class="form-control" id="idDescrizione" value="{{ufficio?.nomeUfficio}}">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="idDescrizione" class="col-sm-12 col-md-2 col-form-label">Titolare</label>
+        <div class="col-sm-12 col-md-10">
+            <input type="text" class="form-control" id="idTitolare" value="{{ufficio?.nomeTitolare}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-10 p-2">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item " role="presentation">
+                    <a class="nav-link active  text-danger" id="contatti-tab" data-bs-toggle="tab"
+                        data-bs-target="#contatti-tab-pane" type="button" role="tab" aria-controls="contatti-tab-pane"
+                        aria-selected="true">Contatti</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link text-danger" id="sottouffici-tab" data-bs-toggle="tab"
+                        data-bs-target="#sottouffici-tab-pane" type="button" role="tab"
+                        aria-controls="sottouffici-tab-pane" aria-selected="false">Sotto
+                        Uffici</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link text-danger" id="personale-tab" data-bs-toggle="tab"
+                        data-bs-target="#personalei-tab-pane" type="button" role="tab"
+                        aria-controls="personalei-tab-pane" aria-selected="false">Personale</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="contatti-tab-pane" role="tabpanel"
+                    aria-labelledby="contatti-tab" tabindex="0">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Contatto</th>
+                                    <th class="text-end">
+                                        <button type="button" class="btn btn-danger px-4" title="Aggiungi contatto">
+                                            <fa-icon [icon]="faPlusCircle" size="1x" (click)="onAddClick()"></fa-icon>
+                                        </button>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of ufficio?.contatti">
+                                    <td>{{item.tipo}}</td>
+                                    <td>{{item.contatto}}</td>
+                                    <td class="text-end">
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-danger px-3" title="Modifica contatto">
+                                                <fa-icon [icon]="faEdit" size="1x" (click)="onEditClick()"></fa-icon>
+                                            </button>
+                                            <button type="button" class="btn btn-danger px-3" title="Cancella contatto">
+                                                <fa-icon [icon]="faTrashAlt" size="1x" (click)="onDelClick()"></fa-icon>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="sottouffici-tab-pane" role="tabpanel" aria-labelledby="sottouffici-tab"
+                    tabindex="0">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Ufficio</th>
+                                    <th class="text-end">
+                                        <button type="button" class="btn btn-danger px-4" title="Aggiungi ufficio">
+                                            <fa-icon [icon]="faPlusCircle" size="1x" (click)="onAddClick()"></fa-icon>
+                                        </button>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of ufficio?.children">
+                                    <td>{{item.nomeUfficio}}</td>
+                                    <td class="text-end">
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-danger px-3" title="Modifica ufficio">
+                                                <fa-icon [icon]="faEdit" size="1x" (click)="onEditClick()"></fa-icon>
+                                            </button>
+                                            <button type="button" class="btn btn-danger px-3" title="Cancella ufficio">
+                                                <fa-icon [icon]="faTrashAlt" size="1x" (click)="onDelClick()"></fa-icon>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="personalei-tab-pane" role="tabpanel" aria-labelledby="personale-tab"
+                    tabindex="0">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Personale</th>
+                                    <th>Qualifica</th>
+                                    <th class="text-end">
+                                        <button type="button" class="btn btn-danger px-4" title="Aggiungi Personale">
+                                            <fa-icon [icon]="faPlusCircle" size="1x" (click)="onAddClick()"></fa-icon>
+                                        </button>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of ufficio?.personale">
+                                    <td>{{item.cognome}} {{item.nome}}</td>
+                                    <td>{{item.qualifica}}</td>
+                                    <td class="text-end">
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-danger px-3"
+                                                title="Modifica personale">
+                                                <fa-icon [icon]="faEdit" size="1x" (click)="onEditClick()"></fa-icon>
+                                            </button>
+                                            <button type="button" class="btn btn-danger px-3"
+                                                title="Cancella personale">
+                                                <fa-icon [icon]="faTrashAlt" size="1x" (click)="onDelClick()"></fa-icon>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row form-group my-3">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-save2"></i> Salva
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+        <div class="col-sm-12 col-md-2">
+            <div class="row">
+                <div class="col mt-2">
+                    <label for="idPiano" class="text-end pe-0">Piano</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col  mt-2">
+                    <input type="text" class="form-control" id="idPiano">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col  mt-2">
+                    <label for="idStanza" class="text-end pe-0">Stanza</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-2">
+                    <input type="text" class="form-control" id="idStanza">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col  mt-2">
+                    <label for="idStanza" class="text-end pe-0">Colore</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col  mt-2">
+                    <input type="text" class="form-control" id="idStanza" value="{{ufficio?.coloreSfondo}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="bsModalRef.hide()">{{ closeBtnName }}</button>
+</div>

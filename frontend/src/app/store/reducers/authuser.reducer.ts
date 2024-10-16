@@ -6,23 +6,26 @@ import { AuthUserActionType } from '../actions/authuser.action';
 import { IAuthUserState, initialAuthState } from '../states/authuser.state';
 
 export function authUserReducer(
-  authUser: IAuthUserState = initialAuthState,
-  action: any
+    authUser: IAuthUserState = initialAuthState,
+    action: any
 ) {
-  const jwtKey = environment.jwtKey;
+    const jwtKey = environment.jwtKey;
 
-  //console.log('action type: ', action.type);
+    //console.log('action type: ', action.type);
 
-  switch (action.type) {
-    case AuthUserActionType.SetAuthToken:
-      let temp: IAuthUserState = { ...authUser };
-      temp.token = action.token;
+    switch (action.type) {
+        //case AuthUserActionType.GetLoggedUser:
+        //    return authUser.decodeToken;
+        case AuthUserActionType.SetAuthToken:
+            let temp: IAuthUserState = { ...authUser };
+            temp.token = action.token;
 
-      let jwtService = new JwtService(action.token, jwtKey);
-      temp.decodeToken = jwtService.decode();
-      return temp;
+            let jwtService = new JwtService(action.token, jwtKey);
+            temp.decodeToken = jwtService.decode();
 
-    default:
-      return authUser
-  }
+            return temp;
+
+        default:
+            return authUser
+    }
 }

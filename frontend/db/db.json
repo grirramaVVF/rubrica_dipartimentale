@@ -2,9 +2,13 @@
     "profile": {
         "name": "typicode"
     },
+    "createtokenbak": {
+        "success": true,
+        "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3MjEyOTE3NDYsImlhdCI6MTcyMTI5MTc0NiwianRpIjoiaWQxMjM0NTYiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0IiwibmFtZSI6Im5vbWUuY29nbm9tZSIsInN1YiI6IkFBQUJCQjAwRjEwQjEyM0siLCJpc3MiOiJBcHBSdWJEaXAiLCJ0aXBvIjoiVlZGIiwic2VkaSI6W3siY29kU2VkZSI6MSwiaXNTdXBlclVzZXIiOnRydWUsInVmZmljaSI6W3siaWRVZmYiOjEsImlkUHJvZmlsbyI6MX0seyJpZFVmZiI6MiwiaWRQcm9maWxvIjoxfV19XX0.G7W7mf4h7KVs1wOhNoWypDVGVXmS1Q5yQDtFjsvHJRX6oxXP6-sZqrPih_u4eJWM4ECL6aQ5FtRt0gX6B3i7mA"
+    },
     "createtoken": {
         "success": true,
-        "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3MjEyOTE3NDYsImlhdCI6MTcyMTI5MTc0NiwianRpIjoiaWQxMjM0NTYiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0IiwibmFtZSI6IiIsInN1YiI6IkFBQUJCQjAwRjEwQjEyM0siLCJpc3MiOiJBcHBSdWJEaXAiLCJ0aXBvIjoiVlZGIiwic2VkaSI6W3siY29kU2VkZSI6MSwiaXNTdXBlclVzZXIiOnRydWUsInVmZmljaSI6W3siaWRVZmYiOjEsImlkUHJvZmlsbyI6MX0seyJpZFVmZiI6MiwiaWRQcm9maWxvIjoxfV19XX0.htBoH9V6PzbnEXGZ7W3AyYCrMDHt7QsRn8hYe_EYBj-j4m6bpGL9dZUFwl8-m5GlFlatREFFDosoLkFnsV1qiQ"
+        "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3MjEyOTE3NDYsImlhdCI6MTcyMTI5MTc0NiwianRpIjoiaWQxMjM0NTYiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0IiwibmFtZSI6Im5vbWUuY29nbm9tZSIsInN1YiI6IkFBQUJCQjAwRjEwQjEyM0siLCJpc3MiOiJBcHBSdWJEaXAiLCJ0aXBvIjoiVlZGIiwic2VkaSI6W3siY29kU2VkZSI6MSwiaXNTdXBlclVzZXIiOnRydWUsInVmZmljaSI6W3siaWRVZmYiOjEsImlkUHJvZmlsbyI6MX0seyJpZFVmZiI6MiwiaWRQcm9maWxvIjoxfV19XX0.G7W7mf4h7KVs1wOhNoWypDVGVXmS1Q5yQDtFjsvHJRX6oxXP6-sZqrPih_u4eJWM4ECL6aQ5FtRt0gX6B3i7mA"
     },
     "ufficiRubrica": [
         {
@@ -16,6 +20,24 @@
             "ordineVisualizzazione": 1,
             "descrizioneUfficio": "Capo Dipartimento Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
             "tipologiaUfficio": "centrali",
+            "contatti": [
+                {
+                    "tipo": "telefono",
+                    "contatto": "444444444444"
+                },
+                {
+                    "tipo": "email",
+                    "contatto": "444444444444"
+                },
+                {
+                    "tipo": "pec",
+                    "contatto": "444444444444"
+                },
+                {
+                    "tipo": "voip",
+                    "contatto": "444444444444"
+                }
+            ],
             "personale": [
                 {
                     "cognome": "Cognome",
@@ -167,7 +189,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "id": "4c3c"
         },
         {
             "codiceUfficio": "01.0",
@@ -251,7 +274,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "id": "83b3"
         },
         {
             "codiceUfficio": "02.0",
@@ -291,7 +315,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "id": "8065"
         },
         {
             "codiceUfficio": "03.0",
@@ -331,7 +356,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "id": "a96c"
         },
         {
             "codiceUfficio": "04.0",
@@ -400,14 +426,14 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "id": "2724"
         },
         {
             "codiceUfficioSuperiore": "",
             "nomeTitolare": "nomeTitolare",
             "ordineVisualizzazione": 1,
             "descrizioneUfficio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquid optio nihil eos. Officiis, dignissimos delectus. Sit rerum unde repellat deleniti dignissimos, dolor cupiditate odio facere nihil aut, necessitatibus sunt.",
-
             "tipologiaUfficio": "periferia",
             "personale": [
                 {
@@ -570,7 +596,8 @@
             "provincia": "MI",
             "coordinate": "45.46489,9.17972",
             "idSedePadre": "001",
-            "codAOO": "DIR-LOM"
+            "codAOO": "DIR-LOM",
+            "id": "b801"
         },
         {
             "id": "03",
@@ -606,7 +633,8 @@
             "provincia": "PD",
             "coordinate": "45.40998,11.87337",
             "idSedePadre": "001",
-            "codAOO": "DIR-VEN"
+            "codAOO": "DIR-VEN",
+            "id": "43e5"
         },
         {
             "codiceUfficio": "05",
@@ -624,7 +652,8 @@
             "provincia": "TS",
             "coordinate": "45.64855,13.76876",
             "idSedePadre": "001",
-            "codAOO": "DIR-FVG"
+            "codAOO": "DIR-FVG",
+            "id": "aa53"
         },
         {
             "codiceUfficio": "06",
@@ -642,7 +671,8 @@
             "provincia": "BO",
             "coordinate": "44.535506,11.368185",
             "idSedePadre": "001",
-            "codAOO": "DIR-EMI"
+            "codAOO": "DIR-EMI",
+            "id": "502b"
         },
         {
             "codiceUfficio": "07",
@@ -660,7 +690,8 @@
             "provincia": "FI",
             "coordinate": "43.78091,11.26828",
             "idSedePadre": "001",
-            "codAOO": "DIR-TOS"
+            "codAOO": "DIR-TOS",
+            "id": "1a21"
         },
         {
             "codiceUfficio": "09",
@@ -678,7 +709,8 @@
             "provincia": "AN",
             "coordinate": "43.60838,13.51542",
             "idSedePadre": "001",
-            "codAOO": "DIR-MAR"
+            "codAOO": "DIR-MAR",
+            "id": "e8e4"
         },
         {
             "codiceUfficio": "10",
@@ -696,7 +728,8 @@
             "provincia": "RM",
             "coordinate": "41.82691,12.45946",
             "idSedePadre": "001",
-            "codAOO": "DIR-LAZ"
+            "codAOO": "DIR-LAZ",
+            "id": "62e4"
         },
         {
             "codiceUfficio": "12",
@@ -714,7 +747,8 @@
             "provincia": "PG",
             "coordinate": "43.10535,12.39194",
             "idSedePadre": "001",
-            "codAOO": "DIR-UMB"
+            "codAOO": "DIR-UMB",
+            "id": "6886"
         },
         {
             "codiceUfficio": "13",
@@ -732,7 +766,8 @@
             "provincia": "NA",
             "coordinate": "40.86588,14.29312",
             "idSedePadre": "001",
-            "codAOO": "DIR-CAM"
+            "codAOO": "DIR-CAM",
+            "id": "8963"
         },
         {
             "codiceUfficio": "15",
@@ -750,7 +785,8 @@
             "provincia": "BA",
             "coordinate": "41.11185,16.90165",
             "idSedePadre": "001",
-            "codAOO": "DIR-PUG"
+            "codAOO": "DIR-PUG",
+            "id": "3c67"
         },
         {
             "codiceUfficio": "16",
@@ -768,7 +804,8 @@
             "provincia": "CZ",
             "coordinate": "38.91112,16.57481",
             "idSedePadre": "001",
-            "codAOO": "DIR-CAL"
+            "codAOO": "DIR-CAL",
+            "id": "980f"
         },
         {
             "codiceUfficio": "17",
@@ -786,7 +823,8 @@
             "provincia": "CA",
             "coordinate": "39.247166,9.117922",
             "idSedePadre": "001",
-            "codAOO": "DIR-SAR"
+            "codAOO": "DIR-SAR",
+            "id": "2892"
         },
         {
             "codiceUfficio": "18",
@@ -804,7 +842,8 @@
             "provincia": "PA",
             "coordinate": "38.12285,13.35766",
             "idSedePadre": "001",
-            "codAOO": "DIR-SIC"
+            "codAOO": "DIR-SIC",
+            "id": "dac2"
         },
         {
             "codiceUfficio": "19",
@@ -822,7 +861,8 @@
             "provincia": "PZ",
             "coordinate": "40.64405,15.83283",
             "idSedePadre": "001",
-            "codAOO": "DIR-BAS"
+            "codAOO": "DIR-BAS",
+            "id": "61db"
         },
         {
             "codiceUfficio": "20",
@@ -840,7 +880,8 @@
             "provincia": "AQ",
             "coordinate": "42.371063,13.349061",
             "idSedePadre": "001",
-            "codAOO": "DIR-ABR"
+            "codAOO": "DIR-ABR",
+            "id": "fc30"
         },
         {
             "codiceUfficio": "21",
@@ -858,7 +899,8 @@
             "provincia": "CB",
             "coordinate": "41.56611,14.66530",
             "idSedePadre": "001",
-            "codAOO": "DIR-MOL"
+            "codAOO": "DIR-MOL",
+            "id": "5120"
         }
     ],
     "GetChildSedeFromWauc": [

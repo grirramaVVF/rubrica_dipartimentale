@@ -13,7 +13,8 @@ import {
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faEdit, faPlusCircle, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { UfficiFormComponent } from '../uffici-form/uffici-form.component';
+import { UfficiFormComponent } from '../form/uffici-form/uffici-form.component';
+import { selectLoggedUser } from '../../store/selectors/authuser.selector';
 
 @Component({
     selector: 'vvfrubrica-uffici',
@@ -41,6 +42,9 @@ export class UfficiComponent {
     idSelectedOfficeComponent$ = this._storeApp$.select(selectIdSelectedOfficeComponent);
     idSelectedOfficeComponent: string = '';
 
+    @Input()
+    visualizeActionBar: boolean = false;
+
     constructor(private _storeApp$: Store<AppState>, private modalService: BsModalService,) { }
 
     ngOnInit(): void {
@@ -66,7 +70,7 @@ export class UfficiComponent {
 
     onAddClick() {
         const initialState = {
-            title: 'Aggiungi Sotto Ufficio',
+            title: 'Aggiungi ufficio in: '+this.itemDst.nomeUfficio,
             list: []
         };
 
@@ -75,15 +79,8 @@ export class UfficiComponent {
 
     onEditClick() {
         const initialState = {
-            title: 'Modifica Ufficio',
+            title: 'Modifica Ufficio: ' + this.itemDst?.nomeUfficio,
             ufficio: this.itemDst,
-            list: [
-                { tipo: 'telefono', contatto: '33333333333' },
-                { tipo: 'email', contatto: '33333333333' },
-                { tipo: 'pec', contatto: '33333333333' },
-                { tipo: 'voip', contatto: '33333333333' },
-            ],
-
         };
 
         this.openModal(initialState);
@@ -95,6 +92,5 @@ export class UfficiComponent {
 
     openModal(initialState: object) {
         this.bsModalRef = this.modalService.show(UfficiFormComponent, { initialState, class: 'gray modal-xl', backdrop: 'static' });
-
     }
 }

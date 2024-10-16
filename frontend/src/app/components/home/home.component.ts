@@ -19,7 +19,7 @@ import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
 import { PersonaleComponent } from '../personale/personale.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { Office } from '../../models/Office';
+// import { Office } from '../../models/Office';
 import {
     AddElencoUfficiSelezionati,
     DelElencoUfficiSelezionati,
@@ -28,7 +28,8 @@ import {
     SetIdSelectedOfficeComponent,
     SetUfficioSelezionato,
 } from '../../store/actions/rubrica.action';
-import { UfficiFormComponent } from '../uffici-form/uffici-form.component';
+import { UfficiFormComponent } from '../form/uffici-form/uffici-form.component';
+import { selectLoggedUser } from '../../store/selectors/authuser.selector';
 // import { ModalModule } from 'ngx-bootstrap/modal';
 // import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
@@ -71,15 +72,28 @@ export class HomeComponent {
     elencoUfficiSelezionati$ = this._storeApp$.select(selectElencoUfficiSelezionati);
     elencoUfficiSelezionati: Array<IOffice | null> | null = null;
 
-    testVar: Office = new Office();
+    loggedUser$: any = this._storeApp$.select(selectLoggedUser);
+    loggedUser: any = {};
+
+    visualizeActionBar: boolean = false;
+    //testVar: Office = new Office();
 
     constructor(private _storeApp$: Store<AppState>) { }
 
     ngOnInit() {
+        this.loggedUser$.subscribe((loggedUser: any) => {
+            this.loggedUser = { ...loggedUser };
+
+            this.visualizeActionBar = false;
+            if (Object.keys(this.loggedUser).length > 0) {
+                this.visualizeActionBar = true;
+            }
+        });
+
         this._storeApp$.dispatch({ type: RubricaActionType.GetHomeRubrica });
         this.homeItems$.subscribe(items => {
             this.homeItems = [...items?.rubrica];
-            this.testVar.setOffices(this.homeItems);
+            //this.testVar.setOffices(this.homeItems);
         });
 
         this.ufficioSelezionato$.subscribe(

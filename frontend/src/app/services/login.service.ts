@@ -5,6 +5,9 @@ import { Router } from '@angular/router';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
+import { AppState } from '../store/states/app.state';
+import { Store } from '@ngrx/store';
+import { SetAuthToken } from '../store/actions/authuser.action';
 
 interface AuthResponse {
     token: string;
@@ -18,7 +21,7 @@ export class AuthService {
     private apiUrl = environment.apiCreateToken;
     private isLoggedInSubject = new BehaviorSubject<boolean>(false);
 
-    constructor(private http: HttpClient, private router: Router) {
+    constructor(private http: HttpClient, private router: Router, private _storeApp$: Store<AppState>,) {
         // Verifica se l'utente è già loggato all'avvio dell'app
         this.isLoggedInSubject.next(!!this.getToken());
     }
@@ -26,18 +29,18 @@ export class AuthService {
     login(username: string, password: string): Observable<AuthResponse> {
         const headers = { 'content-type': 'application/json' }
         const body = JSON.stringify({ username, password });
-        console.log(body);
         //return this.http.post<AuthResponse>(this.apiUrl + 'people', body, { 'headers': headers })
 
         return this.http
             // .post<AuthResponse>(`${this.apiUrl}Token/Create`, { username, password })
-            .post<AuthResponse>(`${this.apiUrl}`, body, { 'headers': headers })
+            // .post<AuthResponse>(`${this.apiUrl}`, body, { 'headers': headers })
+            .get<AuthResponse>(`${this.apiUrl}`)
             .pipe(
                 tap((response) => {
                     this.saveToken(response.token);
-                    this.isLoggedInSubject.next(true);
-                    console.log("sono auth service");
-                    console.log(response.token);
+                    //this.isLoggedInSubject.next(true);
+                    // console.log("sono auth service");
+                    // console.log(response.token);
                 })
             );
     }
@@ -49,7 +52,8 @@ export class AuthService {
     }
 
     saveToken(token: string): void {
-        localStorage.setItem('authToken', token);
+        this._storeApp$.dispatch(SetAuthToken({ token: token }));
+        // localStorage.setItem('authToken', token);
     }
 
     getToken(): string | null {

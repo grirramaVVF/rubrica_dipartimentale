@@ -17,7 +17,7 @@ export const authInterceptor: HttpInterceptorFn = (
   // Ottieni il token dal servizio di autenticazione
   console.log("sono intercettore");
   const token = authService.getToken();
-  console.log(token);
+//   console.log(token);
 
   // Clona la richiesta e aggiungi l'header di autorizzazione
   let authReq = req;

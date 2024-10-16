@@ -4,13 +4,18 @@ import { createSelector } from '@ngrx/store';
 const selectAuthUserState = (state: any) => state.authUser;
 
 export const selectAuthUser = createSelector(
-  selectAuthUserState,
-  (state) => state
+    selectAuthUserState,
+    (state) => state
 );
 
-export const setToken=createSelector(
-  selectAuthUserState,
-  (state) => state
+export const selectLoggedUser = createSelector(
+    selectAuthUserState,
+    (state) => state.decodeToken
+);
+
+export const setToken = createSelector(
+    selectAuthUserState,
+    (state) => state
 )
 
 //import { IAppState } from '../states/app.state';

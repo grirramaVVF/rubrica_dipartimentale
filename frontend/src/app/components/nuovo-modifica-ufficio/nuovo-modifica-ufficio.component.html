@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="nome" placeholder="Inserisci il nome" required>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" placeholder="Inserisci l'email" required type="email">
+    </mat-form-field>
+  
+    <mat-dialog-actions align="end">
+      <button mat-button (click)="onCancel()">Annulla</button>
+      <button mat-button color="primary" type="submit" [disabled]="form.invalid">Salva</button>
+    </mat-dialog-actions>
+  </form>
+  

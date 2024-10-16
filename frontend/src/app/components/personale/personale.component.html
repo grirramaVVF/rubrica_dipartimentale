@@ -5,7 +5,7 @@
 <hr>
 <div class="divPersonale">
     <div *ngFor="let persona of ufficioSelezionato?.personale" class="divPersonaleChild"
-        style="border-color: {{ufficioSelezionato?.coloreSfondo}};">
+        style="border-color: {{ufficioSelezionato?.coloreSfondo}}">
         <div class="divCerchio">
             <span class="circle" style="background-color: {{ufficioSelezionato?.coloreSfondo}}">
                 <span>{{persona.cognome.charAt(0).toUpperCase()+persona.nome.charAt(0).toUpperCase()}}</span>
@@ -14,6 +14,10 @@
         <div class="divDatiPersona">
             <p><strong>{{persona.qualifica}} {{persona.cognome}} {{persona.nome}}</strong></p>
             <p *ngFor="let contatto of persona.contatti">{{contatto.tipo}}: <strong>{{contatto.contatto}}</strong></p>
+            <button mat-raised-button color="primary" (click)="openFormContatto(persona)">
+                <fa-icon [icon]="faPen"></fa-icon>
+            </button>
         </div>
     </div>
+
 </div>

@@ -2,10 +2,18 @@
     <div class="toggle">
         <input type="radio" [(ngModel)]="checkTopRightSelected" name="checkTopRight" id="idRadioUfficio"
             value="ufficiDipendenti" (change)="onButtonClick()" />
-        <label for="idRadioUfficio">Uffici dipendenti</label>
+        <label for="idRadioUfficio">Uffici dipendenti
+            <button mat-raised-button color="primary" (click)="openFormUfficio()">
+                <fa-icon [icon]="faPlus" ></fa-icon> 
+            </button>
+        </label>
         <input type="radio" [(ngModel)]="checkTopRightSelected" name="checkTopRight" id="idRadioComponenti"
             value="componenti" (change)="onButtonClick()" />
-        <label for="idRadioComponenti">Componenti</label>
+        <label for="idRadioComponenti">Componenti
+            <button mat-raised-button color="primary" (click)="openFormContatto()">
+                <fa-icon [icon]="faPlus" ></fa-icon> 
+            </button>
+        </label>
         <input type="radio" [(ngModel)]="checkTopRightSelected" name="checkTopRight" id="idRadioDescizione"
             value="descrizione" (change)="onButtonClick()" />
         <label for="idRadioDescizione">Descrizione</label>

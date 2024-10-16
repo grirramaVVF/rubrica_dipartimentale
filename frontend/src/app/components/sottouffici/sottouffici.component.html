@@ -1,5 +1,9 @@
 <div class="divSottuffici" *ngFor="let item of ufficioSelezionato.children">
     <div class="accordion_container" style="background-color: {{item.coloreSfondo}};">
+        <button mat-raised-button color="primary" (click)="openFormUfficio()">
+            <fa-icon [icon]="faPen"></fa-icon> 
+        </button>
+
         <section class="accordion">
             <input type="checkbox" name="collapse" id="{{item.codiceUfficio}}"
                 (click)="leggiSottoAlbero(item.codiceUfficio)">
@@ -10,4 +14,5 @@
             </h2>
         </section>
     </div>
+
 </div>

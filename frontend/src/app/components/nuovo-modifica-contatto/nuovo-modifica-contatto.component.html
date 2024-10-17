@@ -28,7 +28,9 @@
         <input matInput [formControlName]="contatto.tipo" [placeholder]="contatto.tipo"
           [type]="getInputType(contatto.tipo)" required>
       </mat-form-field>
-      <button mat-button color="warn" (click)="removeContatto(i)">Rimuovi</button>
+      <button mat-button color="warn" (click)="removeContatto(i)">
+        <fa-icon [icon]="faTrash" class="fa-2x"></fa-icon>
+      </button>
       <mat-error *ngIf="isFieldInvalid(contatto.tipo)">
         {{ contatto.tipo }} non valido.
       </mat-error>

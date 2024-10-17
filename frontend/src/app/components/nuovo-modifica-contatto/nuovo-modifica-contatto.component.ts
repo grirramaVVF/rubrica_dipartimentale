@@ -15,7 +15,8 @@ import { IOffice } from '../../models/IOffice';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../store/states/app.state';
 import { selectUfficioSelezionato } from '../../store/selectors/rubrica.selector';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faTrash} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nuovo-modifica-contatto',
@@ -23,7 +24,7 @@ import { selectUfficioSelezionato } from '../../store/selectors/rubrica.selector
   styleUrl: './nuovo-modifica-contatto.component.css',
   standalone: true,
   imports: [
-
+    FontAwesomeModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
@@ -37,6 +38,8 @@ import { selectUfficioSelezionato } from '../../store/selectors/rubrica.selector
   ]
 })
 export class NuovoModificaContattoComponent {
+  faTrash=faTrash;
+
   form: FormGroup;
   p: IPersonale = { codiceUfficio: '', cognome: '', nome: '', qualifica: '', contatti: [] };
   tipiContatti: string[] = [];

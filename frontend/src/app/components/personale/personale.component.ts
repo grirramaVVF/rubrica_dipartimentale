@@ -5,8 +5,8 @@ import { IOffice } from '../../models/IOffice';
 import { selectUfficioSelezionato } from '../../store/selectors/rubrica.selector';
 import { NgForOf, NgIf } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
-import { faPen } from '@fortawesome/free-solid-svg-icons'; 
+import { faAddressBook,faPen } from '@fortawesome/free-solid-svg-icons';
+
 
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { NuovoModificaContattoComponent } from '../nuovo-modifica-contatto/nuovo-modifica-contatto.component';

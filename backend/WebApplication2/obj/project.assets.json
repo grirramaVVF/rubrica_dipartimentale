@@ -3498,7 +3498,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\natse\\.nuget\\packages\\": {},
+    "C:\\Users\\giuseppe.rirrama\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -3507,14 +3507,14 @@
       "projectUniqueName": "D:\\progetti\\angular\\rubrica_dipartimentale\\backend\\WebApplication2\\ApiRubricaDipartimentale.csproj",
       "projectName": "ApiRubricaDipartimentale",
       "projectPath": "D:\\progetti\\angular\\rubrica_dipartimentale\\backend\\WebApplication2\\ApiRubricaDipartimentale.csproj",
-      "packagesPath": "C:\\Users\\natse\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\giuseppe.rirrama\\.nuget\\packages\\",
       "outputPath": "D:\\progetti\\angular\\rubrica_dipartimentale\\backend\\WebApplication2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\natse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\giuseppe.rirrama\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3536,6 +3536,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3620,8 +3625,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Si è verificato un errore durante il recupero dei dati sulla vulnerabilità del pacchetto: Non è possibile caricare l'indice del servizio per l'origine https://api.nuget.org/v3/index.json."
+    }
+  ]
 }
